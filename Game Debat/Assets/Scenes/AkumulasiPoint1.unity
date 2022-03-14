@@ -168,7 +168,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71306250}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -421,7 +421,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1949691023}
         m_TargetAssemblyTypeName: AddScorePoint, Assembly-CSharp
-        m_MethodName: AddPoint
+        m_MethodName: DeletePoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -560,19 +560,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AkumulasiPoint1
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1813403151}
-        m_TargetAssemblyTypeName: AddScoreTime, Assembly-CSharp
-        m_MethodName: StopTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AkumulasiPoint
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &344349047
@@ -805,7 +793,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801388833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1084,7 +1072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.171, y: 0.4825316}
   m_AnchorMax: {x: 0.6643891, y: 0.568}
-  m_AnchoredPosition: {x: -7.822052, y: 12.901154}
+  m_AnchoredPosition: {x: -29.06398, y: 12.901154}
   m_SizeDelta: {x: 47.606773, y: 39.71469}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198727040
@@ -1120,7 +1108,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIGHSCORE
+  m_Text: HIGHPOINT
 --- !u!222 &1198727041
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1163,8 +1151,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2624438, y: 0.40446845}
   m_AnchorMax: {x: 0.578, y: 0.48987374}
-  m_AnchoredPosition: {x: -8.60054, y: -27.963165}
-  m_SizeDelta: {x: 25.10691, y: 39.683098}
+  m_AnchoredPosition: {x: -29.955, y: -27.963165}
+  m_SizeDelta: {x: 67.816, y: 39.6831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215340563
 MonoBehaviour:
@@ -1199,7 +1187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SCORE
+  m_Text: HIGHSCORE
 --- !u!222 &1215340564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1511,7 +1499,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 78
 --- !u!222 &1508985524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1604,7 +1592,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1813403151}
         m_TargetAssemblyTypeName: AddScoreTime, Assembly-CSharp
-        m_MethodName: StartTimer
+        m_MethodName: ClearTimeHighscore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1722,7 +1710,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 81
 --- !u!222 &1751165540
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1760,8 +1748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331fc10cd03d9034a85b1365761c7566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 1751165539}
-  timehighscore: {fileID: 893286904}
+  timer: {fileID: 893286904}
+  timehighscore: {fileID: 1751165539}
 --- !u!4 &1813403152
 Transform:
   m_ObjectHideFlags: 0
@@ -1886,8 +1874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Point: 0
   Highpoint: 0
-  Pointtext: {fileID: 1508985523}
-  Highpointtext: {fileID: 1903880167}
+  Pointtext: {fileID: 1903880167}
+  Highpointtext: {fileID: 1508985523}
 --- !u!4 &1949691024
 Transform:
   m_ObjectHideFlags: 0
@@ -1947,7 +1935,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142800832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
