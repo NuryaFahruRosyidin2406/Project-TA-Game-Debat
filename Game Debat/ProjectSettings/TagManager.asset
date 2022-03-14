@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Answer
+  - PointA
+  - PointB
+  - PointC
+  - PointD
   layers:
   - Default
   - TransparentFX
