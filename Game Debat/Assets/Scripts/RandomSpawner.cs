@@ -12,6 +12,7 @@ public class RandomSpawner : MonoBehaviour
     public GameObject pointDPrefab;
     public Text myScoreText;
     public int duplicate;
+    public float spawnTime=1;
 
     private int scoreNum;
 
@@ -21,6 +22,7 @@ public class RandomSpawner : MonoBehaviour
         myScoreText.text = "" + scoreNum;
 
         RandomSpawn();
+        SpawnObject();
         duplicate = GameObject.FindGameObjectsWithTag("Answer").Length;
 
         Debug.Log(duplicate);
@@ -45,6 +47,15 @@ public class RandomSpawner : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("PointC"));
             Destroy(GameObject.FindGameObjectWithTag("PointD"));
             RandomSpawn();
+            if (spawnTime > 0)
+            {
+                spawnTime -= Time.deltaTime;
+            }
+            else if (spawnTime <= 0)
+            {
+                SpawnObject();
+                spawnTime = 1;
+            }
         }
     }
 
@@ -65,7 +76,10 @@ public class RandomSpawner : MonoBehaviour
         //Spawn Point D
         Vector2 randomSpawnPositionD = new Vector2(Random.Range(4, 4), Random.Range(-5, 0));
         Instantiate(pointDPrefab, randomSpawnPositionD, Quaternion.identity);
+    }
 
+    public void SpawnObject()
+    {
         //Spawn Answer
         Vector2 spawnAnswer = new Vector2(Random.Range(-8, -8), Random.Range(-8, -8));
         Instantiate(answerPrefab, spawnAnswer, Quaternion.identity);
