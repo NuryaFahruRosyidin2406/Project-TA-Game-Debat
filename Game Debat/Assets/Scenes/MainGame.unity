@@ -279,6 +279,7 @@ MonoBehaviour:
   pointDPrefab: {fileID: 6832809559155628289, guid: 6fc0ce2b6a0b5514bb54fbc0f19d46cd, type: 3}
   myScoreText: {fileID: 1354719226}
   duplicate: 0
+  spawnTime: 1
 --- !u!4 &335710356
 Transform:
   m_ObjectHideFlags: 0
@@ -843,7 +844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1385454604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1048,7 +1049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1660561948
 RectTransform:
   m_ObjectHideFlags: 0
