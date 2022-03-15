@@ -14,7 +14,9 @@ public class AddScorePoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Highpoint = PlayerPrefs.GetInt("HighPoint");
+        //Highpoint = PlayerPrefs.GetInt("HighPoint");
+        Point = PlayerPrefs.GetInt("Score");
+        Highpoint = PlayerPrefs.GetInt("HighScore");
     }
 
     // Update is called once per frame
@@ -36,7 +38,9 @@ public class AddScorePoint : MonoBehaviour
 
     public void DeletePoint()
     {
-        PlayerPrefs.DeleteKey("HighPoint");
-        Highpointtext.text = "No High Point Yet";
+        //PlayerPrefs.DeleteKey("HighPoint");
+        //Highpointtext.text = "No High Point Yet";
+        PlayerPrefs.DeleteKey("HighScore");
+        PlayerPrefs.DeleteKey("Score");
     }
 }

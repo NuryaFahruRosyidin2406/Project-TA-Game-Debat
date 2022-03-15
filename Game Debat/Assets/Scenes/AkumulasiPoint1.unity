@@ -372,7 +372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.39822194, y: 0.04268429}
   m_AnchorMax: {x: 0.6044986, y: 0.153558}
-  m_AnchoredPosition: {x: 1.9440079, y: 140.711}
+  m_AnchoredPosition: {x: 1.9440079, y: 106}
   m_SizeDelta: {x: 0.4444275, y: 2.3830109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249635476
@@ -504,7 +504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.66422194, y: 0.04268429}
   m_AnchorMax: {x: 0.86800003, y: 0.153558}
-  m_AnchoredPosition: {x: 2.244995, y: 140.711}
+  m_AnchoredPosition: {x: 2.244995, y: 106}
   m_SizeDelta: {x: 0.67149353, y: -0.19529724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344349046
@@ -560,7 +560,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AkumulasiPoint
+          m_StringArgument: StartGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &344349047
@@ -1072,7 +1072,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.171, y: 0.4825316}
   m_AnchorMax: {x: 0.6643891, y: 0.568}
-  m_AnchoredPosition: {x: -29.06398, y: 12.901154}
+  m_AnchoredPosition: {x: -47, y: 12.901}
   m_SizeDelta: {x: 47.606773, y: 39.71469}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198727040
@@ -1097,7 +1097,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIGHPOINT
+  m_Text: SCORE
 --- !u!222 &1198727041
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1151,8 +1151,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2624438, y: 0.40446845}
   m_AnchorMax: {x: 0.578, y: 0.48987374}
-  m_AnchoredPosition: {x: -29.955, y: -27.963165}
-  m_SizeDelta: {x: 67.816, y: 39.6831}
+  m_AnchoredPosition: {x: -41.477, y: -28.124}
+  m_SizeDelta: {x: 82.954, y: 39.6831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215340563
 MonoBehaviour:
@@ -1176,7 +1176,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1463,8 +1463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6643891, y: 0.40446845}
   m_AnchorMax: {x: 0.77677816, y: 0.4825316}
-  m_AnchoredPosition: {x: 23.80365, y: -27.299957}
-  m_SizeDelta: {x: 12.923889, y: 41.00952}
+  m_AnchoredPosition: {x: 15.478, y: -27.461}
+  m_SizeDelta: {x: 77.35, y: 41.0095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508985523
 MonoBehaviour:
@@ -1543,7 +1543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1163342, y: 0.04268429}
   m_AnchorMax: {x: 0.32000002, y: 0.153558}
-  m_AnchoredPosition: {x: 3, y: 142}
+  m_AnchoredPosition: {x: 3, y: 107.289}
   m_SizeDelta: {x: 0.67149353, y: -0.19529724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521371236
@@ -1674,8 +1674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6643891, y: 0.4825316}
   m_AnchorMax: {x: 0.77677816, y: 0.568}
-  m_AnchoredPosition: {x: 23.80365, y: 12.901169}
-  m_SizeDelta: {x: 12.923889, y: 39.71469}
+  m_AnchoredPosition: {x: 15.4782, y: 14.362}
+  m_SizeDelta: {x: 77.3504, y: 39.7147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1751165539
 MonoBehaviour:
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 893286904}
-  timehighscore: {fileID: 1751165539}
+  timehighscore: {fileID: 1903880167}
 --- !u!4 &1813403152
 Transform:
   m_ObjectHideFlags: 0
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Point: 0
   Highpoint: 0
-  Pointtext: {fileID: 1903880167}
+  Pointtext: {fileID: 1751165539}
   Highpointtext: {fileID: 1508985523}
 --- !u!4 &1949691024
 Transform:

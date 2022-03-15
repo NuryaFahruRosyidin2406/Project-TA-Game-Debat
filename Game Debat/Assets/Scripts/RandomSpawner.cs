@@ -42,6 +42,15 @@ public class RandomSpawner : MonoBehaviour
             scoreNum += 1;
             myScoreText.text = "" + scoreNum;
 
+            //Penyimpanan Score
+            PlayerPrefs.SetInt("Score", scoreNum);
+            if (scoreNum > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                PlayerPrefs.SetInt("HighScore", scoreNum);
+                //myHighScoreText.text = scoreNum.ToString();
+            }
+            //Penyimpanan Score
+
             Destroy(GameObject.FindGameObjectWithTag("PointA"));
             Destroy(GameObject.FindGameObjectWithTag("PointB"));
             Destroy(GameObject.FindGameObjectWithTag("PointC"));
