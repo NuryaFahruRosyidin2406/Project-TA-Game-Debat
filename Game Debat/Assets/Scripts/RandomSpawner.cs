@@ -18,6 +18,8 @@ public class RandomSpawner : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
+        
         scoreNum = 0;
         myScoreText.text = "" + scoreNum;
 

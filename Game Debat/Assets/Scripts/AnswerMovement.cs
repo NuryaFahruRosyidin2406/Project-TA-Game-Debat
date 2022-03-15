@@ -15,6 +15,8 @@ public class AnswerMovement : MonoBehaviour
     private int duplicate;
     private float interpolateAmount;
 
+    public float speed = 0.5f;
+
     // Update is called once per frame
     private void Update()
     {
@@ -31,7 +33,7 @@ public class AnswerMovement : MonoBehaviour
         else
         {
             Debug.Log("Waduh");
-            interpolateAmount = (interpolateAmount + Time.deltaTime) % 1f;
+            interpolateAmount = (interpolateAmount + Time.deltaTime * speed) % 1f;
             pointABCD.position = CubicLerp(pointA.position, pointB.position, pointC.position, pointD.position, interpolateAmount);
         }
     }
