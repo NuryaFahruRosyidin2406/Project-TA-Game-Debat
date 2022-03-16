@@ -1748,6 +1748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331fc10cd03d9034a85b1365761c7566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
   timer: {fileID: 893286904}
   timehighscore: {fileID: 1903880167}
 --- !u!4 &1813403152
