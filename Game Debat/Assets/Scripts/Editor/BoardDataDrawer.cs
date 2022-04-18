@@ -16,24 +16,24 @@ public class BoardDataDrawer : Editor
 
     private void OnEnable()
     {
-        InitializeReordableList(ref _dataList, "SearchWords", "Searching Words");
+        //InitializeReordableList(ref _dataList, "SearchWords", "Searching Words");
     }
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
 
-        GameDataInstance.timeInSecods =
-            EditorGUILayout.FloatField("Max Game Time (in Seconds)", GameDataInstance.timeInSecods);
+       /* GameDataInstance.timeInSecods =
+            EditorGUILayout.FloatField("Max Game Time (in Seconds)", GameDataInstance.timeInSecods);*/
 
         DrawColumnsRowsInputFields();
         EditorGUILayout.Space();
-        ConvertToUpperButton();
+        //ConvertToUpperButton();
 
         if (GameDataInstance.Board != null && GameDataInstance.Columns > 0 && GameDataInstance.Rows > 0)
             DrawBoardTable();
 
-        GUILayout.BeginHorizontal();
+        /*GUILayout.BeginHorizontal();
 
         ClearBoardButton();
         FillupWithRandomLettersButton();
@@ -41,7 +41,7 @@ public class BoardDataDrawer : Editor
         GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
-        _dataList.DoLayoutList();
+        _dataList.DoLayoutList();*/
 
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)
@@ -58,7 +58,7 @@ public class BoardDataDrawer : Editor
         GameDataInstance.Columns = EditorGUILayout.IntField("Columns", GameDataInstance.Columns);
         GameDataInstance.Rows = EditorGUILayout.IntField("Rows", GameDataInstance.Rows);
 
-        if((GameDataInstance.Columns != columnsTemp || GameDataInstance.Rows != rowsTemp) 
+        if ((GameDataInstance.Columns != columnsTemp || GameDataInstance.Rows != rowsTemp)
             && GameDataInstance.Columns > 0 && GameDataInstance.Rows > 0)
         {
             GameDataInstance.CreateNewBoard();
@@ -139,9 +139,9 @@ public class BoardDataDrawer : Editor
 
     private void ConvertToUpperButton()
     {
-        if(GUILayout.Button("To Upper"))
+        if (GUILayout.Button("To Upper"))
         {
-            for(var i = 0; i < GameDataInstance.Columns; i++)
+            for (var i = 0; i < GameDataInstance.Columns; i++)
             {
                 for (var j = 0; j < GameDataInstance.Rows; j++)
                 {
@@ -166,11 +166,11 @@ public class BoardDataDrawer : Editor
 
     private void ClearBoardButton()
     {
-        if(GUILayout.Button("Clear Board"))
+        if (GUILayout.Button("Clear Board"))
         {
             for (int i = 0; i < GameDataInstance.Columns; i++)
             {
-                for(int j = 0; j < GameDataInstance.Rows; j++)
+                for (int j = 0; j < GameDataInstance.Rows; j++)
                 {
                     GameDataInstance.Board[i].Row[j] = " ";
                 }
@@ -180,7 +180,7 @@ public class BoardDataDrawer : Editor
 
     private void FillupWithRandomLettersButton()
     {
-        if(GUILayout.Button("Fill Up With Random"))
+        if (GUILayout.Button("Fill Up With Random"))
         {
             for (int i = 0; i < GameDataInstance.Columns; i++)
             {
@@ -190,7 +190,7 @@ public class BoardDataDrawer : Editor
                     string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     int index = UnityEngine.Random.Range(0, letters.Length);
 
-                    if(errorCounter == 0)
+                    if (errorCounter == 0)
                     {
                         GameDataInstance.Board[i].Row[j] = letters[index].ToString();
                     }

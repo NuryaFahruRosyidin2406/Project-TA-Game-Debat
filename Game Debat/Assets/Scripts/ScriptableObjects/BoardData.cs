@@ -18,7 +18,7 @@ public class BoardData : ScriptableObject
         public int Size;
         public string[] Row;
 
-        public BoardRow() {}
+        public BoardRow() { }
 
         public BoardRow(int size)
         {
@@ -34,7 +34,7 @@ public class BoardData : ScriptableObject
 
         public void ClearRow()
         {
-            for(int i = 0; i < Size; i++)
+            for (int i = 0; i < Size; i++)
             {
                 Row[i] = " ";
             }
@@ -59,7 +59,7 @@ public class BoardData : ScriptableObject
     public void CreateNewBoard()
     {
         Board = new BoardRow[Columns];
-        for(int i = 0; i < Columns; i++)
+        for (int i = 0; i < Columns; i++)
         {
             Board[i] = new BoardRow(Rows);
         }
