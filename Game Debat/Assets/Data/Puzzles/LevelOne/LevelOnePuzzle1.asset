@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22818f2c174f41a428c379d801aa5721, type: 3}
   m_Name: LevelOnePuzzle1
   m_EditorClassIdentifier: 
-  timeInSecods: 0
+  timeInSecods: 10
   Columns: 5
   Rows: 5
   Board:

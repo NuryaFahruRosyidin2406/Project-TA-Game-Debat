@@ -5,6 +5,7 @@ using UnityEngine;
 public class WinPopup : MonoBehaviour
 {
     public GameObject winPopup;
+    public GameObject wordsPopup;
 
     void Start()
     {
@@ -14,15 +15,22 @@ public class WinPopup : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnBoardCompleted += ShowWinPopup;
+        GameEvents.OnBoardCompleted += ShowWordsPopup;
     }
 
     private void OnDisable()
     {
         GameEvents.OnBoardCompleted -= ShowWinPopup;
+        GameEvents.OnBoardCompleted -= ShowWordsPopup;
     }
 
     private void ShowWinPopup()
     {
         winPopup.SetActive(true);
+    }
+
+    private void ShowWordsPopup()
+    {
+        wordsPopup.SetActive(false);
     }
 }

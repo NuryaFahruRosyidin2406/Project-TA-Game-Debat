@@ -22,14 +22,12 @@ public class WordChecker : MonoBehaviour
     {
         GameEvents.OnCheckSquare += SquareSelected;
         GameEvents.OnClearSelection += ClearSelection;
-        //GameEvents.OnLoadNextLevel += LoadNextGameLevel;
     }
 
     private void OnDisable()
     {
         GameEvents.OnCheckSquare -= SquareSelected;
         GameEvents.OnClearSelection -= ClearSelection;
-        //GameEvents.OnLoadNextLevel -= LoadNextGameLevel;
     }
 
     void Start()
