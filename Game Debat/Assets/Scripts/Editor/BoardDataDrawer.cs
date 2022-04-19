@@ -16,7 +16,7 @@ public class BoardDataDrawer : Editor
 
     private void OnEnable()
     {
-        //InitializeReordableList(ref _dataList, "SearchWords", "Searching Words");
+        InitializeReordableList(ref _dataList, "SearchWords", "Searching Words");
     }
 
     public override void OnInspectorGUI()
@@ -28,12 +28,12 @@ public class BoardDataDrawer : Editor
 
         DrawColumnsRowsInputFields();
         EditorGUILayout.Space();
-        //ConvertToUpperButton();
+        ConvertToUpperButton();
 
         if (GameDataInstance.Board != null && GameDataInstance.Columns > 0 && GameDataInstance.Rows > 0)
             DrawBoardTable();
 
-        /*GUILayout.BeginHorizontal();
+        GUILayout.BeginHorizontal();
 
         ClearBoardButton();
         FillupWithRandomLettersButton();
@@ -41,7 +41,7 @@ public class BoardDataDrawer : Editor
         GUILayout.EndHorizontal();
 
         EditorGUILayout.Space();
-        _dataList.DoLayoutList();*/
+        _dataList.DoLayoutList();
 
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)

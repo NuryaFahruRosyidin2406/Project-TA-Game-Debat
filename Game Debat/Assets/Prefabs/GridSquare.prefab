@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 658122969891269731}
   - component: {fileID: 658122969891269730}
-  - component: {fileID: 658122969891269741}
+  - component: {fileID: -2213131778632760431}
   - component: {fileID: 658122969891269740}
   m_Layer: 0
   m_Name: GridSquare
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &658122969891269741
+--- !u!114 &-2213131778632760431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
