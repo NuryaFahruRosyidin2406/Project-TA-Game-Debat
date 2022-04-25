@@ -1200,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6298521869113267789, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Text
-      value: LevelTwo
+      value: Level Two
       objectReference: {fileID: 0}
     - target: {fileID: 6298521869113267791, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Name
@@ -1322,7 +1322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6298521869113267789, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Text
-      value: LevelOne
+      value: Level One
       objectReference: {fileID: 0}
     - target: {fileID: 6298521869113267791, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Name
