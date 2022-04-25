@@ -835,7 +835,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3c34aab04ad79b84ca8625d26e785272, type: 3}
+    m_Font: {fileID: 12800000, guid: 419e088148f80b349b1edac9e10dd897, type: 3}
     m_FontSize: 90
     m_FontStyle: 1
     m_BestFit: 0
@@ -1202,6 +1202,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level Two
       objectReference: {fileID: 0}
+    - target: {fileID: 6298521869113267789, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 419e088148f80b349b1edac9e10dd897, type: 3}
     - target: {fileID: 6298521869113267791, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Name
       value: Text
@@ -1324,6 +1328,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Level One
       objectReference: {fileID: 0}
+    - target: {fileID: 6298521869113267789, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 419e088148f80b349b1edac9e10dd897, type: 3}
     - target: {fileID: 6298521869113267791, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Name
       value: Text
