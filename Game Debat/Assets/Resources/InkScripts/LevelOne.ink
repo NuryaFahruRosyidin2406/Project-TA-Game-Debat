@@ -3,6 +3,7 @@ EXTERNAL CharAnimation(charName, animationName)
 EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
+EXTERNAL ChangeScript(scriptName)
 
 {Name("Ray")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -29,3 +30,5 @@ Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga 
 {ShowArgue(1)}
 {ChangeTime(4)}
 Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
+
+{ChangeScript("TestZone")}

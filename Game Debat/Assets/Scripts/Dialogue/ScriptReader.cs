@@ -8,8 +8,8 @@ using TMPro;
 public class ScriptReader : MonoBehaviour
 {
     [SerializeField]
-    private TextAsset _inkJsonFile;
-    private Story _StoryScript;
+    public TextAsset _inkJsonFile;
+    public Story _StoryScript;
 
     public TMP_Text dialogueBox;
     public TMP_Text nameTag;
@@ -67,6 +67,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("charTarget", (string charName, float moveSpeed, float xpos, float ypos, float zpos) => setCharacterMoveTarget(charName, moveSpeed, xpos, ypos, zpos)); //Change character position.        
         _StoryScript.BindExternalFunction("ShowArgue", (int argueStatus) => showArgue(argueStatus));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
+        _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         DisplayNextLine();
     }
 
@@ -84,7 +85,7 @@ public class ScriptReader : MonoBehaviour
         }
         else
         {
-            dialogueBox.text = "That's all folks"; //display when there is no text.
+            dialogueBox.text = ". . . "; //display when there is no text.
             TimerOn = false;
         }
     }
@@ -186,7 +187,15 @@ public class ScriptReader : MonoBehaviour
         TimeLeft = setTimeLeft;
         Debug.Log(TimeLeft + " Seconds");
     }
-    
+
+    public void nextScript(string name) // Load Next Script for the dialogue
+    {
+        var loadScript = Resources.Load<TextAsset>("InkScripts/" + name);
+        Debug.Log(loadScript);
+        _inkJsonFile = loadScript;
+        LoadStory();
+    }
+
     void updateTimer(float currentTime) // update dialogue timer
     {
         currentTime += 1;
