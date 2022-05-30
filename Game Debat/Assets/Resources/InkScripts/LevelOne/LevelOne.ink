@@ -1,4 +1,5 @@
 EXTERNAL Name(charName)
+EXTERNAL Icon(charName)
 EXTERNAL CharAnimation(charName, animationName)
 EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
@@ -6,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 
 {Name("Ray")}
+{Icon("ray")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
@@ -16,7 +18,7 @@ Ujian Nasional sudah sejak lama dijadikan standar kelulusan dari satu jenjang pe
 {ChangeTime(3)}
 Namun, tampaknya hal ini tidak lagi efektif. 
 
-{ChangeTime(4)}
+{ChangeTime(3)}
 Alih-alih memberikan dampak yang baik, siswa jadi lebih merasakan dampak buruknya. 
 
 {ChangeTime(3)}
@@ -24,11 +26,15 @@ Salah satu dampak buruk Ujian Nasional adalah menambah beban siswa.
 
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
-{ChangeTime(5)}
+{ChangeTime(4)}
 Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang. 
 
 {ShowArgue(1)}
-{ChangeTime(4)}
+{ChangeTime(3)}
 Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
 
-{ChangeScript("TestZone")}
+* [Memberikan persiapan UN]
+{ChangeScript("PilihanSatu")}
+
+* [Membuat lingkungan sekolah bebas stress]
+{ChangeScript("PilihanDua")}

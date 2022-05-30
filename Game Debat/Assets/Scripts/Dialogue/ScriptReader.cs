@@ -190,7 +190,7 @@ public class ScriptReader : MonoBehaviour
 
     public void nextScript(string name) // Load Next Script for the dialogue
     {
-        var loadScript = Resources.Load<TextAsset>("InkScripts/" + name);
+        var loadScript = Resources.Load<TextAsset>("InkScripts/LevelOne/" + name);
         Debug.Log(loadScript);
         _inkJsonFile = loadScript;
         LoadStory();
@@ -204,3 +204,4 @@ public class ScriptReader : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
     }
 }
+
