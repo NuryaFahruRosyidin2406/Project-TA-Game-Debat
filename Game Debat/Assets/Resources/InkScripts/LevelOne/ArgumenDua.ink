@@ -41,3 +41,6 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 
 * [Memperbanyak pengawas]
 {ChangeScript("PilihanDua.2")}
+
+* [Batal Bantah Argumen]
+{ChangeScript("ArgumenTiga")}

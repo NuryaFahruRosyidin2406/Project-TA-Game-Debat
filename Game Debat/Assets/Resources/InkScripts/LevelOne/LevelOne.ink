@@ -38,3 +38,6 @@ Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
 
 * [Membuat lingkungan sekolah bebas stress]
 {ChangeScript("PilihanDua")}
+
+* [Batal Bantah Argumen]
+{ChangeScript("ArgumenDua")}

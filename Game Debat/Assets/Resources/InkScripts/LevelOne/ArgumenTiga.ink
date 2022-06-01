@@ -7,14 +7,14 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 
 {ChangeTime(0)}
-Memang benar siswa akan semakin giat belajar dengan adanya Ujian Nasional. Akan tetapi , hal tersebut akan membimbing siswa kepada suatu konsep belajar yang keliru.
+Memang benar siswa akan semakin giat belajar dengan adanya Ujian Nasional. Akan tetapi, hal tersebut akan membimbing siswa kepada suatu konsep belajar yang keliru.
 
 {Name("Ray")}
 {Icon("ray")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
-Memang benar siswa akan semakin giat belajar dengan adanya Ujian Nasional. Akan tetapi , hal tersebut akan membimbing siswa kepada suatu konsep belajar yang keliru.
+Memang benar siswa akan semakin giat belajar dengan adanya Ujian Nasional. Akan tetapi, hal tersebut akan membimbing siswa kepada suatu konsep belajar yang keliru.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",6)}
