@@ -7,27 +7,27 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 
 {ChangeTime(0)}
-Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang terhadap siswa
+Kecurangan dapat di atasi dengan menggunakan sistem ujian berbasis komputer dengan keamanan yang tinggi
 
 {Name("Player")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
 {ChangeTime(4)}
-Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang terhadap siswa
+Kecurangan dapat di atasi dengan menggunakan sistem ujian berbasis komputer dengan keamanan yang tinggi
 
 {Name("Ray")}
 {Icon("ray")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",5)}
 {ChangeTime(3)}
-Persiapan hanya akan menambah beban mental.
+Namun hal itu tidak mencegah pihak lain ikut campur.
 
-{ChangeTime(4)}
-Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang.
+{ChangeTime(3)}
+Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",1)}
-{ChangeTime(3)}
-Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
+{ChangeTime(5)}
+Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif untuk menentukan kelulusan seorang siswa?
 
-{ChangeScript("ArgumenDua")}
+{ChangeScript("Argumen3")}

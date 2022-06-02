@@ -22,10 +22,15 @@ public class ScriptReader : MonoBehaviour
     [SerializeField]
     private Button choiceBasePrefab;
 
-    public float TimeLeft = 4;
+    public float TimeLeft = 4f;
     public bool TimerOn = false;
 
-    
+    public bool onChoice = false;
+    public float choiceTimer = 4f;
+
+    public bool argumenShow;
+    public int transitionNumber;
+
     void Start()
     {
         TimerOn = true;
@@ -39,14 +44,26 @@ public class ScriptReader : MonoBehaviour
             if(TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
+                //updateTimer(TimeLeft);
             }
             else
             {
-                Debug.Log("Chat Time is up!");
                 DisplayNextLine();
                 //TimeLeft = 3; // use this if you want to change all the time for the dialogue
-                
+
+            }
+        }
+
+        if (onChoice)
+        {
+            if(choiceTimer > 0)
+            {
+                choiceTimer -= Time.deltaTime;
+            }
+            else
+            {
+                DefaultOnClickChoiceButon(2);
+                onChoice = false;
             }
         }
         
@@ -65,7 +82,8 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("CharAnimation", (string charName, string animName) => playCharacterAnim(charName, animName));
         _StoryScript.BindExternalFunction("CharExpression", (string charName, int expressionInt) => changeCharacterExpression(charName, expressionInt));
         _StoryScript.BindExternalFunction("charTarget", (string charName, float moveSpeed, float xpos, float ypos, float zpos) => setCharacterMoveTarget(charName, moveSpeed, xpos, ypos, zpos)); //Change character position.        
-        _StoryScript.BindExternalFunction("ShowArgue", (int argueStatus) => showArgue(argueStatus));
+        _StoryScript.BindExternalFunction("ShowArgue", (bool argueStatus) => showArgue(argueStatus));
+        _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         DisplayNextLine();
@@ -91,7 +109,7 @@ public class ScriptReader : MonoBehaviour
     }
 
     private void DisplayChoices()
-    {
+    {    
         if (choiceHolder.GetComponentsInChildren<Button>().Length > 0) return; //checks if button holder has buttons in it.
 
         for(int i = 0; i < _StoryScript.currentChoices.Count; i++)
@@ -101,6 +119,9 @@ public class ScriptReader : MonoBehaviour
 
             button.onClick.AddListener(() => OnClickChoiceButon(choice));
         }
+
+        onChoice = true;
+        choiceTimer = 5f;
     }
 
     Button CreateChoiceButton(string text)
@@ -118,7 +139,16 @@ public class ScriptReader : MonoBehaviour
 
     void OnClickChoiceButon(Choice choice)
     {
+        Debug.Log("pilihan " + choice.index);
         _StoryScript.ChooseChoiceIndex(choice.index);
+        RefreshChoiceView();
+        DisplayNextLine();
+        onChoice = false;
+    }
+
+    void DefaultOnClickChoiceButon(int defaultChoice)
+    {
+        _StoryScript.ChooseChoiceIndex(defaultChoice);
         RefreshChoiceView();
         DisplayNextLine();
     }
@@ -175,10 +205,16 @@ public class ScriptReader : MonoBehaviour
         character.GetComponent<CharPosition>().setTarget(targetPosition, movingSpeed);
     }
 
-    public void showArgue(int argumen)
+    public void showArgue(bool argumen)
     {
-        int argumenNumber = argumen;
-        Debug.Log(argumenNumber);
+        argumenShow = argumen;
+        Debug.Log(argumenShow);
+    }
+
+    public void transNum(int number)
+    {
+        transitionNumber = number;
+        Debug.Log("Transision number: " + transitionNumber);
     }
 
     public void changeTime(float time) // function to change time in the inky

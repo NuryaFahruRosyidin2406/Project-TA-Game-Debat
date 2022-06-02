@@ -7,27 +7,27 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 
 {ChangeTime(0)}
-Kecurangan dapat di atasi dengan menggunakan sistem ujian berbasis komputer dengan keamanan yang tinggi
+Kecurangan dapat diatasi dengan menambah jumlah pengawas
 
 {Name("Player")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
-{ChangeTime(4)}
-Kecurangan dapat di atasi dengan menggunakan sistem ujian berbasis komputer dengan keamanan yang tinggi
+{ChangeTime(3)}
+Kecurangan dapat diatasi dengan menambah jumlah pengawas
 
 {Name("Ray")}
 {Icon("ray")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",5)}
+{CharExpression("chitose",4)}
 {ChangeTime(3)}
-Namun hal itu tidak mencegah pihak lain ikut campur.
+Menambah jumlah pengawas bukanlah solusi.
 
 {ChangeTime(3)}
-Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban.
+Karena beberapa oknum guru juga membantu para siswa dengan memberikan jawaban.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",1)}
-{ChangeTime(5)}
+{ChangeTime(4)}
 Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif untuk menentukan kelulusan seorang siswa?
 
-{ChangeScript("ArgumenTiga")}
+{ChangeScript("Argumen3")}

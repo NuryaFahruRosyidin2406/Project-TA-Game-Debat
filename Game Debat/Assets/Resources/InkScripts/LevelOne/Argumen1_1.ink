@@ -7,20 +7,20 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 
 {ChangeTime(0)}
-Untuk itu kita perlu menciptakan lingkungan bebas stress demi menghilangkan beban psikologis siswa
+Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang terhadap siswa
 
 {Name("Player")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
 {ChangeTime(4)}
-Untuk itu kita perlu menciptakan lingkungan bebas stress demi menghilangkan beban psikologis siswa
+Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang terhadap siswa
 
 {Name("Ray")}
 {Icon("ray")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",4)}
+{CharExpression("chitose",5)}
 {ChangeTime(3)}
-Lingkungan bebas stress tidak menghilangkan akar masalah yang ada.
+Persiapan hanya akan menambah beban mental.
 
 {ChangeTime(4)}
 Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang.
@@ -30,4 +30,4 @@ Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga 
 {ChangeTime(3)}
 Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
 
-{ChangeScript("ArgumenDua")}
+{ChangeScript("Argumen2")}

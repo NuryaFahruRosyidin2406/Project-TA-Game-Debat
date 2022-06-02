@@ -9,6 +9,7 @@ TagManager:
   - PointB
   - PointC
   - PointD
+  - DialogueManager
   layers:
   - Default
   - TransparentFX
