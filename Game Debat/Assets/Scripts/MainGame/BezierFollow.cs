@@ -52,7 +52,7 @@ public class BezierFollow : MonoBehaviour
         if (showArgue == true)
         {
             buttonImage.enabled = true;
-            speedModifier = 0.75f;
+            speedModifier = 0;
         }
         else if (showArgue == false)
         {
@@ -72,15 +72,15 @@ public class BezierFollow : MonoBehaviour
 
         if (transitionNumber == 1)
         {
-            scriptReader.nextScript("Transisi1");
+            scriptReader.nextScript("1_Transisi1");
         }
         else if (transitionNumber == 2)
         {
-            scriptReader.nextScript("Transisi2");
+            scriptReader.nextScript("2_Transisi2");
         }
         else if (transitionNumber == 3)
         {
-            scriptReader.nextScript("Transisi3");
+            scriptReader.nextScript("3_Transisi3");
         }
     }
 

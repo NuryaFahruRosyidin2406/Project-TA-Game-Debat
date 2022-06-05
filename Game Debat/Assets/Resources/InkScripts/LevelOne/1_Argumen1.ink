@@ -1,3 +1,5 @@
+Selamat Pagi semuanya, sekarang saya akan menjelaskan mengapa saya setuju bahwa Ujian Nasional harus dihapuskan sebagai standar kelulusan
+
 EXTERNAL Name(charName)
 EXTERNAL Icon(charName)
 EXTERNAL CharAnimation(charName, animationName)

@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ae5bd7bdeba9f49bfbfce1cdfa4bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingMenu: {fileID: 0}
 --- !u!4 &818229959
 Transform:
   m_ObjectHideFlags: 0
@@ -1242,7 +1243,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4608f6ed6b9233d4ca4edd850fac27ca, type: 3}
     - target: {fileID: 6298521868394441132, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Name
-      value: LevelSatu
+      value: LevelOne
       objectReference: {fileID: 0}
     - target: {fileID: 6298521868394441133, guid: 2001e311eb2724043b19e59155db40c4, type: 3}
       propertyPath: m_Pivot.x
