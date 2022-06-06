@@ -29,5 +29,5 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 * [Memperbanyak pengawas]
 {ChangeScript("1_Argumen2_2")}
 
-* [Batal Bantah Argumen]
+* [Batal Menginterupsi]
 {ChangeScript("1_Argumen2_3")}

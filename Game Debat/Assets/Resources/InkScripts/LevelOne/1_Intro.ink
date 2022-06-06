@@ -12,14 +12,17 @@ EXTERNAL ChoiceTime(timeLeft)
 
 {Name("Moderator")}
 {Icon("mc1")}
-{ChangeTime(6)}
-Hari ini kita akan membahas tentang Penghapusan Ujian Nasional atau yang biasa disebut UN Sebagai Standar Kelulusan Siswa.
-
-{ChangeTime(4)}
-Ada dua pihak dalam debat kali ini yaitu pihak afirmasi atau pihak pro.
+{ChangeTime(5)}
+Hari ini kita akan membahas tentang Penghapusan Ujian Nasional atau yang biasa disebut UN 
 
 {ChangeTime(3)}
-dan pihak oposisi atau pihak kontra.
+Sebagai Standar Kelulusan Siswa.
+
+{ChangeTime(4)}
+Ada dua pihak dalam debat kali ini yaitu pihak afirmasi atau pihak pro
+
+{ChangeTime(3)}
+Dan pihak oposisi atau pihak kontra.
 
 {ChangeTime(4)}
 Silahkan kepada pihak afirmasi untuk memperkenalkan diri.

@@ -76,11 +76,11 @@ public class BezierFollow : MonoBehaviour
         }
         else if (transitionNumber == 2)
         {
-            scriptReader.nextScript("2_Transisi2");
+            scriptReader.nextScript("1_Transisi2");
         }
         else if (transitionNumber == 3)
         {
-            scriptReader.nextScript("3_Transisi3");
+            scriptReader.nextScript("1_Transisi3");
         }
     }
 

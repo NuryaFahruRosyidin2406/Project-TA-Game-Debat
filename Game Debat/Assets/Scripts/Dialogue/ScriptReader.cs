@@ -85,6 +85,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("ShowArgue", (bool argueStatus) => showArgue(argueStatus));
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
+        _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         DisplayNextLine();
     }
@@ -121,7 +122,7 @@ public class ScriptReader : MonoBehaviour
         }
 
         onChoice = true;
-        choiceTimer = 5f;
+        //choiceTimer = 5f;
     }
 
     Button CreateChoiceButton(string text)
@@ -222,6 +223,12 @@ public class ScriptReader : MonoBehaviour
         float setTimeLeft = time;
         TimeLeft = setTimeLeft;
         Debug.Log(TimeLeft + " Seconds");
+    }
+
+    public void choiceTime(float time) // function to change choice time in the inky
+    {
+        choiceTimer = time;
+        Debug.Log(choiceTimer + " Seconds");
     }
 
     public void nextScript(string name) // Load Next Script for the dialogue

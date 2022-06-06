@@ -21,7 +21,7 @@ Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang ter
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",5)}
 {ChangeTime(3)}
-Persiapan hanya akan menambah beban mental.
+Persiapan akan menambah beban mental.
 
 {ChangeTime(4)}
 Maka dari itu, penghapusan UN membuat beban psikologis siswa juga akan berkurang.

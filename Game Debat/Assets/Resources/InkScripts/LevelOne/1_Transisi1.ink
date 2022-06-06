@@ -27,5 +27,5 @@ Namun, tampaknya hal ini tidak lagi efektif.
 * [Membuat lingkungan sekolah bebas stress]
 {ChangeScript("1_Argumen1_2")}
 
-* [Batal Bantah Argumen]
+* [Batal Menginterupsi]
 {ChangeScript("1_Argumen1_3")}
