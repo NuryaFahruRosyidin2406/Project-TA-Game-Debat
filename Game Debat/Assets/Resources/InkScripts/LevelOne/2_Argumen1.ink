@@ -5,12 +5,13 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",5)}
 {ChangeTime(3)}
@@ -34,4 +35,37 @@ Hal ini tentu akan semakin memotivasi siswa untuk belajar lebih giat demi mendap
 {ChangeTime(5)}
 Dengan dihapusnya Ujian Nasional, siswa akan menjadi kurang termotivasi dan pada akhirnya menjadi malas belajar.
 
-{ChangeScript("2_Transisi2")}
+{Name("Fatih")}
+{Icon("fatih")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(4)}
+Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
+
+{Name("Pemain")}
+{Icon("pemain")}
+{ChoiceTime(1000)}
+{ChangeTime(2)}
+(Pilih untuk mempertahankan argumen!)
+
+* [UN Pemberi Motivasi Secara Nasional]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(3)}
+Motivasi bisa di dapatkan di mana saja. 
+
+{ChangeTime(5)}
+Namun, UN di sini dapat menjadi pemberi motivasi secara nasional dan menyeluruh sehingga efeknya akan lebih optimal untuk skala besar
+
+{ChangeScript("2_Transisi1")}
+
+* [UN Adalah Bentuk Motivasi Terbaik]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(5)}
+UN merupakan bentuk motivasi terbaik yang bisa di dapatkan siswa untuk meningkatkan semangat belajar
+{ChangeScript("2_Transisi1")}

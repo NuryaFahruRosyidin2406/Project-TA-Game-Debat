@@ -13,13 +13,18 @@ EXTERNAL TransNum(transNumber)
 {ShowArgue(false)}
 Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang. 
 
+{Name("Fatih")}
+{Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
 {ShowArgue(false)}
-Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang. 
+Baiklah, saya akan melanjutkan argumen saya.
+
+{ChangeTime(4)}
+Maka dari itu, penghapusan UN membuat beban psikologis siswa juga akan berkurang. 
 
 {ChangeTime(3)}
-Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
+Jadi, UN yang tidak efektif ini seharusnya dihapuskan saja.
 
 {ChangeScript("1_Argumen2")}

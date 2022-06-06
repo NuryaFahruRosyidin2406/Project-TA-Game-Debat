@@ -5,17 +5,18 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Player")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",1)}
-{ChangeTime(3)}
-Motivasi bisa di dapatkan di mana saja. 
+{CharExpression("chitose",0)}
+{ChoiceTime(1000)}
+{ChangeTime(4)}
+Pilih argumen yang ingin dipakai!
 
-{ChangeTime(5)}
-Namun, UN di sini dapat menjadi pemberi motivasi secara nasional dan menyeluruh sehingga efeknya akan lebih optimal untuk skala besar
-
-{ChangeScript("2_Argumen2")}
+* [Mengukur Potensi]
+{ChangeScript("2_Argumen3_1_2")}

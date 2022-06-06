@@ -5,12 +5,13 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",5)}
 {ChangeTime(5)}
@@ -34,4 +35,41 @@ Selain itu, Ujian Nasional juga masih tetap dibutuhkan.
 {ChangeTime(5)}
 Selain itu, Ujian nasional akan memotivasi siswa untuk lebih giat belajar demi mencapai cita-citanya, yaitu masuk ke sekolah favorit yang diidamkan.
 
-{ChangeScript("2_Transisi4")}
+{Name("Fatih")}
+{Icon("fatih")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(4)}
+Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
+
+{Name("Pemain")}
+{Icon("pemain")}
+{ChoiceTime(1000)}
+{ChangeTime(2)}
+Pilih untuk mempertahankan argumen! 
+
+* [UN Sebagai Sarana Persiapan]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(3)}
+Memang benar persiapan bisa dilakukan tanpa UN.
+
+{ChangeTime(5)}
+Namun dengan adanya UN, hal ini dapat menjadi media persiapan yang mematangkan potensi siswa untuk belajar dan mengukur diri mereka
+
+{ChangeScript("2_Transisi3")}
+
+* [UN Adalah Syarat Wajib]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(5)}
+Saya tidak setuju! Karena nyatanya UN adalah standar nilai yang digunakan untuk seleksi masuk sekolah baru
+
+{ChangeTime(4)}
+dan secara otomatis mempersiapkan UN sama dengan mempersiapkan Ujian Masuk
+
+{ChangeScript("2_Transisi3")}

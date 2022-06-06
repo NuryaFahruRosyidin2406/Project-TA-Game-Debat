@@ -5,17 +5,18 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Player")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",1)}
-{ChangeTime(3)}
-UTS dan UAS merupakan tolak ukur kemampuan belajar dalam satu semester. 
+{CharExpression("chitose",0)}
+{ChoiceTime(1000)}
+{ChangeTime(4)}
+Pilih argumen yang ingin dipakai!
 
-{ChangeTime(3)}
-Hal ini tidak bisa digunakan sebagai pengukur potensi diri
-
-{ChangeScript("2_Argumen3")}
+* [Mengukur Potensi]
+{ChangeScript("2_Argumen1_3_2")}

@@ -5,12 +5,13 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",5)}
 {ChangeTime(5)}
@@ -37,4 +38,41 @@ Hal ini diperlukan agar siswa tetap mau belajar dan berusaha, serta tidak bersik
 {ChangeTime(3)}
 Melalui Ujian Nasional, siswa juga dapat mengukur potensi dirinya.
 
-{ChangeScript("2_Transisi3")}
+{Name("Fatih")}
+{Icon("fatih")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(4)}
+Potensi dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
+
+{Name("Pemain")}
+{Icon("pemain")}
+{ChoiceTime(1000)}
+{ChangeTime(2)}
+(Pilih untuk mempertahankan argumen!) 
+
+* [UTS dan UAS Tidak Berstandar Nasional]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(3)}
+UTS dan UAS di setiap sekolah akan berbeda beda.
+
+{ChangeTime(3)}
+Sehingga tidak dapat menjadi jaminan sebagai standar nasional yang baik
+
+{ChangeScript("2_Transisi2")}
+
+* [UTS dan UAS Tidak Dapat Digunakan]
+{Name("Pemain")}
+{Icon("pemain")}
+{CharAnimation("chitose","AgreeWithYou")}
+{CharExpression("chitose",1)}
+{ChangeTime(3)}
+UTS dan UAS merupakan tolak ukur kemampuan belajar dalam satu semester. 
+
+{ChangeTime(3)}
+Hal ini tidak bisa digunakan sebagai pengukur potensi diri
+
+{ChangeScript("2_Transisi2")}

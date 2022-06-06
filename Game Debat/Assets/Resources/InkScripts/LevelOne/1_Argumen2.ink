@@ -10,13 +10,13 @@ EXTERNAL TransNum(transNumber)
 {ChangeTime(0)}
 Obsesi mendapatkan nilai Ujian Nasional yang tinggi demi masuk ke sekolah favorit telah menuntun para siswa untuk berbuat curang.
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Fatih")}
+{Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
-{ChangeTime(5)}
+{ChangeTime(7)}
 {TransNum(2)}
-Obsesi mendapatkan nilai Ujian Nasional yang tinggi demi masuk ke sekolah favorit telah menuntun para siswa untuk berbuat curang.
+Obsesi mendapatkan nilai UN yang tinggi demi masuk ke sekolah favorit menuntun siswa untuk berbuat curang.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",6)}
@@ -24,14 +24,17 @@ Obsesi mendapatkan nilai Ujian Nasional yang tinggi demi masuk ke sekolah favori
 Hal ini tentu sudah bukan rahasia lagi. 
 
 {ChangeTime(4)}
-Beberapa siswa giat mengikuti bimbingan belajar di lembaga-lembaga tertentu untuk mendapatkan kunci jawaban dari Ujian Nasional. 
+Beberapa siswa giat mengikuti bimbingan belajar di lembaga-lembaga tertentu.
+
+{ChangeTime(4)}
+Hal itu dilakukan oleh mereka untuk mendapatkan kunci jawaban dari Ujian Nasional. 
 
 {ChangeTime(3)}
 Tak jarang mereka rela untuk membayar mahal demi kunci jawaban tersebut. 
 
 {ChangeTime(4)}
 {ShowArgue(true)}
-Ketika Ujian Nasional berlangsung, tak jarang para siswa bekerja sama dengan saling menyontek. 
+Ketika UN berlangsung, tak jarang para siswa saling bekerja sama dengan saling menyontek. 
 
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
@@ -40,6 +43,6 @@ Ketika Ujian Nasional berlangsung, tak jarang para siswa bekerja sama dengan sal
 Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban. 
 
 {ChangeTime(4)}
-Apakah Anda masih yakin bahwa Ujian Nasional masih efektif untuk menentukan kelulusan seorang siswa?
+Apakah Anda masih yakin bahwa UN masih efektif untuk menentukan kelulusan seorang siswa?
 
 {ChangeScript("1_Argumen3")}

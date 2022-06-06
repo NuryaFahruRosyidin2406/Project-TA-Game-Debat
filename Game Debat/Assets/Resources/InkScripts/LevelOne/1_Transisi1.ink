@@ -5,19 +5,21 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Fatih")}
+{Icon("fatih")}
 {CharExpression("chitose",6)}
 {ChangeTime(0)}
 Namun, tampaknya hal ini tidak lagi efektif. 
 
-{Name(". . .")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharExpression("chitose",6)}
+{ChoiceTime(10)}
 {ChangeTime(2)}
 {ShowArgue(false)}
-Pilih argumen untuk membantah argumen lawan!
+(Pilih argumen sanggahan untuk membantah argumen lawan!)
 
 * [Memberikan persiapan UN]
 {ChangeScript("1_Argumen1_1")}

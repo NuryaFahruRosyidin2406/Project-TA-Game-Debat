@@ -1,5 +1,3 @@
-Selamat Pagi semuanya, sekarang saya akan menjelaskan mengapa saya setuju bahwa Ujian Nasional harus dihapuskan sebagai standar kelulusan
-
 EXTERNAL Name(charName)
 EXTERNAL Icon(charName)
 EXTERNAL CharAnimation(charName, animationName)
@@ -9,12 +7,21 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 
-{Name("Ray")}
-{Icon("ray")}
+{ChangeTime(0)}
+Ujian Nasional sudah sejak lama dijadikan standar kelulusan.
+
+{Name("Fatih")}
+{Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
-Ujian Nasional sudah sejak lama dijadikan standar kelulusan dari satu jenjang pendidikan ke jenjang pendidikan yang lebih tinggi.
+Terima kasih Moderator, saya akan menyampaikan argumen saya.
+
+{ChangeTime(4)}
+UN sudah sejak lama dijadikan standar kelulusan.
+
+{ChangeTime(4)}
+Yang digunakan dari satu jenjang pendidikan ke jenjang pendidikan yang lebih tinggi.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",6)}
@@ -33,9 +40,9 @@ Salah satu dampak buruk Ujian Nasional adalah menambah beban siswa.
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
 {ShowArgue(false)}
-Maka dari itu, dengan dihapuskannya Ujian Nasional, beban psikologis siswa juga akan berkurang. 
+Maka dari itu, penghapusan UN membuat beban psikologis siswa juga akan berkurang.
 
 {ChangeTime(3)}
-Jadi, Ujian Nasional yang tidak efektif ini seharusnya dihapuskan saja.
+Jadi, UN yang tidak efektif ini seharusnya dihapuskan saja.
 
 {ChangeScript("1_Argumen2")}

@@ -5,23 +5,21 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name(". . .")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
+{ChoiceTime(1000)}
 {ChangeTime(4)}
-{ShowArgue(false)}
 Pilih argumen yang ingin dipakai!
 
-* [Motivasi Belajar]
-{ChangeScript("2_Argumen1")}
-
 * [Mengukur Potensi]
-{ChangeScript("2_Argumen2")}
+{ChangeScript("2_Argumen1_2")}
 
 * [Persiapan Seleksi Sekolah/Kuliah]
-{ChangeScript("2_Argumen3")}
+{ChangeScript("2_Argumen1_3")}

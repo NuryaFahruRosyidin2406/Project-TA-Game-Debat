@@ -5,25 +5,21 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
 Test
 
-{Name("Player")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",1)}
+{CharExpression("chitose",0)}
+{ChoiceTime(1000)}
 {ChangeTime(4)}
-Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
+Pilih argumen yang ingin dipakai!
 
-{Name(". . .")}
-{Icon("ray")}
-{CharExpression("chitose",6)}
-{ChangeTime(2)}
-{ShowArgue(false)}
-Pilih untuk mempertahankan argumen! 
+* [Motivasi Belajar]
+{ChangeScript("2_Argumen2_1")}
 
-* [UN Pemberi Motivasi Secara Nasional]
-{ChangeScript("2_Argumen1_1")}
-
-* [UN Adalah Bentuk Motivasi Terbaik]
-{ChangeScript("2_Argumen1_2")}
+* [Persiapan Seleksi Sekolah/Kuliah]
+{ChangeScript("2_Argumen2_3")}

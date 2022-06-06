@@ -5,21 +5,23 @@ EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
+EXTERNAL ChoiceTime(timeLeft)
 
-{Name("Ray")}
-{Icon("ray")}
+{Name("Fatih")}
+{Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(0)}
 Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif untuk menentukan kelulusan seorang siswa?
 
-{Name(". . .")}
-{Icon("ray")}
+{Name("Pemain")}
+{Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
+{ChoiceTime(10)}
 {ChangeTime(4)}
 {ShowArgue(false)}
-Pilih argumen untuk membantah argumen lawan!
+(Pilih argumen sanggahan untuk membantah argumen lawan!)
 
 * [Tingkatkan keamanan sistem]
 {ChangeScript("1_Argumen2_1")}
