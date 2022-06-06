@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pindahPS : MonoBehaviour
 {
@@ -19,6 +19,11 @@ public class pindahPS : MonoBehaviour
     public void mgsoalsatuClicked()
     {
         Timersettings.mulaihm();
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     // Update is called once per frame

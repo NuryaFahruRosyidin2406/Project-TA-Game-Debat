@@ -7,15 +7,20 @@ public class timersettings : MonoBehaviour
 {
     public int countdownTime;
     public int cdTimereturn;
+    public int scoremax = 0;
     public float Waktu = 100;
     public float counterWaktu = 100;
     float s;
     public bool GameAktif = false;
     public GameObject PanelMulai;
     public GameObject PanelHitungmundur;
-    public GameObject PanelWadahUI;
+    public GameObject GOTimer;
+    public GameObject GOSkor;
+    //public GameObject PanelWadahUI;
     public GameObject Panelmg2S1;
     public GameObject PanelSelesaimg2;
+    public GameObject boxTimer;
+    public GameObject boxSkor;
     public Text countdownDisplay;
     public Text TextTimer;
 
@@ -43,9 +48,8 @@ public class timersettings : MonoBehaviour
     public void waktuberhenti()
     {
         GameAktif = false;
-        TextTimer.gameObject.SetActive(false);
-        //skordrag.score.gameObject.SetActive(false);
-        //countdownDisplay.gameObject.SetActive(false);
+        boxTimer.gameObject.SetActive(false);
+        boxSkor.gameObject.SetActive(false);
         Waktu = 0;
     }
 
@@ -53,9 +57,11 @@ public class timersettings : MonoBehaviour
     {
         PanelMulai.SetActive(false);
         PanelHitungmundur.SetActive(true);
-        PanelWadahUI.SetActive(true);
+        //PanelWadahUI.SetActive(true);
         Panelmg2S1.SetActive(true);
         StartCoroutine(CountdownToStart());
+        GOTimer.gameObject.SetActive(true);
+        GOSkor.gameObject.SetActive(true);
     }
 
     // Waktu hitung mundur
