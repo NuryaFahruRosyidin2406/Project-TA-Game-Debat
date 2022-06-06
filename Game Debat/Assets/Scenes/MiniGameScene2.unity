@@ -905,7 +905,6 @@ MonoBehaviour:
   cdTimereturn: 5
   Waktu: 60
   counterWaktu: 60
-  s: 0
   GameAktif: 0
   PanelMulai: {fileID: 1599756374}
   PanelHitungmundur: {fileID: 1009748009}
