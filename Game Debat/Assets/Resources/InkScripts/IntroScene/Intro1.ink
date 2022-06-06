@@ -57,7 +57,7 @@ Kalo gitu kita bisa langsung mulai
 {ChangeTime(10)}
 Ayo ikut aku ke ruang debat
 
-{ChangeScene("StartGame")}
+{ChangeScene("LevelSelection")}
 
 * [Tidak. Bisa tolong ajari aku.]
 

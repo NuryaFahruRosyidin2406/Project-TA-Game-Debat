@@ -12,45 +12,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22818f2c174f41a428c379d801aa5721, type: 3}
   m_Name: LevelOnePuzzle1
   m_EditorClassIdentifier: 
-  timeInSecods: 10
-  Columns: 5
-  Rows: 5
+  timeInSecods: 180
+  Columns: 6
+  Rows: 10
   Board:
-  - Size: 5
+  - Size: 10
     Row:
-    - M
-    - G
-    - I
-    - V
-    - I
-  - Size: 5
-    Row:
-    - O
-    - A
     - A
     - V
+    - K
+    - S
+    - F
+    - U
+    - J
+    - I
+    - A
     - N
-  - Size: 5
+  - Size: 10
     Row:
-    - R
+    - P
+    - S
+    - I
+    - K
     - O
     - L
-    - E
-    - D
-  - Size: 5
-    Row:
-    - B
-    - C
-    - E
-    - A
     - O
-  - Size: 5
-    Row:
+    - G
     - I
+    - S
+  - Size: 10
+    Row:
+    - H
     - A
-    - J
-    - J
+    - N
+    - T
+    - K
+    - I
+    - F
+    - Y
+    - K
+    - I
+  - Size: 10
+    Row:
+    - C
+    - P
+    - A
+    - C
+    - U
+    - R
+    - A
+    - N
+    - G
+    - P
+  - Size: 10
+    Row:
+    - P
+    - P
+    - N
+    - A
+    - S
+    - I
+    - O
+    - N
+    - A
+    - L
+  - Size: 10
+    Row:
+    - M
+    - O
+    - T
+    - I
+    - V
+    - A
+    - S
+    - I
+    - O
     - Y
   SearchWords:
-  - Word: INDO
-  - Word: MALAY
+  - Word: PSIKOLOGIS
+  - Word: CURANG
+  - Word: FOKUS
+  - Word: MOTIVASI
+  - Word: NASIONAL
+  - Word: UJIAN

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public GameObject settingMenu;
+    public GameObject soundOn;
+    public GameObject soundOff;
     
     public void LoadScene(string sceneName)
     {
@@ -25,5 +27,17 @@ public class ChangeScene : MonoBehaviour
     public void CloseSettingMenu()
     {
         settingMenu.SetActive(false);
+    }
+
+    public void TurnOnSound()
+    {
+        soundOn.SetActive(true);
+        soundOff.SetActive(false);
+    }
+
+    public void TurnOffSound()
+    {
+        soundOn.SetActive(false);
+        soundOff.SetActive(true);
     }
 }
