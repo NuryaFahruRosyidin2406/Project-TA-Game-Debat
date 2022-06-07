@@ -16,7 +16,9 @@ public class BezierFollow : MonoBehaviour
     private Vector2 objectPosition;
 
     [SerializeField] public float speedModifier;
-    
+
+    private Vector3 scaleChange;
+
     private bool coroutineAllowed;
     public string popUp;
     private bool showArgue;
@@ -36,6 +38,8 @@ public class BezierFollow : MonoBehaviour
         speedModifier = Random.Range(0.2f, 1.5f);
         coroutineAllowed = true;
         buttonImage = GetComponent<Image>();
+        transform.localScale = new Vector3(0f, 0f, 0f);
+        Time.timeScale = 0f;
     }
 
     // Update is called once per frame
@@ -51,12 +55,30 @@ public class BezierFollow : MonoBehaviour
 
         if (showArgue == true)
         {
-            buttonImage.enabled = true;
+            //buttonImage.enabled = true;
+            if(transform.localScale.x < 1f && transform.localScale.y < 1f && transform.lossyScale.z < 1f)
+            {
+                transform.localScale += scaleChange = new Vector3(0.01f, 0.01f, 0.01f); ;
+            }
+            else
+            {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            }
+            
             speedModifier = 0;
         }
         else if (showArgue == false)
         {
-            buttonImage.enabled = false;
+            //buttonImage.enabled = false;
+            if (transform.localScale.x > 0f && transform.localScale.y > 0f && transform.lossyScale.z > 0f)
+            {
+                transform.localScale -= scaleChange = new Vector3(1f, 1f, 1f); ;
+            }
+            else
+            {
+                transform.localScale = new Vector3(0f, 0f, 0f);
+            }
+
             if (speedModifier <= 0)
             {
                 speedModifier = Random.Range(0.2f, 1.5f);

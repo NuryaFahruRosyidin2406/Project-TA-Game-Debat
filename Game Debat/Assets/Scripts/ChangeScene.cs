@@ -10,6 +10,13 @@ public class ChangeScene : MonoBehaviour
     public GameObject creditMenu;
     public GameObject hintMenu;
     public GameObject pauseMenu;
+    public GameObject keywordMenu;
+    public GameObject key1;
+    public GameObject key2;
+    public GameObject key3;
+    public GameObject key4;
+    public GameObject key5;
+    public GameObject key6;
 
     public GameObject soundOn;
     public GameObject soundOff;
@@ -45,6 +52,28 @@ public class ChangeScene : MonoBehaviour
         Application.Quit();
     }
 
+    public void OpenKey(GameObject keyName)
+    {
+        keyName.SetActive(true);
+    }
+
+    public void CloseKey(GameObject keyName)
+    {
+        keyName.SetActive(false);
+    }
+
+    public void OpenKeywordtMenu()
+    {
+        keywordMenu.SetActive(true);
+        // Time.timeScale = 0f;
+    }
+
+    public void ClosedKeywordtMenu()
+    {
+        keywordMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
     public void OpenHintMenu()
     {
         hintMenu.SetActive(true);
@@ -53,6 +82,7 @@ public class ChangeScene : MonoBehaviour
     public void CloseHintMenu()
     {
         hintMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void OpenCreditMenu()
