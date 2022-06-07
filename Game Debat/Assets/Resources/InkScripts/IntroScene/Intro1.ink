@@ -35,10 +35,12 @@ Ngomong ngomong, apakah kamu familiar dengan cara debat di sini?
 {ChangeTime(10)}
 Jika tidak, aku dengan senang hati akan mengajarimu 
 
+
+
 * [Iya. Aku sudah paham dengan cara debat di sini.]
 
 {Name("Pemain")}
-{Icon("player")}
+{Icon("pemain")}
 {ChangeTime(10)}
 Iya. Aku sudah sangat paham tentang teknik dan cara debat disini.
 
@@ -62,7 +64,7 @@ Ayo ikut aku ke ruang debat
 * [Tidak. Bisa tolong ajari aku.]
 
 {Name("Pemain")}
-{Icon("player")}
+{Icon("pemain")}
 {ChangeTime(10)}
 Aku baru disini. Bisa ajari aku cara debat?
 
@@ -76,3 +78,29 @@ Tentu saja!
 {CharExpression("chitose",0)}
 {ChangeTime(10)}
 Sekarang ayo ikut aku ke halaman sekolah
+
+* [Diam]
+
+{Name("Pemain")}
+{Icon("pemain")}
+{ChangeTime(10)}
+. . .
+
+{Name("Pemain")}
+{Icon("pemain")}
+{ChangeTime(10)}
+. . . . . .
+
+{Name("Fatih")}
+{Icon("fatih")}
+{ChangeTime(10)}
+{CharExpression("chitose",1)}
+O-okay... 
+
+{Name("Fatih")}
+{Icon("fatih")}
+{ChangeTime(10)}
+{CharAnimation("chitose","GivinganArgument")}
+Aku anggap kau sudah paham. Kalau begitu, ayo ikut aku ke halaman sekolah.
+
+{ChangeScene("LevelSelection")}

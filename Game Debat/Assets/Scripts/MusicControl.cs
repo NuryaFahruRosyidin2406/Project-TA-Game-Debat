@@ -9,7 +9,7 @@ public class MusicControl : MonoBehaviour
 
     private void Awake() // Runs before void Start()
     {
-        DontDestroyOnLoad(this.gameObject); // Don't destroy this gameObject when loading different scenes
+        //DontDestroyOnLoad(this.gameObject); // Don't destroy this gameObject when loading different scenes
 
         if (instance == null) // If the MusicControlScript instance variable is null
         {
