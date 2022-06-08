@@ -24,3 +24,6 @@ Dapat saya simpulkan bahwa Ujian Nasional tidak dapat dijadikan acuan kelulusan 
 
 * [Hasil lebih penting daripada proses]
 {ChangeScript("1_Argumen3_2")}
+
+* [Batal Menginterupsi]
+{ChangeScript("1_Argumen3_3")}
