@@ -28,6 +28,7 @@ public class mgduasusunkata : MonoBehaviour
     public AudioClip buttonDrop;
 
     public timersettings Timersettings;
+    public skordrag Skordrag;
 
     // Start is called before the first frame update
     void Start()
@@ -1858,12 +1859,17 @@ public class mgduasusunkata : MonoBehaviour
         {
             feed_benar.SetActive(false);
             feed_benar.SetActive(true);
-            skordrag.scoreValue += 10;
+            Skordrag.scoremgdua();
+            //skordrag.scoreValue += 10;
             kataditemukan();
             source.clip = correct[Random.Range(0, correct.Length)];
             source.Play();
             StartCoroutine(LoadNextPanel());
-            if (skordrag.scoreValue == Timersettings.scoremax)
+            /*if (skordrag.scoreValue == Timersettings.scoremax)
+            {
+                Timersettings.waktuberhenti();
+            }*/
+            if (Skordrag.scorevaluemg2 == Timersettings.scoremax)
             {
                 Timersettings.waktuberhenti();
             }
