@@ -7,12 +7,15 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
+Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
 
 {Name("Moderator")}
 {Icon("mc1")}
 {ChangeTime(4)}
+{DebateStatus(false)}
 Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
 
 {ChangeTime(5)}
@@ -22,6 +25,7 @@ Selanjutnya, dipersilahkan kepada pihak oposisi untuk menyampaikan argumennya.
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(0)}
+{DebateStatus(true)}
 (Pilih argumen yang ingin dipakai!)
 
 * [Motivasi Belajar]

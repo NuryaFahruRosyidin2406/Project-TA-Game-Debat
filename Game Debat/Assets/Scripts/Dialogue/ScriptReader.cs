@@ -28,6 +28,8 @@ public class ScriptReader : MonoBehaviour
     public bool onChoice = false;
     public float choiceTimer = 4f;
 
+    public bool debateRun;
+
     public bool argumenShow;
     public int transitionNumber;
 
@@ -85,6 +87,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("ShowArgue", (bool argueStatus) => showArgue(argueStatus));
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
+        _StoryScript.BindExternalFunction("DebateStatus", (bool debateStatus) => doingDebate(debateStatus)); // Change debate status
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         DisplayNextLine();
@@ -218,6 +221,12 @@ public class ScriptReader : MonoBehaviour
         Debug.Log("Transision number: " + transitionNumber);
     }
 
+    public void doingDebate(bool status)
+    {
+        debateRun = status;
+        Debug.Log("Debate Status " + debateRun);
+    }
+    
     public void changeTime(float time) // function to change time in the inky
     {
         float setTimeLeft = time;

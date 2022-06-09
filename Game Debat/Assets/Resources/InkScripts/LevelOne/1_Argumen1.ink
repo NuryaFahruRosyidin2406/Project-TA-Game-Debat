@@ -6,6 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
 Ujian Nasional sudah sejak lama dijadikan standar kelulusan.
@@ -15,6 +16,7 @@ Ujian Nasional sudah sejak lama dijadikan standar kelulusan.
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
+{DebateStatus(true)}
 Terima kasih Moderator, saya akan menyampaikan argumen saya.
 
 {ChangeTime(4)}
