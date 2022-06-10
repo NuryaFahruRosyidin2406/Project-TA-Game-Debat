@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MainGameTimer : MonoBehaviour
 {
     ScriptReader scriptReader;
-
     [SerializeField] GameObject dialogueManager;
 
     public Text timerText;
@@ -73,6 +72,8 @@ public class MainGameTimer : MonoBehaviour
             }
             else
             {
+                dialogueManager.GetComponent<ScriptReader>().nextScript("3_TimesUp"); // change Script to TimesUp
+                dialogueManager.GetComponent<ScriptReader>().RefreshChoiceView(); // Delete choice when times up
                 _debateStatus = false;
                 _stopTimer = true;
                 _timeOut = true;

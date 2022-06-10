@@ -29,6 +29,8 @@ public class ScriptReader : MonoBehaviour
     public float choiceTimer = 4f;
 
     public bool debateRun;
+    public bool scoreShow;
+    public int debateScore;
 
     public bool argumenShow;
     public int transitionNumber;
@@ -88,6 +90,8 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
         _StoryScript.BindExternalFunction("DebateStatus", (bool debateStatus) => doingDebate(debateStatus)); // Change debate status
+        _StoryScript.BindExternalFunction("AddDebateScore", (int debateScore) => addDebateScore(debateScore)); // Add or Reduce Player Score
+        _StoryScript.BindExternalFunction("ShowScore", (bool scoreStatus) => showScore(scoreStatus)); // Change status of showing the score
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         DisplayNextLine();
@@ -157,7 +161,7 @@ public class ScriptReader : MonoBehaviour
         DisplayNextLine();
     }
 
-    void RefreshChoiceView()
+    public void RefreshChoiceView()
     {
         if(choiceHolder != null)
         {
@@ -225,6 +229,18 @@ public class ScriptReader : MonoBehaviour
     {
         debateRun = status;
         Debug.Log("Debate Status " + debateRun);
+    }
+
+    public void showScore(bool status)
+    {
+        scoreShow = status;
+        Debug.Log("Score Ditampilan: " + scoreShow);
+    }
+
+    public void addDebateScore(int score) // Add Player Score
+    {
+        debateScore += score;
+        Debug.Log("Score pemain saat ini " + debateScore);
     }
     
     public void changeTime(float time) // function to change time in the inky

@@ -5,28 +5,52 @@ using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
+    ScriptReader scriptReader;
+
+    public GameObject displayMenu;
+    [SerializeField] GameObject dialogueManager;
+
     public Text myScoreText;
     private int scoreNum;
-    private int duplicate;
 
-    // Start is called before the first frame update
+    private bool showScore;
+    public float timeToCountScore = 3f;
+
+    void Awake()
+    {
+        scriptReader = dialogueManager.GetComponent<ScriptReader>();
+    }
+
     void Start()
     {
         scoreNum = 0;
         myScoreText.text = "" + scoreNum;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        duplicate = GameObject.FindGameObjectsWithTag("Answer").Length;
-        if (duplicate >= 1)
+        if (showScore)
         {
-            duplicate = GameObject.FindGameObjectsWithTag("Answer").Length;
-            if (duplicate == 0)
+            OpenMenu();
+            if(timeToCountScore >= 0)
             {
-                scoreNum += 1;
+                myScoreText.text = "" + Random.Range(0, 100);
+                timeToCountScore -= Time.deltaTime;
+            }
+            else
+            {
+                myScoreText.text = "" + scoreNum;
             }
         }
+        else
+        {
+            scoreNum = scriptReader.debateScore;
+            showScore = scriptReader.scoreShow;
+        }
+    }
+
+    public void OpenMenu()
+    {
+        displayMenu.SetActive(true);
     }
 }
