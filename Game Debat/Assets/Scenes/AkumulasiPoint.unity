@@ -481,7 +481,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200110428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1369376845}
+        m_TargetAssemblyTypeName: GantiScene, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200110428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,7 +1703,7 @@ GameObject:
   - component: {fileID: 1241072116}
   - component: {fileID: 1241072115}
   m_Layer: 5
-  m_Name: Textsvaluest
+  m_Name: Textsvaluesda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,8 +1934,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1369376844}
   - component: {fileID: 1369376845}
+  - component: {fileID: 1369376846}
   m_Layer: 0
-  m_Name: SceneController
+  m_Name: ManagerCode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1955,6 +1968,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baee4b2ba81ff0419f2a13df999651b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1369376846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369376843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d221643022d4c514ea0aa8fed8348a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorelevelsatu: {fileID: 1751165539}
+  highscorelevelsatu: {fileID: 1508985523}
+  scoreleveldua: {fileID: 1747944045}
+  highscoreleveldua: {fileID: 1241072115}
 --- !u!1 &1390174237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,7 +2338,7 @@ GameObject:
   - component: {fileID: 1747944046}
   - component: {fileID: 1747944045}
   m_Layer: 5
-  m_Name: Texthsvaluest
+  m_Name: Texthsvalueda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

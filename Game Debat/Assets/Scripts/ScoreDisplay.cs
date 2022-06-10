@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    Text scorelevelsatu;
-    Text highscorelevelsatu;
-    /*Text scoreleveldua;
-    Text highscoreleveldua;
-    Text scoreleveltiga;
-    Text highscoreleveltiga;*/
+    public Text scorelevelsatu;
+    public Text highscorelevelsatu;
+    public Text scoreleveldua;
+    public Text highscoreleveldua;
 
     // Start is called before the first frame update
     void Start()
