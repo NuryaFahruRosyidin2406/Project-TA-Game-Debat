@@ -17,10 +17,10 @@ Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
 {Icon("mc1")}
 {ChangeTime(4)}
 {DebateStatus(false)}
-Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
+Terimakasih kepada pihak afirmasi untuk argumennya.
 
 {ChangeTime(5)}
-Selanjutnya, dipersilahkan kepada pihak oposisi untuk menyampaikan argumennya.
+Selanjutnya, diberikan waktu kepada pihak oposisi untuk menyampaikan argumennya.
 
 {Name("Pemain")}
 {Icon("pemain")}

@@ -6,6 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Test
@@ -15,11 +16,11 @@ Test
 {ChangeTime(5)}
 Saya masih menganggap Ujian Nasional menjadi penentu kelulusan yang efektif terlepas dari kecurangan yang terjadi.
 
-{ChangeTime(4)}
-Apabila bicara tentang kecurangan, menurut saya di mana-mana pasti ada kecurangan.
+{ChangeTime(5)}
+Apabila berbicara tentang kecurangan, menurut saya di mana-mana pasti akan ada kecurangan.
 
 {ChangeTime(3)}
-Akan tetapi, bukan berarti hal tersebut tidak dapat diminimalisasi. 
+Akan tetapi, bukan berarti hal tersebut tidak dapat di minimalisasi. 
 
 {ChangeTime(5)}
 Pemerintah telah menggunakan Ujian Nasional berbasis komputer yang dapat menekan angka kecurangan tersebut.
@@ -38,7 +39,7 @@ Melalui Ujian Nasional, siswa juga dapat mengukur potensi dirinya.
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(4)}
-Potensi dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
+Potensi ini dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 
 {Name("Pemain")}
 {Icon("pemain")}
@@ -47,6 +48,7 @@ Potensi dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 (Pilih untuk mempertahankan argumen!) 
 
 * [UTS dan UAS Tidak Berstandar Nasional]
+{AddDebateScore(5)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -57,7 +59,10 @@ UTS dan UAS di setiap sekolah akan berbeda beda.
 {ChangeTime(3)}
 Sehingga tidak dapat menjadi jaminan sebagai standar nasional yang baik
 
+{ChangeScript("3_Penutup")}
+
 * [UTS dan UAS Tidak Dapat Digunakan]
+{AddDebateScore(-2)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -67,3 +72,5 @@ UTS dan UAS merupakan tolak ukur kemampuan belajar dalam satu semester.
 
 {ChangeTime(3)}
 Hal ini tidak bisa digunakan sebagai pengukur potensi diri
+
+{ChangeScript("3_Penutup")}

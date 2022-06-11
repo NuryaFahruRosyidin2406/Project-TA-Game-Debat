@@ -6,6 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Test
@@ -43,6 +44,7 @@ Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 (Pilih untuk mempertahankan argumen!)
 
 * [UN Pemberi Motivasi Secara Nasional]
+{AddDebateScore(5)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -59,10 +61,12 @@ Sehingga efeknya akan lebih optimal untuk skala besar.
 {ChangeScript("2_Transisi1")}
 
 * [UN Adalah Bentuk Motivasi Terbaik]
+{AddDebateScore(-2)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
 {ChangeTime(5)}
 UN merupakan bentuk motivasi terbaik yang bisa di dapatkan siswa untuk meningkatkan semangat belajar.
+
 {ChangeScript("2_Transisi1")}

@@ -6,6 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Test
@@ -24,7 +25,6 @@ Ada target yang ingin mereka capai, sehingga mereka akan berusaha dengan keras.
 {ChangeTime(5)}
 Apalagi beberapa sekolah menjadikan nilai Ujian Nasional sebagai penentu Penerimaan Peserta Didik Baru.
 
-{ChangeTime(5)}
 Hal ini tentu akan semakin memotivasi siswa untuk belajar lebih giat demi mendapatkan nilai Ujian Nasional yang tinggi. 
 
 {ChangeTime(5)}
@@ -33,7 +33,7 @@ Dengan dihapusnya Ujian Nasional, siswa akan menjadi kurang termotivasi dan pada
 {Name("Fatih")}
 {Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
-{CharExpression("chitose",0)}
+{CharExpression("chitose",1)}
 {ChangeTime(4)}
 Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 
@@ -44,6 +44,7 @@ Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 (Pilih untuk mempertahankan argumen!)
 
 * [UN Pemberi Motivasi Secara Nasional]
+{AddDebateScore(5)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -51,13 +52,21 @@ Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 {ChangeTime(3)}
 Motivasi bisa di dapatkan di mana saja. 
 
-{ChangeTime(5)}
-Namun, UN di sini dapat menjadi pemberi motivasi secara nasional dan menyeluruh sehingga efeknya akan lebih optimal untuk skala besar
+{ChangeTime(4)}
+Namun, UN di sini dapat menjadi pemberi motivasi secara nasional dan menyeluruh 
+
+{ChangeTime(4)}
+Sehingga efeknya akan lebih optimal untuk skala besar.
+
+{ChangeScript("3_Penutup")}
 
 * [UN Adalah Bentuk Motivasi Terbaik]
+{AddDebateScore(-2)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
 {ChangeTime(5)}
 UN merupakan bentuk motivasi terbaik yang bisa di dapatkan siswa untuk meningkatkan semangat belajar
+
+{ChangeScript("3_Penutup")}

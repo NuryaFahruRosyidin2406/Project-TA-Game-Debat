@@ -15,9 +15,9 @@ Terima kasih kepada pihak oposisi yang telah menyampaikan argumennya.
 {Name("Moderator")}
 {Icon("mc1")}
 {ChangeTime(4)}
-Terima kasih kepada pihak oposisi yang telah menyampaikan argumennya.
+Terima kasih kepada pihak oposisi untuk argumennya.
 
 {ChangeTime(4)}
-Selanjutnya, dipersilahkan kepada juri untuk memberikan penilaiannya.
+Selanjutnya, diberikan waktu kepada juri untuk memberikan penilaiannya.
 
 {ShowScore(true)}

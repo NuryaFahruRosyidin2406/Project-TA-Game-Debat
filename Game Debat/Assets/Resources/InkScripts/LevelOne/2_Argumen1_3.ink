@@ -6,6 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Test
@@ -13,22 +14,25 @@ Test
 {Name("Pemain")}
 {Icon("pemain")}
 {ChangeTime(5)}
-Universitas di Indonesia memiliki kriteria tertentu terhadap calon mahasiswa, salah satunya nilai ujian nasional.
+Tentunya universitas di negara ini memiliki kriteria tertentu kepada calon mahasiswa, salah satunya nilai UN.
 
 {ChangeTime(5)}
-Dalam hal ini, nilai ujian nasional bermanfaat dalam seleksi masuk jenjang pendidikan yang lebih tinggi atau berikutnya.
+Dalam hal ini, nilai UN memiliki manfaat dalam seleksi masuk jenjang pendidikan yang lebih tinggi atau berikutnya.
 
 {ChangeTime(3)}
-Akan tetapi, bukan berarti hal tersebut tidak dapat diminimalisasi. 
+Akan tetapi, bukan berarti hal tersebut tidak dapat untuk diminimalisasi. 
 
-{ChangeTime(6)}
-Ujian Nasional masih sangat penting terutama di Indonesia karena Ujian Nasional dapat menjadi standar nasional yang seragam antara satu sekolah dengan sekolah lainnya.
-
-{ChangeTime(3)}
-Selain itu, Ujian Nasional juga masih tetap dibutuhkan. 
+{ChangeTime(4)}
+Ujian Nasional masih sangat penting terutama di Indonesia.
 
 {ChangeTime(5)}
-Selain itu, Ujian nasional akan memotivasi siswa untuk lebih giat belajar demi mencapai cita-citanya, yaitu masuk ke sekolah favorit yang diidamkan.
+UN dapat menjadi standar nasional yang seragam antara satu sekolah dengan sekolah lainnya.
+
+{ChangeTime(3)}
+Selain itu, Ujian nasional akan memotivasi siswa untuk lebih giat belajar
+
+{ChangeTime(5)}
+Demi mencapai cita-citanya, yaitu masuk ke sekolah favorit yang diidamkan.
 
 {Name("Fatih")}
 {Icon("fatih")}
@@ -44,6 +48,7 @@ Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
 Pilih untuk mempertahankan argumen! 
 
 * [UN Sebagai Sarana Persiapan]
+{AddDebateScore(5)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -52,11 +57,12 @@ Pilih untuk mempertahankan argumen!
 Memang benar persiapan bisa dilakukan tanpa UN.
 
 {ChangeTime(5)}
-Namun dengan adanya UN, hal ini dapat menjadi media persiapan yang mematangkan potensi siswa untuk belajar dan mengukur diri mereka
+UN dapat menjadi media persiapan yang mematangkan potensi untuk belajar dan mengukur diri.
 
 {ChangeScript("2_Transisi1_3")}
 
 * [UN Adalah Syarat Wajib]
+{AddDebateScore(-5)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -65,6 +71,6 @@ Namun dengan adanya UN, hal ini dapat menjadi media persiapan yang mematangkan p
 Saya tidak setuju! Karena nyatanya UN adalah standar nilai yang digunakan untuk seleksi masuk sekolah baru
 
 {ChangeTime(4)}
-dan secara otomatis mempersiapkan UN sama dengan mempersiapkan Ujian Masuk
+Dan secara otomatis persiapan UN sama dengan persiapan Ujian Masuk.
 
 {ChangeScript("2_Transisi1_3")}
