@@ -11,7 +11,7 @@ Test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Listening")}
+{CharAnimation("haru_greeter_t03","Agree")}
 {ChoiceTime(1000)}
 {ChangeTime(4)}
 Pilih argumen yang ingin dipakai!

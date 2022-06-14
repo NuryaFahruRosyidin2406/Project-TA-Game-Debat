@@ -17,11 +17,11 @@ test
 {ShowArgue(false)}
 (Pilih argumen sanggahan untuk membantah argumen lawan!)
 
-* [Membatasi Waktu Penggunaan Media Sosial]
-{ChangeScript("2_Argumen2_1")}
+* [Mengajarkan Manajemen Waktu]
+{ChangeScript("2_Argumen3_1")}
 
-* [Memberikan Contoh Penggunaan Media Sosial]
-{ChangeScript("2_Argumen2_2")}
+* [Belajar Menggunakan Media Sosial]
+{ChangeScript("2_Argumen3_2")}
 
 * [Batal Menginterupsi]
-{ChangeScript("2_Argumen2_3")}
+{ChangeScript("2_Argumen3_3")}
