@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BezierFollow : MonoBehaviour
 {
     ScriptReader scriptReader;
+    ScriptReaderLevelTwo scriptReaderLevelTwo;
 
     [SerializeField] GameObject dialogueManager;
     [SerializeField] private Transform[] routes;
@@ -28,6 +29,10 @@ public class BezierFollow : MonoBehaviour
     void Awake()
     {
         scriptReader = dialogueManager.GetComponent<ScriptReader>();
+        if(scriptReader == null)
+        {
+            scriptReaderLevelTwo = dialogueManager.GetComponent<ScriptReaderLevelTwo>();
+        }
     }
 
     // Start is called before the first frame update
@@ -45,8 +50,17 @@ public class BezierFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        showArgue = scriptReader.argumenShow;
-        transitionNumber = scriptReader.transitionNumber;
+        if (scriptReader == null)
+        {
+            showArgue = scriptReaderLevelTwo.argumenShow;
+            transitionNumber = scriptReaderLevelTwo.transitionNumber;
+        }
+        else
+        {
+            showArgue = scriptReader.argumenShow;
+            transitionNumber = scriptReader.transitionNumber;
+        }
+        
 
         if (coroutineAllowed)
         {
@@ -94,15 +108,40 @@ public class BezierFollow : MonoBehaviour
 
         if (transitionNumber == 1)
         {
-            scriptReader.nextScript("1_Transisi1");
+            
+            if(scriptReader == null)
+            {
+                scriptReaderLevelTwo.nextScript("2_Transisi1");
+            }
+            else
+            {
+                scriptReader.nextScript("1_Transisi1");
+            }
         }
         else if (transitionNumber == 2)
         {
-            scriptReader.nextScript("1_Transisi2");
+            
+            if (scriptReader == null)
+            {
+                scriptReaderLevelTwo.nextScript("2_Transisi2");
+            }
+            else
+            {
+                scriptReader.nextScript("1_Transisi2");
+            }
+
         }
         else if (transitionNumber == 3)
         {
-            scriptReader.nextScript("1_Transisi3");
+            
+            if (scriptReader == null)
+            {
+                scriptReaderLevelTwo.nextScript("2_Transisi3");
+            }
+            else
+            {
+                scriptReader.nextScript("1_Transisi3");
+            }
         }
     }
 

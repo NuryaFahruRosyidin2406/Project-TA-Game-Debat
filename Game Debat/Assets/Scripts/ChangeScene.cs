@@ -23,7 +23,13 @@ public class ChangeScene : MonoBehaviour
     public GameObject pauseOn;
     public GameObject pauseOff;
 
-    
+    //public int nextSceneLoad;
+
+    /*private void Start()
+    {
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;        
+    }*/
+
     public void Resume()
     {
         pauseMenu.SetActive(false);
@@ -51,6 +57,16 @@ public class ChangeScene : MonoBehaviour
     {
         Application.Quit();
     }
+
+    /*public void NextLevel()
+    {
+        SceneManager.LoadScene(nextSceneLoad);
+
+        if(nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+        {
+            PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+        }
+    }*/
 
     public void OpenKey(GameObject keyName)
     {

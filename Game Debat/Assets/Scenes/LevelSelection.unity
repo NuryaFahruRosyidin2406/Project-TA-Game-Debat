@@ -1094,6 +1094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700673812}
   - component: {fileID: 700673811}
+  - component: {fileID: 700673813}
   m_Layer: 0
   m_Name: SceneControl
   m_TagString: Untagged
@@ -1118,6 +1119,13 @@ MonoBehaviour:
   creditMenu: {fileID: 0}
   hintMenu: {fileID: 724542796}
   pauseMenu: {fileID: 1794181317}
+  keywordMenu: {fileID: 0}
+  key1: {fileID: 0}
+  key2: {fileID: 0}
+  key3: {fileID: 0}
+  key4: {fileID: 0}
+  key5: {fileID: 0}
+  key6: {fileID: 0}
   soundOn: {fileID: 1458793536}
   soundOff: {fileID: 371754347}
   pauseOn: {fileID: 1019143433}
@@ -1136,6 +1144,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700673813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700673810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3fef9ece7e1124b8e783ceb81164b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlButtons:
+  - {fileID: 1565667083}
+  - {fileID: 1906459710}
+  - {fileID: 992761566}
 --- !u!1 &724542796
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,34 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/StartGame.unity
     guid: e5439e6c58b12e748b174d38f11a12a3
-  - enabled: 0
-    path: Assets/Scenes/PilihLevel.unity
-    guid: 2eab3fd0dff304547bbe5b1c8814f108
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/AkumulasiPoint.unity
-    guid: 159ada73a6b727046ad0508bbd70bd66
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: e3142cefd9fd97441bd3e896ac389a41
+  - enabled: 1
+    path: Assets/Scenes/IntroScene.unity
+    guid: 483594b16451eab40b735ac6be3e1192
   - enabled: 1
     path: Assets/Scenes/MiniGameScene.unity
     guid: 2e616d8a4e421e543abf6a8d3baeee71
   - enabled: 1
     path: Assets/Scenes/LevelOne.unity
     guid: c0152238a63011e419dde26f0d362cab
-  - enabled: 1
-    path: Assets/Scenes/IntroScene.unity
-    guid: 483594b16451eab40b735ac6be3e1192
-  - enabled: 1
-    path: Assets/Scenes/LevelSelection.unity
-    guid: e3142cefd9fd97441bd3e896ac389a41
+  - enabled: 0
+    path: Assets/Scenes/PilihLevel.unity
+    guid: 2eab3fd0dff304547bbe5b1c8814f108
+  - enabled: 0
+    path: Assets/Scenes/AkumulasiPoint.unity
+    guid: 159ada73a6b727046ad0508bbd70bd66
   m_configObjects: {}
