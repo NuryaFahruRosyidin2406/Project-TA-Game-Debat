@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class mgduasusunkata : MonoBehaviour
+public class mgduasusunhurufS : MonoBehaviour
 {
-    public GameObject lettreOne, lettreTwo, lettreThree, lettreFour, lettreFive, lettreSix, lettreSeven, lettreEight, lettreNine, lettreTen, lettreEleven, lettreTwelve, BoxOne, BoxTwo, BoxThree, BoxFour, BoxFive, BoxSix, BoxSeven, BoxEight, BoxNine, BoxTen, BoxEleven, BoxTwelve;
+    public GameObject lettreOne, lettreTwo, lettreThree, lettreFour, lettreFive, lettreSix, lettreSeven, lettreEight, lettreNine, BoxOne, BoxTwo, BoxThree, BoxFour, BoxFive, BoxSix, BoxSeven, BoxEight, BoxNine;
 
-    Vector3 lettreOneIni, lettreTwoIni, lettreThreeIni, lettreFourIni, lettreFiveIni, lettreSixIni, lettreSevenIni, lettreEightIni, lettreNineIni, lettreTenIni, lettreElevenIni, lettreTwelveIni;
+    Vector3 lettreOneIni, lettreTwoIni, lettreThreeIni, lettreFourIni, lettreFiveIni, lettreSixIni, lettreSevenIni, lettreEightIni, lettreNineIni;
 
     string str = "";
-    public string word;
-    public string Kataditemukan, Kataditemukan1, Kataditemukan2, Kataditemukan3, Kataditemukan4, Kataditemukan5, Kataditemukan6, Kataditemukan7, Kataditemukan8, Kataditemukan9, Kataditemukan10, Kataditemukan11, Kataditemukan12;
+    public string word, word2, word3, word4;
+    public string Kataditemukan, Kataditemukan1, Kataditemukan2, Kataditemukan3, Kataditemukan4, Kataditemukan5, Kataditemukan6;
 
     public Text KatadiTemukan;
 
     public GameObject questionToHide, questionToShow;
 
-    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect, sixCorrect, sevenCorrect, eightCorrect, nineCorrect, tenCorrect, elevenCorrect, twelveCorrect = false;
+    bool oneCorrect, twoCorrect, threeCorrect, fourCorrect, fiveCorrect, sixCorrect, sevenCorrect, eightCorrect, nineCorrect = false;
 
-    Vector3 iniScaleLettreOne, iniScaleLettreTwo, iniScaleLettreThree, iniScaleLettreFour, iniScaleLettreFive, iniScaleLettreSix, iniScaleLettreSeven, iniScaleLettreEight, iniScaleLettreNine, iniScaleLettreTen, iniScaleLettreEleven, iniScaleLettreTwelve;
+    Vector3 iniScaleLettreOne, iniScaleLettreTwo, iniScaleLettreThree, iniScaleLettreFour, iniScaleLettreFive, iniScaleLettreSix, iniScaleLettreSeven, iniScaleLettreEight, iniScaleLettreNine;
 
     public AudioSource source;
     public AudioClip[] correct;
@@ -42,9 +42,6 @@ public class mgduasusunkata : MonoBehaviour
         lettreSevenIni = lettreSeven.transform.position;
         lettreEightIni = lettreEight.transform.position;
         lettreNineIni = lettreNine.transform.position;
-        lettreTenIni = lettreTen.transform.position;
-        lettreElevenIni = lettreEleven.transform.position;
-        lettreTwelveIni = lettreTwelve.transform.position;
 
         iniScaleLettreOne = lettreOne.transform.localScale;
         iniScaleLettreTwo = lettreTwo.transform.localScale;
@@ -55,9 +52,6 @@ public class mgduasusunkata : MonoBehaviour
         iniScaleLettreSeven = lettreSeven.transform.localScale;
         iniScaleLettreEight = lettreEight.transform.localScale;
         iniScaleLettreNine = lettreNine.transform.localScale;
-        iniScaleLettreTen = lettreTen.transform.localScale;
-        iniScaleLettreEleven = lettreEleven.transform.localScale;
-        iniScaleLettreTwelve = lettreTwelve.transform.localScale;
     }
 
     public void DragLettreOne()
@@ -105,21 +99,6 @@ public class mgduasusunkata : MonoBehaviour
         lettreNine.transform.position = Input.mousePosition;
     }
 
-    public void DragLettreTen()
-    {
-        lettreTen.transform.position = Input.mousePosition;
-    }
-
-    public void DragLettreEleven()
-    {
-        lettreEleven.transform.position = Input.mousePosition;
-    }
-
-    public void DragLettreTwelve()
-    {
-        lettreTwelve.transform.position = Input.mousePosition;
-    }
-
     //dragdrop1
     public void DropLettreOne()
     {
@@ -132,9 +111,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreOne.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreOne.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreOne.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreOne.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreOne.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreOne.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -226,36 +202,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreOne.transform.localScale = BoxTen.transform.localScale;
-            lettreOne.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreOne.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreOne.transform.localScale = BoxEleven.transform.localScale;
-            lettreOne.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreOne.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreOne.transform.localScale = BoxTwelve.transform.localScale;
-            lettreOne.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreOne.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreOne.transform.position = lettreOneIni;
@@ -276,9 +222,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreTwo.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreTwo.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreTwo.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreTwo.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreTwo.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreTwo.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -370,36 +313,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreTwo.transform.localScale = BoxTen.transform.localScale;
-            lettreTwo.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreTwo.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreTwo.transform.localScale = BoxEleven.transform.localScale;
-            lettreTwo.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreTwo.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreTwo.transform.localScale = BoxTwelve.transform.localScale;
-            lettreTwo.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreTwo.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreTwo.transform.position = lettreTwoIni;
@@ -420,9 +333,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreThree.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreThree.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreThree.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreThree.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreThree.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreThree.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -514,36 +424,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreThree.transform.localScale = BoxTen.transform.localScale;
-            lettreThree.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreThree.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreThree.transform.localScale = BoxEleven.transform.localScale;
-            lettreThree.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreThree.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreThree.transform.localScale = BoxTwelve.transform.localScale;
-            lettreThree.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreThree.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreThree.transform.position = lettreThreeIni;
@@ -564,9 +444,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreFour.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreFour.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreFour.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreFour.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreFour.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreFour.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -658,36 +535,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreFour.transform.localScale = BoxTen.transform.localScale;
-            lettreFour.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreFour.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreFour.transform.localScale = BoxEleven.transform.localScale;
-            lettreFour.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreFour.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreFour.transform.localScale = BoxTwelve.transform.localScale;
-            lettreFour.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreFour.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreFour.transform.position = lettreFourIni;
@@ -708,9 +555,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreFive.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreFive.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreFive.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreFive.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreFive.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreFive.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -802,36 +646,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreFive.transform.localScale = BoxTen.transform.localScale;
-            lettreFive.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreFive.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreFive.transform.localScale = BoxEleven.transform.localScale;
-            lettreFive.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreFive.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreFive.transform.localScale = BoxTwelve.transform.localScale;
-            lettreFive.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreFive.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreFive.transform.position = lettreFiveIni;
@@ -852,9 +666,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreSix.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreSix.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreSix.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreSix.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreSix.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreSix.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -946,36 +757,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreSix.transform.localScale = BoxTen.transform.localScale;
-            lettreSix.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreSix.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreSix.transform.localScale = BoxEleven.transform.localScale;
-            lettreSix.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreSix.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreSix.transform.localScale = BoxTwelve.transform.localScale;
-            lettreSix.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreSix.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreSix.transform.position = lettreSixIni;
@@ -996,9 +777,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreSeven.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreSeven.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreSeven.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreSeven.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreSeven.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreSeven.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -1090,36 +868,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreSeven.transform.localScale = BoxTen.transform.localScale;
-            lettreSeven.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreSeven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreSeven.transform.localScale = BoxEleven.transform.localScale;
-            lettreSeven.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreSeven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreSeven.transform.localScale = BoxTwelve.transform.localScale;
-            lettreSeven.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreSeven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreSeven.transform.position = lettreSevenIni;
@@ -1140,9 +888,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreEight.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreEight.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreEight.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreEight.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreEight.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreEight.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -1234,36 +979,6 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreEight.transform.localScale = BoxTen.transform.localScale;
-            lettreEight.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreEight.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreEight.transform.localScale = BoxEleven.transform.localScale;
-            lettreEight.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreEight.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreEight.transform.localScale = BoxTwelve.transform.localScale;
-            lettreEight.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreEight.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreEight.transform.position = lettreEightIni;
@@ -1284,9 +999,6 @@ public class mgduasusunkata : MonoBehaviour
         float Distance7 = Vector3.Distance(lettreNine.transform.position, BoxSeven.transform.position);
         float Distance8 = Vector3.Distance(lettreNine.transform.position, BoxEight.transform.position);
         float Distance9 = Vector3.Distance(lettreNine.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreNine.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreNine.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreNine.transform.position, BoxTwelve.transform.position);
 
         if (Distance < 50 && oneCorrect == false)
         {
@@ -1378,471 +1090,9 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
         }
 
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreNine.transform.localScale = BoxTen.transform.localScale;
-            lettreNine.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreNine.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreNine.transform.localScale = BoxEleven.transform.localScale;
-            lettreNine.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreNine.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreNine.transform.localScale = BoxTwelve.transform.localScale;
-            lettreNine.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreNine.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
         else
         {
             lettreNine.transform.position = lettreNineIni;
-            source.clip = reload;
-            source.Play();
-        }
-    }
-
-    //dragdrop10
-    public void DropLettreTen()
-    {
-        float Distance = Vector3.Distance(lettreTen.transform.position, BoxOne.transform.position);
-        float Distance2 = Vector3.Distance(lettreTen.transform.position, BoxTwo.transform.position);
-        float Distance3 = Vector3.Distance(lettreTen.transform.position, BoxThree.transform.position);
-        float Distance4 = Vector3.Distance(lettreTen.transform.position, BoxFour.transform.position);
-        float Distance5 = Vector3.Distance(lettreTen.transform.position, BoxFive.transform.position);
-        float Distance6 = Vector3.Distance(lettreTen.transform.position, BoxSix.transform.position);
-        float Distance7 = Vector3.Distance(lettreTen.transform.position, BoxSeven.transform.position);
-        float Distance8 = Vector3.Distance(lettreTen.transform.position, BoxEight.transform.position);
-        float Distance9 = Vector3.Distance(lettreTen.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreTen.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreTen.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreTen.transform.position, BoxTwelve.transform.position);
-
-        if (Distance < 50 && oneCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxOne.transform.localScale;
-            lettreTen.transform.position = BoxOne.transform.position;
-            oneCorrect = true;
-            BoxOne.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance2 < 50 && twoCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxTwo.transform.localScale;
-            lettreTen.transform.position = BoxTwo.transform.position;
-            twoCorrect = true;
-            BoxTwo.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance3 < 50 && threeCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxThree.transform.localScale;
-            lettreTen.transform.position = BoxThree.transform.position;
-            threeCorrect = true;
-            BoxThree.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance4 < 50 && fourCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxFour.transform.localScale;
-            lettreTen.transform.position = BoxFour.transform.position;
-            fourCorrect = true;
-            BoxFour.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance5 < 50 && fiveCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxFive.transform.localScale;
-            lettreTen.transform.position = BoxFive.transform.position;
-            fiveCorrect = true;
-            BoxFive.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance6 < 50 && sixCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxSix.transform.localScale;
-            lettreTen.transform.position = BoxSix.transform.position;
-            sixCorrect = true;
-            BoxSix.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance7 < 50 && sevenCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxSeven.transform.localScale;
-            lettreTen.transform.position = BoxSeven.transform.position;
-            sevenCorrect = true;
-            BoxSeven.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance8 < 50 && eightCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxEight.transform.localScale;
-            lettreTen.transform.position = BoxEight.transform.position;
-            eightCorrect = true;
-            BoxEight.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance9 < 50 && nineCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxNine.transform.localScale;
-            lettreTen.transform.position = BoxNine.transform.position;
-            nineCorrect = true;
-            BoxNine.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxTen.transform.localScale;
-            lettreTen.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxEleven.transform.localScale;
-            lettreTen.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreTen.transform.localScale = BoxTwelve.transform.localScale;
-            lettreTen.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreTen.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else
-        {
-            lettreTen.transform.position = lettreTenIni;
-            source.clip = reload;
-            source.Play();
-        }
-    }
-
-    //dragdrop11
-    public void DropLettreEleven()
-    {
-        float Distance = Vector3.Distance(lettreEleven.transform.position, BoxOne.transform.position);
-        float Distance2 = Vector3.Distance(lettreEleven.transform.position, BoxTwo.transform.position);
-        float Distance3 = Vector3.Distance(lettreEleven.transform.position, BoxThree.transform.position);
-        float Distance4 = Vector3.Distance(lettreEleven.transform.position, BoxFour.transform.position);
-        float Distance5 = Vector3.Distance(lettreEleven.transform.position, BoxFive.transform.position);
-        float Distance6 = Vector3.Distance(lettreEleven.transform.position, BoxSix.transform.position);
-        float Distance7 = Vector3.Distance(lettreEleven.transform.position, BoxSeven.transform.position);
-        float Distance8 = Vector3.Distance(lettreEleven.transform.position, BoxEight.transform.position);
-        float Distance9 = Vector3.Distance(lettreEleven.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreEleven.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreEleven.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreEleven.transform.position, BoxTwelve.transform.position);
-
-        if (Distance < 50 && oneCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxOne.transform.localScale;
-            lettreEleven.transform.position = BoxOne.transform.position;
-            oneCorrect = true;
-            BoxOne.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance2 < 50 && twoCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxTwo.transform.localScale;
-            lettreEleven.transform.position = BoxTwo.transform.position;
-            twoCorrect = true;
-            BoxTwo.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance3 < 50 && threeCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxThree.transform.localScale;
-            lettreEleven.transform.position = BoxThree.transform.position;
-            threeCorrect = true;
-            BoxThree.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance4 < 50 && fourCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxFour.transform.localScale;
-            lettreEleven.transform.position = BoxFour.transform.position;
-            fourCorrect = true;
-            BoxFour.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance5 < 50 && fiveCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxFive.transform.localScale;
-            lettreEleven.transform.position = BoxFive.transform.position;
-            fiveCorrect = true;
-            BoxFive.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance6 < 50 && sixCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxSix.transform.localScale;
-            lettreEleven.transform.position = BoxSix.transform.position;
-            sixCorrect = true;
-            BoxSix.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance7 < 50 && sevenCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxSeven.transform.localScale;
-            lettreEleven.transform.position = BoxSeven.transform.position;
-            sevenCorrect = true;
-            BoxSeven.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance8 < 50 && eightCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxEight.transform.localScale;
-            lettreEleven.transform.position = BoxEight.transform.position;
-            eightCorrect = true;
-            BoxEight.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance9 < 50 && nineCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxNine.transform.localScale;
-            lettreEleven.transform.position = BoxNine.transform.position;
-            nineCorrect = true;
-            BoxNine.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxTen.transform.localScale;
-            lettreEleven.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxEleven.transform.localScale;
-            lettreEleven.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreEleven.transform.localScale = BoxTwelve.transform.localScale;
-            lettreEleven.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreEleven.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else
-        {
-            lettreEleven.transform.position = lettreElevenIni;
-            source.clip = reload;
-            source.Play();
-        }
-    }
-
-    //dragdrop12
-    public void DropLettreTwelve()
-    {
-        float Distance = Vector3.Distance(lettreTwelve.transform.position, BoxOne.transform.position);
-        float Distance2 = Vector3.Distance(lettreTwelve.transform.position, BoxTwo.transform.position);
-        float Distance3 = Vector3.Distance(lettreTwelve.transform.position, BoxThree.transform.position);
-        float Distance4 = Vector3.Distance(lettreTwelve.transform.position, BoxFour.transform.position);
-        float Distance5 = Vector3.Distance(lettreTwelve.transform.position, BoxFive.transform.position);
-        float Distance6 = Vector3.Distance(lettreTwelve.transform.position, BoxSix.transform.position);
-        float Distance7 = Vector3.Distance(lettreTwelve.transform.position, BoxSeven.transform.position);
-        float Distance8 = Vector3.Distance(lettreTwelve.transform.position, BoxEight.transform.position);
-        float Distance9 = Vector3.Distance(lettreTwelve.transform.position, BoxNine.transform.position);
-        float Distance10 = Vector3.Distance(lettreTwelve.transform.position, BoxTen.transform.position);
-        float Distance11 = Vector3.Distance(lettreTwelve.transform.position, BoxEleven.transform.position);
-        float Distance12 = Vector3.Distance(lettreTwelve.transform.position, BoxTwelve.transform.position);
-
-        if (Distance < 50 && oneCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxOne.transform.localScale;
-            lettreTwelve.transform.position = BoxOne.transform.position;
-            oneCorrect = true;
-            BoxOne.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance2 < 50 && twoCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxTwo.transform.localScale;
-            lettreTwelve.transform.position = BoxTwo.transform.position;
-            twoCorrect = true;
-            BoxTwo.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance3 < 50 && threeCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxThree.transform.localScale;
-            lettreTwelve.transform.position = BoxThree.transform.position;
-            threeCorrect = true;
-            BoxThree.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance4 < 50 && fourCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxFour.transform.localScale;
-            lettreTwelve.transform.position = BoxFour.transform.position;
-            fourCorrect = true;
-            BoxFour.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance5 < 50 && fiveCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxFive.transform.localScale;
-            lettreTwelve.transform.position = BoxFive.transform.position;
-            fiveCorrect = true;
-            BoxFive.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance6 < 50 && sixCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxSix.transform.localScale;
-            lettreTwelve.transform.position = BoxSix.transform.position;
-            sixCorrect = true;
-            BoxSix.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance7 < 50 && sevenCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxSeven.transform.localScale;
-            lettreTwelve.transform.position = BoxSeven.transform.position;
-            sevenCorrect = true;
-            BoxSeven.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance8 < 50 && eightCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxEight.transform.localScale;
-            lettreTwelve.transform.position = BoxEight.transform.position;
-            eightCorrect = true;
-            BoxEight.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance9 < 50 && nineCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxNine.transform.localScale;
-            lettreTwelve.transform.position = BoxNine.transform.position;
-            nineCorrect = true;
-            BoxNine.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance10 < 50 && tenCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxTen.transform.localScale;
-            lettreTwelve.transform.position = BoxTen.transform.position;
-            tenCorrect = true;
-            BoxTen.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance11 < 50 && elevenCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxEleven.transform.localScale;
-            lettreTwelve.transform.position = BoxEleven.transform.position;
-            elevenCorrect = true;
-            BoxEleven.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else if (Distance12 < 50 && twelveCorrect == false)
-        {
-            lettreTwelve.transform.localScale = BoxTwelve.transform.localScale;
-            lettreTwelve.transform.position = BoxTwelve.transform.position;
-            twelveCorrect = true;
-            BoxTwelve.name = lettreTwelve.name;
-            source.clip = buttonDrop;
-            source.Play();
-        }
-
-        else
-        {
-            lettreTwelve.transform.position = lettreTwelveIni;
             source.clip = reload;
             source.Play();
         }
@@ -1854,8 +1104,8 @@ public class mgduasusunkata : MonoBehaviour
     // pengecekan huruf apakah benar atau salah
     public void Check()
     {
-        str = BoxOne.name + BoxTwo.name + BoxThree.name + BoxFour.name + BoxFive.name + BoxSix.name + BoxSeven.name + BoxEight.name + BoxNine.name + BoxTen.name + BoxEleven.name + BoxTwelve.name;
-        if (word == str)
+        str = BoxOne.name + BoxTwo.name + BoxThree.name + BoxFour.name + BoxFive.name + BoxSix.name + BoxSeven.name + BoxEight.name + BoxNine.name;
+        if ((word == str) || (word2 == str) || (word3 == str) || (word4 == str))
         {
             feed_benar.SetActive(false);
             feed_benar.SetActive(true);
@@ -1864,15 +1114,16 @@ public class mgduasusunkata : MonoBehaviour
             kataditemukan();
             source.clip = correct[Random.Range(0, correct.Length)];
             source.Play();
+
+            if (Skordrag.scorevaluemg2 == Timersettings.scoremax)
+            {
+                Timersettings.waktuberhenti();
+            }
             StartCoroutine(LoadNextPanel());
             /*if (skordrag.scoreValue == Timersettings.scoremax)
             {
                 Timersettings.waktuberhenti();
             }*/
-            if (Skordrag.scorevaluemg2 == Timersettings.scoremax)
-            {
-                Timersettings.waktuberhenti();
-            }
         }
         else
         {
@@ -1880,13 +1131,14 @@ public class mgduasusunkata : MonoBehaviour
             source.Play();
             feed_salah.SetActive(false);
             feed_salah.SetActive(true);
+            Reload();
         }
     }
 
     // untuk menuliskan kata yang ditemukan
     public void kataditemukan()
     {
-        Kataditemukan = Kataditemukan1 + Kataditemukan2 + Kataditemukan3 + Kataditemukan4 + Kataditemukan5 + Kataditemukan6 + Kataditemukan7 + Kataditemukan8 + Kataditemukan9 + Kataditemukan10 + Kataditemukan11 + Kataditemukan12; // script ini di taro di bagian cek kalo benar
+        Kataditemukan = Kataditemukan1 + Kataditemukan2 + Kataditemukan3 + Kataditemukan4 + Kataditemukan5 + Kataditemukan6; // script ini di taro di bagian cek kalo benar
         KatadiTemukan.text = Kataditemukan;
     }
 
@@ -1904,9 +1156,6 @@ public class mgduasusunkata : MonoBehaviour
         sevenCorrect = false;
         eightCorrect = false;
         nineCorrect = false;
-        tenCorrect = false;
-        elevenCorrect = false;
-        twelveCorrect = false;
 
         BoxOne.name = "1";
         BoxTwo.name = "2";
@@ -1917,9 +1166,6 @@ public class mgduasusunkata : MonoBehaviour
         BoxSeven.name = "7";
         BoxEight.name = "8";
         BoxNine.name = "9";
-        BoxTen.name = "10";
-        BoxEleven.name = "11";
-        BoxTwelve.name = "12";
 
         lettreOne.transform.position = lettreOneIni;
         lettreTwo.transform.position = lettreTwoIni;
@@ -1930,9 +1176,6 @@ public class mgduasusunkata : MonoBehaviour
         lettreSeven.transform.position = lettreSevenIni;
         lettreEight.transform.position = lettreEightIni;
         lettreNine.transform.position = lettreNineIni;
-        lettreTen.transform.position = lettreTenIni;
-        lettreEleven.transform.position = lettreElevenIni;
-        lettreTwelve.transform.position = lettreTwelveIni;
 
         lettreOne.transform.localScale = iniScaleLettreOne;
         lettreTwo.transform.localScale = iniScaleLettreTwo;
@@ -1943,14 +1186,11 @@ public class mgduasusunkata : MonoBehaviour
         lettreSeven.transform.localScale = iniScaleLettreSeven;
         lettreEight.transform.localScale = iniScaleLettreEight;
         lettreNine.transform.localScale = iniScaleLettreNine;
-        lettreTen.transform.localScale = iniScaleLettreTen;
-        lettreEleven.transform.localScale = iniScaleLettreEleven;
-        lettreTwelve.transform.localScale = iniScaleLettreTwelve;
     }
 
     IEnumerator LoadNextPanel()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         questionToHide.SetActive(false);
         questionToShow.SetActive(true);
     }

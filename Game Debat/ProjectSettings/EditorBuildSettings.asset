@@ -14,6 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: 483594b16451eab40b735ac6be3e1192
+  - enabled: 0
+    path: Assets/Scenes/PilihLevel.unity
+    guid: 2eab3fd0dff304547bbe5b1c8814f108
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/AkumulasiPointLST.unity
+    guid: 159ada73a6b727046ad0508bbd70bd66
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/MiniGameScene.unity
     guid: 2e616d8a4e421e543abf6a8d3baeee71

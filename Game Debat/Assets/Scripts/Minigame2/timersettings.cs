@@ -24,6 +24,8 @@ public class timersettings : MonoBehaviour
     public Text countdownDisplay;
     public Text TextTimer;
 
+    public skordrag Skordrag;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,10 +49,13 @@ public class timersettings : MonoBehaviour
 
     public void waktuberhenti()
     {
-        GameAktif = false;
-        boxTimer.gameObject.SetActive(false);
-        boxSkor.gameObject.SetActive(false);
-        Waktu = 0;
+        if (Skordrag.jmlscoremg2 == scoremax)
+        {
+            GameAktif = false;
+            boxTimer.gameObject.SetActive(false);
+            boxSkor.gameObject.SetActive(false);
+            Waktu = 0;
+        }
     }
 
     public void mulaihm()

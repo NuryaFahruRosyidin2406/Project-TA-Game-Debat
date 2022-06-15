@@ -46,6 +46,7 @@ public class ScoreSystem : MonoBehaviour
         {
             scoreNum = scriptReader.debateScore;
             showScore = scriptReader.scoreShow;
+            // Edit skor disini
         }
     }
 
