@@ -19,6 +19,9 @@ public class timersettings : MonoBehaviour
     //public GameObject PanelWadahUI;
     public GameObject Panelmg2S1;
     public GameObject PanelSelesaimg2;
+    public GameObject PauseMenu;
+    public GameObject PauseOn;
+    public GameObject PauseOff;
     public GameObject boxTimer;
     public GameObject boxSkor;
     public Text countdownDisplay;
@@ -67,6 +70,24 @@ public class timersettings : MonoBehaviour
         StartCoroutine(CountdownToStart());
         GOTimer.gameObject.SetActive(true);
         GOSkor.gameObject.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        PauseMenu.SetActive(false);
+
+        PauseOff.SetActive(true);
+        PauseOn.SetActive(false);
+        GameAktif = true;
+    }
+
+    public void Pause()
+    {
+        PauseMenu.SetActive(true);
+
+        PauseOff.SetActive(false);
+        PauseOn.SetActive(true);
+        GameAktif = false;
     }
 
     // Waktu hitung mundur

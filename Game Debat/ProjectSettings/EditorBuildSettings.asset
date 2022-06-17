@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PilihLevel.unity
     guid: 2eab3fd0dff304547bbe5b1c8814f108
   - enabled: 0
-    path: Assets/Scenes/AkumulasiPoint.unity
+    path: Assets/Scenes/AkumulasiPointLST.unity
     guid: 159ada73a6b727046ad0508bbd70bd66
+  - enabled: 1
+    path: Assets/Scenes/MiniGameScene2.unity
+    guid: cde5dc00b3dee8c45889bbe401b11d72
   m_configObjects: {}
