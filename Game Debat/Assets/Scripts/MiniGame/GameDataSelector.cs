@@ -18,7 +18,8 @@ public class GameDataSelector : MonoBehaviour
         {
             if (data.categoryName == currentGameData.selectedCategoryName)
             {
-                var boardIndex = 0;
+                var boardIndex = Random.Range(0,5);
+                Debug.Log("Puzzle yang di buka " + boardIndex);
 
                 if (boardIndex < data.boardData.Count)
                 {

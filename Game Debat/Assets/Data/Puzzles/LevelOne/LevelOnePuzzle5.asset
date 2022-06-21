@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22818f2c174f41a428c379d801aa5721, type: 3}
+  m_Name: LevelOnePuzzle5
+  m_EditorClassIdentifier: 
+  timeInSecods: 180
+  Columns: 6
+  Rows: 10
+  Board:
+  - Size: 10
+    Row:
+    - D
+    - P
+    - C
+    - H
+    - U
+    - G
+    - C
+    - A
+    - Y
+    - H
+  - Size: 10
+    Row:
+    - W
+    - S
+    - U
+    - K
+    - O
+    - F
+    - D
+    - F
+    - M
+    - V
+  - Size: 10
+    Row:
+    - Z
+    - X
+    - R
+    - C
+    - I
+    - U
+    - J
+    - I
+    - A
+    - N
+  - Size: 10
+    Row:
+    - I
+    - S
+    - A
+    - V
+    - I
+    - T
+    - O
+    - M
+    - G
+    - E
+  - Size: 10
+    Row:
+    - P
+    - P
+    - N
+    - A
+    - S
+    - I
+    - O
+    - N
+    - A
+    - L
+  - Size: 10
+    Row:
+    - S
+    - I
+    - G
+    - O
+    - L
+    - O
+    - K
+    - I
+    - S
+    - P
+  SearchWords:
+  - Word: PSIKOLOGIS
+  - Word: CURANG
+  - Word: FOKUS
+  - Word: MOTIVASI
+  - Word: NASIONAL
+  - Word: UJIAN

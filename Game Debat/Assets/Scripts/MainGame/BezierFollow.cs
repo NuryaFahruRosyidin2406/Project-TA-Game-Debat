@@ -99,6 +99,11 @@ public class BezierFollow : MonoBehaviour
             }
             
         }
+        if(transitionNumber == 4)
+        {
+            PopUpArgue();
+        }
+
     }
 
     public void PopUpArgue()
