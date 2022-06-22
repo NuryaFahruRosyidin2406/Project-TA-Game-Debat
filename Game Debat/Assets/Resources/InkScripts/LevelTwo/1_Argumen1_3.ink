@@ -20,11 +20,14 @@ Bukan hanya media sosial yang berpotensi untuk membuat candu, banyak hal lain ju
 {ChangeTime(3)}
 Akan tetapi, hal tersebut dapat diminimalisasi. 
 
-{ChangeTime(5)}
+{ChangeTime(6)}
 Singkatnya, saya percaya bahwa penggunaan media sosial memiliki banyak dampak positif jika digunakan secara tepat,
 
-{ChangeTime(5)}
-Seperti menumbuhkan rasa percaya diri seseorang, menambah pertemanan, dan membentuk suatu komunitas belajar. 
+{ChangeTime(3)}
+Seperti menumbuhkan rasa percaya diri seseorang, 
+
+{ChangeTime(3)}
+Menambah pertemanan, dan membentuk suatu komunitas belajar. 
 
 {ChangeTime(5)}
 Hal ini dapat terwujud jika diimbangi dengan pengawasan dari orang tua dan guru secara bersinergi.
@@ -39,7 +42,7 @@ Penggunaan media sosial yang berlebihan menimbulkan rasa candu.
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
-Pilih untuk mempertahankan argumen! 
+(Pilih untuk mempertahankan argumen!) 
 
 * [Adanya Batasan Penggunaan Media Sosial]
 {Name("Pemain")}
@@ -55,9 +58,9 @@ Akan menjadi alarm seseorang agar tidak terjadi kecanduan terhadap media sosial.
 Dampak positif  yang dapat diperoleh tentunya memudahkan komunikasi,
 
 {ChangeTime(4)}
-Mengakses informasi dengan mudah, melakukan pembelajaran secara online, dan lain lain.
+Mengakses informasi dengan mudah, pembelajaran dapat dilakukan secara online, dan lain lain.
 
-{ChangeTime(5)}
+{ChangeTime(6)}
 Kita harus terbiasa menggunakan media sosial dengan  bijak tanpa merugikan diri sendiri bahkan orang lain.
 
 {ChangeScript("1_Transisi1_3")}

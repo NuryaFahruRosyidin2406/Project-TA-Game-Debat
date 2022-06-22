@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -38,14 +39,23 @@ Demi mencapai cita-citanya, yaitu masuk ke sekolah favorit yang diidamkan.
 {Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
 
 {Name("Pemain")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
-Pilih untuk mempertahankan argumen! 
+Pilih untuk mempertahankan argumen!) 
 
 * [UN Sebagai Sarana Persiapan]
 {AddDebateScore(5)}

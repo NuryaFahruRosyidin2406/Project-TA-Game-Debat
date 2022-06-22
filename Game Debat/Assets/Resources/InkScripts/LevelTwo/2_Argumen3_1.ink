@@ -12,7 +12,7 @@ test
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(3)}
-Dengan diajarkannya manajemen waktu yang baik,
+Dengan diajarkannya cara manajemen waktu yang baik,
 
 {ChangeTime(5)}
 Maka pelajar bisa mengatur hal apa yang harus dijadikan prioritas dan dikerjakan terlebih dahulu.

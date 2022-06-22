@@ -15,7 +15,7 @@ test
 Justru pelajar akan terbantu dalam meningkatkan interaksi sosial agar semakin terjalin kuat menggunakan media ini. 
 
 {ChangeTime(5)}
-Karena tidak sulit untuk menciptakan interaksi dengan mudah dan cepat di media sosial.
+Karena tidak akan sulit untuk menciptakan interaksi dengan mudah dan cepat di media sosial.
 
 {Name("Farah")}
 {Icon("farah")}

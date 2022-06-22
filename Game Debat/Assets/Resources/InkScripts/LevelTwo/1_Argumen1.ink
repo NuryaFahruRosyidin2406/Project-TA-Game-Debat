@@ -18,13 +18,16 @@ Seperti yang kita ketahui bersama,
 Di era yang serba digital ini jarak dan waktu bukanlah sebuah halangan.
 
 {ChangeTime(3)}
-Media sosial telah menjembatani perbedaan tersebut. 
+Media sosial telah menjadi jembatan perbedaan tersebut. 
 
 {ChangeTime(4)}
 Melalui media sosial, siswa dapat membangun komunitas belajar dengan mudah.
 
-{ChangeTime(7)}
-Hal ini tentunya dapat meningkatkan keterampilan dan kemampuan siswa tanpa khawatir akan perbedaan jarak dan waktu.
+{ChangeTime(3)}
+Hal ini tentu saja dapat meningkatkan keterampilan,
+
+{ChangeTime(4)}
+Serta kemampuan siswa tanpa khawatir akan perbedaan jarak dan waktu.
 
 {Name("Farah")}
 {Icon("farah")}
@@ -38,7 +41,7 @@ Kenapa harus media sosial? Media sosial bukanlah solusi yang efektif.
 {ChangeTime(2)}
 (Pilih untuk mempertahankan argumen!)
 
-* [Media Sosial Mempermudah Pembelajaran]
+* [Mempermudah Pembelajaran]
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
@@ -52,11 +55,11 @@ Siswa akan lebih kreatif dan mandiri.
 Kualitas pembelajaran juga akan meningkat,
 
 {ChangeTime(5)}
-Karena siswa dihadapkan dalam situasi yang menantang mereka untuk meningkatkan pengetahuan dan kualitas diri.
+Karena siswa dihadapkan dalam situasi yang menantang mereka meningkatkan pengetahuan dan kualitas diri.
 
 {ChangeScript("1_Transisi1")}
 
-* [Media Sosial Meningkatkan Keterampilan]
+* [Meningkatkan Keterampilan]
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}

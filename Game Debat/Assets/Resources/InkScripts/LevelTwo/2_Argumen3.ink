@@ -18,11 +18,8 @@ Memang kecanduan terhadap media sosial dapat diatasi dengan penerapan aturan yan
 {ChangeTime(5)}
 Akan tetapi, apakah Anda yakin aturan tersebut benar-benar akan berjalan sesuai harapan?
 
-{ChangeTime(4)}
-Pada akhirnya, saya tetap beranggapan bahwa penggunaan media sosial
-
-{ChangeTime(3)}
-Di lingkungan sekolah tidak membawa dampak yang baik
+{ChangeTime(5)}
+Saya beranggapan bahwa penggunaan media sosial di lingkungan sekolah tidak membawa dampak yang baik.
 
 {CharAnimation("haru_greeter_t03","GivingArgument")}
 {ChangeTime(6)}

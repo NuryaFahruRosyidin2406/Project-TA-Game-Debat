@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -34,7 +35,16 @@ Dengan dihapusnya Ujian Nasional, siswa akan menjadi kurang termotivasi dan pada
 {Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 
 {Name("Pemain")}

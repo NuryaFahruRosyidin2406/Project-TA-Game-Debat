@@ -27,8 +27,8 @@ Memang benar siswa dapat belajar melalui media sosial
 Tetapi sarana utama siswa untuk belajar adalah sekolah. Ya namanya jg siswa kan.
 
 {CharAnimation("haru_greeter_t03","GivingArgument")}
-{ChangeTime(4)}
-Justru saya tidak yakin siswa sepenuhnya belajar menggunakan media sosial,
+{ChangeTime(3)}
+Justru saya tidak yakin siswa sepenuhnya belajar,
 
 {ChangeTime(4)}
 Yang ada mereka malah menyalahgunakan media sosial tersebut.

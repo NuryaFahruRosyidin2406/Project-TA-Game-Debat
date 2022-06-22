@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -38,7 +39,16 @@ Melalui Ujian Nasional, siswa juga dapat mengukur potensi dirinya.
 {Icon("fatih")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Potensi ini dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 
 {Name("Pemain")}

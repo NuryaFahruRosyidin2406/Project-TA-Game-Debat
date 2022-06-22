@@ -12,7 +12,7 @@ EXTERNAL ChoiceTime(timeLeft)
 {Name("Moderator")}
 {Icon("mc2")}
 {ChangeTime(5)}
-Hari ini kita akan membahas tentang Penggunaan Media Sosial Baik Bagi Pelajar 
+Hari ini kita akan membahas tentang Pengaruh Penggunaan Media Sosial di Lingkungan Sekolah.
 
 {ChangeTime(4)}
 Ada dua pihak dalam debat kali ini yaitu pihak afirmasi atau pihak pro
@@ -36,7 +36,7 @@ Silahkan kepada pihak afirmasi untuk memperkenalkan diri.
 Halo teman-teman! Kenalin nama saya Pemain.
 
 {ChangeTime(5)}
-Di debat ini saya mendukung Penggunaan Media Sosial Baik Bagi Pelajar.
+Di debat ini saya mendukung Penggunaan Media Sosial bagi Pelajar.
 
 {Name("Moderator")}
 {Icon("mc2")}
@@ -49,8 +49,9 @@ Selanjutnya silahkan kepada pihak oposisi untuk segera memperkenalkan diri.
 {ChangeTime(3)}
 Perkenalkan nama saya Farah.
 
+{CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(5)}
-Pada debat kali ini saya menolak Penggunaan Media Sosial Baik Bagi Pelajar.
+Pada debat kali ini saya menolak Penggunaan Media Sosial bagi Pelajar.
 
 {Name("Moderator")}
 {Icon("mc2")}
@@ -69,7 +70,7 @@ Dipersilahkan kepada pihak afirmasi untuk membuka debat.
 Halo semua, saya Pemain.
 
 {ChangeTime(4)}
-Saya mendukung Penggunaan Media Sosial Baik Bagi Pelajar.
+Saya mendukung Penggunaan Media Sosial bagi Pelajar.
 
 {Name("Moderator")}
 {Icon("mc2")}
@@ -82,8 +83,9 @@ Selanjutnya silahkan kepada pihak oposisi untuk segera memperkenalkan diri.
 {ChangeTime(3)}
 Perkenalkan nama saya Farah.
 
+{CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(5)}
-Pada debat kali ini saya menolak Penggunaan Media Sosial Baik Bagi Pelajar.
+Pada debat kali ini saya menolak Penggunaan Media Sosial bagi Pelajar.
 
 {Name("Moderator")}
 {Icon("mc2")}
@@ -118,8 +120,9 @@ Selanjutnya silahkan kepada pihak oposisi untuk segera memperkenalkan diri.
 {ChangeTime(3)}
 Perkenalkan nama saya Farah.
 
+{CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(5)}
-Pada debat kali ini saya menolak Penggunaan Media Sosial Baik Bagi Pelajar.
+Pada debat kali ini saya menolak Penggunaan Media Sosial bagi Pelajar.
 
 {Name("Moderator")}
 {Icon("mc2")}

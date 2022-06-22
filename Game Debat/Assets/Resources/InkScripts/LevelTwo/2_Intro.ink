@@ -9,13 +9,14 @@ EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
 
 {ChangeTime(0)}
+test
 
 {Name("Moderator")}
 {Icon("mc2")}
 {ChangeTime(4)}
-Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
+Terima kasih kepada pihak afirmasi atas penyampaian argumennya.
 
 {ChangeTime(5)}
-Selanjutnya, dipersilahkan kepada pihak oposisi untuk menyampaikan argumennya.
+Selanjutnya, kepada pihak oposisi untuk menyampaikan argumennya.
 
 {ChangeScript("2_Argumen1")}

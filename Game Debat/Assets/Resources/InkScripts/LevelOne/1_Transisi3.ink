@@ -16,7 +16,7 @@ Dapat saya simpulkan bahwa Ujian Nasional tidak dapat dijadikan acuan kelulusan 
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChoiceTime(10)}
-{ChangeTime(4)}
+{ChangeTime(2)}
 {ShowArgue(false)}
 (Pilih argumen untuk membantah argumen lawan!)
 

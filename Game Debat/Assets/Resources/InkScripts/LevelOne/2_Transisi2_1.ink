@@ -16,8 +16,8 @@ Test
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChoiceTime(1000)}
-{ChangeTime(4)}
-Pilih argumen yang ingin dipakai!
+{ChangeTime(2)}
+(Pilih argumen yang ingin dipakai!)
 
 * [Persiapan Seleksi Sekolah/Kuliah]
 {AddDebateScore(5)}

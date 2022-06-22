@@ -20,7 +20,7 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChoiceTime(10)}
-{ChangeTime(4)}
+{ChangeTime(2)}
 {ShowArgue(false)}
 (Pilih argumen sanggahan untuk membantah argumen lawan!)
 

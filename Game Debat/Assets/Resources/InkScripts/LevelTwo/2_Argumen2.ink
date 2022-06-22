@@ -13,7 +13,7 @@ Test
 {Icon("farah")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(5)}
-Memang benar para pelajar yang cenderung kurang berani dalam mengemukakan pendapat
+Memang benar para pelajar yang cenderung kurang berani mengemukakan pendapat
 
 {ChangeTime(3)}
 Akan dapat membangun kepercayaan diri di media sosial.
