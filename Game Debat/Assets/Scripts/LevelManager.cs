@@ -5,13 +5,23 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    int levelUnlocked;
+    int levelsUnlocked;
 
-    public Button[] buttons;
+    public GameObject[] buttons;
     
     void Start()
     {
-        levelUnlocked = PlayerPrefs.GetInt("level");
+        levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 2);
+
+        for (int i = 0; i < buttons.Length; i++)
+        {
+            buttons[i].SetActive(false);
+        }
+
+        for (int i = 0; i < levelsUnlocked; i++)
+        {
+            buttons[i].SetActive(true);
+        }
     }
 
     void Update()

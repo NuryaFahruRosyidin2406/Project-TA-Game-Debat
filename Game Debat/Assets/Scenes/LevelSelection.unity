@@ -1153,13 +1153,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 700673810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3fef9ece7e1124b8e783ceb81164b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 16a6d734b407aa549a6ed0a92469a996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvlButtons:
-  - {fileID: 1565667083}
-  - {fileID: 1906459710}
-  - {fileID: 992761566}
+  buttons:
+  - {fileID: 1565667080}
+  - {fileID: 1906459708}
+  - {fileID: 992761563}
 --- !u!1 &724542796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,6 @@ GameObject:
   - component: {fileID: 992761567}
   - component: {fileID: 992761566}
   - component: {fileID: 992761565}
-  - component: {fileID: 992761569}
   m_Layer: 5
   m_Name: LevelTwo
   m_TagString: Untagged
@@ -1756,21 +1755,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992761563}
   m_CullTransparentMesh: 1
---- !u!114 &992761569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992761563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde9b00b71486724bb938bf6c445c8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: 18d8f486a740c904983535965f9f0fac, type: 2}
-  levelData: {fileID: 11400000, guid: db8aa7feeb70eac48aa77a932850c235, type: 2}
-  categoryText: {fileID: 1156385036}
 --- !u!1 &1019143433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2390,6 @@ GameObject:
   - component: {fileID: 1565667084}
   - component: {fileID: 1565667083}
   - component: {fileID: 1565667082}
-  - component: {fileID: 1565667086}
   m_Layer: 5
   m_Name: LevelTurtorialButton
   m_TagString: Untagged
@@ -2535,21 +2518,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565667080}
   m_CullTransparentMesh: 1
---- !u!114 &1565667086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565667080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde9b00b71486724bb938bf6c445c8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: 18d8f486a740c904983535965f9f0fac, type: 2}
-  levelData: {fileID: 11400000, guid: db8aa7feeb70eac48aa77a932850c235, type: 2}
-  categoryText: {fileID: 87958633}
 --- !u!1 &1615705601
 GameObject:
   m_ObjectHideFlags: 0
