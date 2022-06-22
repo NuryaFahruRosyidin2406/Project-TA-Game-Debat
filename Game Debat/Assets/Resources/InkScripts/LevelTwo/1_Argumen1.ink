@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -32,7 +33,16 @@ Serta kemampuan siswa tanpa khawatir akan perbedaan jarak dan waktu.
 {Name("Farah")}
 {Icon("farah")}
 {CharAnimation("haru_greeter_t03","ShakeHead")}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Kenapa harus media sosial? Media sosial bukanlah solusi yang efektif.
 
 {Name("Pemain")}

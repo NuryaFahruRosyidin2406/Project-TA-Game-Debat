@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -35,7 +36,16 @@ Hal ini dapat terwujud jika diimbangi dengan pengawasan dari orang tua dan guru 
 {Name("Farah")}
 {Icon("farah")}
 {CharAnimation("haru_greeter_t03","ShakeHead")}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Penggunaan media sosial yang berlebihan menimbulkan rasa candu.
 
 {Name("Pemain")}

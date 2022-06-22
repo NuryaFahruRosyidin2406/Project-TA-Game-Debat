@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
 Test
@@ -35,7 +36,16 @@ Hal tersebut tentu akan menambah kepercayaan diri mereka.
 {Name("Farah")}
 {Icon("farah")}
 {CharAnimation("haru_greeter_t03","Surprised")}
+{TransNum(4)}
+{ChangeTime(0)}
+Interupsi!
+
+{TransNum(0)}
+{ChangeTime(2)}
+Interupsi!
+
 {ChangeTime(4)}
+{ShowArgue(false)}
 Media sosial membuat pelajar merasa mampu hanya di dunia maya.
 
 {Name("Pemain")}
