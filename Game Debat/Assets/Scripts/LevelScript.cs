@@ -16,4 +16,15 @@ public class LevelScript : MonoBehaviour
 
         Debug.Log("LEVEL" + PlayerPrefs.GetInt("levelsUnlocked") + " UNLOCKED");
     }
+
+    public void TurtorialPass()
+    {
+        if (PlayerPrefs.GetInt("levelsUnlocked") < 2)
+        {
+            PlayerPrefs.SetInt("levelsUnlocked", 2);
+            Debug.Log("LEVEL" + PlayerPrefs.GetInt("levelsUnlocked") + " UNLOCKED");
+        }
+        else
+            Debug.Log("Tutorial sudah pernah di selesaikan");
+    }
 }

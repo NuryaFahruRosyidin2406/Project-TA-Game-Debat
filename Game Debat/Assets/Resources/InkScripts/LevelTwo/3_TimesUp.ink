@@ -7,6 +7,7 @@ EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
 Baiklah, waktu penyampaian argumen sudah habis.
@@ -15,6 +16,7 @@ Baiklah, waktu penyampaian argumen sudah habis.
 {Icon("mc2")}
 {ChangeTime(3)}
 {AddDebateScore(-5)}
+{DebateStatus(false)}
 Berhenti!
 
 {Name("Moderator")}
@@ -22,4 +24,4 @@ Berhenti!
 {ChangeTime(3)}
 Waktu anda sudah habis.
 
-{ChangeScript("3_Penutup")}
+{ChangeScript("2_Intro")}

@@ -23,6 +23,8 @@ public class ChangeScene : MonoBehaviour
     public GameObject pauseOn;
     public GameObject pauseOff;
 
+    public GameObject exitMenu;
+
     //public int nextSceneLoad;
 
     /*private void Start()
@@ -55,9 +57,15 @@ public class ChangeScene : MonoBehaviour
 
     public void ExitGame()
     {
+        Debug.Log("Exit Game");
         Application.Quit();
     }
 
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
     /*public void NextLevel()
     {
         SceneManager.LoadScene(nextSceneLoad);
@@ -131,6 +139,16 @@ public class ChangeScene : MonoBehaviour
     public void CloseSettingMenu()
     {
         settingMenu.SetActive(false);
+    }
+
+    public void OpenExitMenu()
+    {
+        exitMenu.SetActive(true);
+    }
+
+    public void ClosedExitMenu()
+    {
+        exitMenu.SetActive(false);
     }
 
     public void TurnOnSound()

@@ -933,7 +933,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IntroScene
+          m_StringArgument: LevelSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &536801924
@@ -3764,6 +3764,7 @@ MonoBehaviour:
   soundOff: {fileID: 1205012510}
   pauseOn: {fileID: 0}
   pauseOff: {fileID: 0}
+  exitMenu: {fileID: 0}
 --- !u!4 &1651380985
 Transform:
   m_ObjectHideFlags: 0

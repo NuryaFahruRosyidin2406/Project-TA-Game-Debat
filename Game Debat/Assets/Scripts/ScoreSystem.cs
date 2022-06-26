@@ -14,7 +14,7 @@ public class ScoreSystem : MonoBehaviour
     private int scoreNum;
 
     private bool showScore;
-    public float timeToCountScore = 3f;
+    public float timeToCountScore = 1f;
 
     void Awake()
     {
@@ -32,13 +32,15 @@ public class ScoreSystem : MonoBehaviour
         if (showScore)
         {
             OpenMenu();
-            if(timeToCountScore >= 0)
+            if (timeToCountScore >= 0)
             {
+                SoundManagerScript.PlaySound("scorecount");
                 myScoreText.text = "" + Random.Range(0, 100);
                 timeToCountScore -= Time.deltaTime;
             }
             else
             {
+                SoundManagerScript.StopSound();
                 myScoreText.text = "" + scoreNum;
             }
         }
@@ -52,6 +54,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void OpenMenu()
     {
+        
         displayMenu.SetActive(true);
         // codingan ganti scene yang spesifik
         /*
