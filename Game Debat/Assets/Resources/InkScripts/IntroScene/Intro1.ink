@@ -6,6 +6,7 @@ EXTERNAL CharAnimation(charName, animationName)
 EXTERNAL CharExpression(charName, expressionInt)
 EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ChangeScene(sceneName)
+EXTERNAL TutorialPass(status)
 
 {Name("???")}
 {Icon("fatih")}
@@ -59,6 +60,7 @@ Kalo gitu kita bisa langsung mulai
 {ChangeTime(10)}
 Ayo ikut aku ke ruang debat
 
+{TutorialPass(true)}
 {ChangeScene("LevelSelection")}
 
 * [Tidak. Bisa tolong ajari aku.]
@@ -103,4 +105,5 @@ O-okay...
 {CharAnimation("chitose","GivinganArgument")}
 Aku anggap kau sudah paham. Kalau begitu, ayo ikut aku ke halaman sekolah.
 
+{TutorialPass(true)}
 {ChangeScene("LevelSelection")}

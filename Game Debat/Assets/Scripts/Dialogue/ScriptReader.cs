@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class ScriptReader : MonoBehaviour
 {
+    LevelScript levelScript;
+
+    [SerializeField] GameObject dialogueManager;
+
     [SerializeField]
     public TextAsset _inkJsonFile;
     public Story _StoryScript;
@@ -35,6 +39,11 @@ public class ScriptReader : MonoBehaviour
 
     public bool argumenShow;
     public int transitionNumber;
+
+    void Awake()
+    {
+        levelScript = dialogueManager.GetComponent<LevelScript>();
+    }
 
     void Start()
     {
@@ -95,6 +104,10 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("ShowScore", (bool scoreStatus) => showScore(scoreStatus)); // Change status of showing the score
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
+        _StoryScript.BindExternalFunction("ChangeScene", (string sceneName) => changeScene(sceneName)); // Change scene into a new scene
+        _StoryScript.BindExternalFunction("PassLevel", (bool status) => PassLevel(status)); // Unlock next level
+        _StoryScript.BindExternalFunction("TutorialPass", (bool status) => TutorialPass(status)); // Pass Tutorial Level
+        _StoryScript.BindExternalFunction("SoundEffect", (string soundName) => PlaySoundEffect(soundName)); // Add Sound effect in Inky
         DisplayNextLine();
     }
 
@@ -170,6 +183,24 @@ public class ScriptReader : MonoBehaviour
             {
                 Destroy(button.gameObject);
             }
+        }
+    }
+
+    public void PassLevel(bool status)
+    {
+        if (status)
+        {
+            levelScript.Pass();
+            status = false;
+        }
+    }
+
+    public void TutorialPass(bool status)
+    {
+        if (status)
+        {
+            levelScript.TurtorialPass();
+            status = false;
         }
     }
 
@@ -271,8 +302,26 @@ public class ScriptReader : MonoBehaviour
             Debug.Log(loadScript);
             _inkJsonFile = loadScript;
         }
+        else if (SceneManager.GetActiveScene().name == "IntroScene")
+        {
+            var loadScript = Resources.Load<TextAsset>("InkScripts/IntroScene/" + name);
+            Debug.Log(loadScript);
+            _inkJsonFile = loadScript;
+        }
                 
         LoadStory();
+    }
+
+    public void changeScene(string sceneName)
+    {
+        Debug.Log("Change scene into " + sceneName);
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void PlaySoundEffect(string soundName) // Add sound effect function
+    {
+        SoundManagerScript.PlaySound(soundName);
+        Debug.Log("Play sound effect " + soundName);
     }
 
     void updateTimer(float currentTime) // update dialogue timer

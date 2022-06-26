@@ -933,7 +933,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: IntroScene
+          m_StringArgument: LevelSelection
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &536801924
@@ -3590,8 +3590,20 @@ MonoBehaviour:
   settingMenu: {fileID: 1369790360}
   highScoreMenu: {fileID: 2070828885}
   creditMenu: {fileID: 102982343}
+  hintMenu: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  keywordMenu: {fileID: 0}
+  key1: {fileID: 0}
+  key2: {fileID: 0}
+  key3: {fileID: 0}
+  key4: {fileID: 0}
+  key5: {fileID: 0}
+  key6: {fileID: 0}
   soundOn: {fileID: 1660079798}
   soundOff: {fileID: 1205012510}
+  pauseOn: {fileID: 0}
+  pauseOff: {fileID: 0}
+  exitMenu: {fileID: 0}
 --- !u!4 &1651380985
 Transform:
   m_ObjectHideFlags: 0
