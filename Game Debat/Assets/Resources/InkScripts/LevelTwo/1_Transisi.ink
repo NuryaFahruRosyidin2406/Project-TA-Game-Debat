@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
 Test
@@ -14,6 +15,7 @@ Test
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
+{DebateStatus(true)}
 (Pilih argumen yang ingin dipakai!)
 
 * [Meningkatkan Keterampilan]

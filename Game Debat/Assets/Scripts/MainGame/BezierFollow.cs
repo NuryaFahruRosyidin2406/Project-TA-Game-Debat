@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BezierFollow : MonoBehaviour
 {
     ScriptReader scriptReader;
-    ScriptReaderLevelTwo scriptReaderLevelTwo;
 
     [SerializeField] GameObject dialogueManager;
     [SerializeField] private Transform[] routes;
@@ -29,10 +29,6 @@ public class BezierFollow : MonoBehaviour
     void Awake()
     {
         scriptReader = dialogueManager.GetComponent<ScriptReader>();
-        if(scriptReader == null)
-        {
-            scriptReaderLevelTwo = dialogueManager.GetComponent<ScriptReaderLevelTwo>();
-        }
     }
 
     // Start is called before the first frame update
@@ -50,17 +46,8 @@ public class BezierFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scriptReader == null)
-        {
-            showArgue = scriptReaderLevelTwo.argumenShow;
-            transitionNumber = scriptReaderLevelTwo.transitionNumber;
-        }
-        else
-        {
-            showArgue = scriptReader.argumenShow;
-            transitionNumber = scriptReader.transitionNumber;
-        }
-        
+        showArgue = scriptReader.argumenShow;
+        transitionNumber = scriptReader.transitionNumber;   
 
         if (coroutineAllowed)
         {
@@ -113,40 +100,24 @@ public class BezierFollow : MonoBehaviour
 
         if (transitionNumber == 1)
         {
-            
-            if(scriptReader == null)
-            {
-                scriptReaderLevelTwo.nextScript("2_Transisi1");
-            }
-            else
-            {
+            if (SceneManager.GetActiveScene().name == "LevelOne")
                 scriptReader.nextScript("1_Transisi1");
-            }
+            else if(SceneManager.GetActiveScene().name == "LevelTwo")
+                scriptReader.nextScript("2_Transisi1");
         }
         else if (transitionNumber == 2)
         {
-            
-            if (scriptReader == null)
-            {
-                scriptReaderLevelTwo.nextScript("2_Transisi2");
-            }
-            else
-            {
+            if (SceneManager.GetActiveScene().name == "LevelOne")
                 scriptReader.nextScript("1_Transisi2");
-            }
-
+            else if (SceneManager.GetActiveScene().name == "LevelTwo")
+                scriptReader.nextScript("2_Transisi2");
         }
         else if (transitionNumber == 3)
         {
-            
-            if (scriptReader == null)
-            {
-                scriptReaderLevelTwo.nextScript("2_Transisi3");
-            }
-            else
-            {
+            if (SceneManager.GetActiveScene().name == "LevelOne")
                 scriptReader.nextScript("1_Transisi3");
-            }
+            else if (SceneManager.GetActiveScene().name == "LevelTwo")
+                scriptReader.nextScript("2_Transisi3");
         }
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScriptReader : MonoBehaviour
 {
@@ -258,9 +259,19 @@ public class ScriptReader : MonoBehaviour
 
     public void nextScript(string name) // Load Next Script for the dialogue
     {
-        var loadScript = Resources.Load<TextAsset>("InkScripts/LevelOne/" + name);
-        Debug.Log(loadScript);
-        _inkJsonFile = loadScript;
+        if (SceneManager.GetActiveScene().name == "LevelOne")
+        {
+            var loadScript = Resources.Load<TextAsset>("InkScripts/LevelOne/" + name);
+            Debug.Log(loadScript);
+            _inkJsonFile = loadScript;
+        }
+        else if (SceneManager.GetActiveScene().name == "LevelTwo")
+        {
+            var loadScript = Resources.Load<TextAsset>("InkScripts/LevelTwo/" + name);
+            Debug.Log(loadScript);
+            _inkJsonFile = loadScript;
+        }
+                
         LoadStory();
     }
 

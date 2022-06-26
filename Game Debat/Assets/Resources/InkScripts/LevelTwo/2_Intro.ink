@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
 test
@@ -14,6 +15,7 @@ test
 {Name("Moderator")}
 {Icon("mc2")}
 {ChangeTime(4)}
+{DebateStatus(false)}
 Terima kasih kepada pihak afirmasi atas penyampaian argumennya.
 
 {ChangeTime(5)}

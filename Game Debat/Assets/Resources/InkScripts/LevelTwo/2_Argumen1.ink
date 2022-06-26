@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
+EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
 Terima kasih Moderator, saya akan menyampaikan argumen saya.
@@ -13,6 +14,7 @@ Terima kasih Moderator, saya akan menyampaikan argumen saya.
 {Icon("farah")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(4)}
+{DebateStatus(true)}
 Terima kasih Moderator, saya akan menyampaikan argumen saya.
 
 {ChangeTime(5)}
