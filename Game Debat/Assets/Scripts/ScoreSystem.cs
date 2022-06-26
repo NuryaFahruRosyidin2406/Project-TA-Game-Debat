@@ -53,5 +53,12 @@ public class ScoreSystem : MonoBehaviour
     public void OpenMenu()
     {
         displayMenu.SetActive(true);
+        // codingan ganti scene yang spesifik
+        /*
+        public void LoadScene(string sceneName)
+        {
+            SceneManager.LoadScene("AkumulasiPointLDA");
+        } 
+        */
     }
 }
