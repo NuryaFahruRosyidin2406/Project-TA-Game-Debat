@@ -23,5 +23,5 @@ test
 * [Memberikan Contoh Penggunaan Media Sosial]
 {ChangeScript("2_Argumen2_2")}
 
-* [Batal Menginterupsi]
+* [(Batal Menginterupsi)]
 {ChangeScript("2_Argumen2_3")}

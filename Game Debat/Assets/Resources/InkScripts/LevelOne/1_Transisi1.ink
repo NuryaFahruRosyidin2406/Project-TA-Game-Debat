@@ -30,6 +30,6 @@ Namun, tampaknya hal ini tidak lagi efektif.
 {AddDebateScore(2)}
 {ChangeScript("1_Argumen1_2")}
 
-* [Batal Menginterupsi]
+* [(Batal Menginterupsi)]
 {AddDebateScore(0)}
 {ChangeScript("1_Argumen1_3")}

@@ -28,6 +28,6 @@ Dapat saya simpulkan bahwa Ujian Nasional tidak dapat dijadikan acuan kelulusan 
 {AddDebateScore(-5)}
 {ChangeScript("1_Argumen3_2")}
 
-* [Batal Menginterupsi]
+* [(Batal Menginterupsi)]
 {AddDebateScore(0)}
 {ChangeScript("1_Argumen3_3")}

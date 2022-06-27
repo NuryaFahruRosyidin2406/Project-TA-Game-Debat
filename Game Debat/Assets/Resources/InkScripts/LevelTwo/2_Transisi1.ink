@@ -23,5 +23,5 @@ test
 * [Membatasi Penggunaan Media Sosial]
 {ChangeScript("2_Argumen1_2")}
 
-* [Batal Menginterupsi]
+* [(Batal Menginterupsi)]
 {ChangeScript("2_Argumen1_3")}

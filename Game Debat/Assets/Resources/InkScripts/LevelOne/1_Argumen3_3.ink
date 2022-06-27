@@ -19,11 +19,10 @@ Bukan untuk mendapatkan ilmu yang bermanfaat bagi kehidupan sehari-hari.
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
 {ChangeTime(3)}
-{ShowArgue(false)}
 Baiklah, saya akan melanjutkan argumen saya.
 
 {ChangeTime(4)}
-Bukan untuk mendapatkan ilmu yang bermanfaat bagi kehidupan sehari-hari. 
+Bukan untuk mendapatkan ilmu yang bermanfaat di kehidupan sehari-hari. 
 
 {ChangeTime(3)}
 {ShowArgue(false)}

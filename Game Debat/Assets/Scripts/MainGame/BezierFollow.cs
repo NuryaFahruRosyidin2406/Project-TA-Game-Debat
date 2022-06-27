@@ -97,6 +97,7 @@ public class BezierFollow : MonoBehaviour
     {
         PopUpSystem pop = GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<PopUpSystem>();
         pop.PopUp(popUp);
+        SoundManagerScript.PlaySound("interupsi");
 
         if (transitionNumber == 1)
         {

@@ -32,6 +32,6 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 {AddDebateScore(3)}
 {ChangeScript("1_Argumen2_2")}
 
-* [Batal Menginterupsi]
+* [(Batal Menginterupsi)]
 {AddDebateScore(0)}
 {ChangeScript("1_Argumen2_3")}
