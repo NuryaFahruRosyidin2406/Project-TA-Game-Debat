@@ -17,6 +17,7 @@ Terima kasih Moderator, saya akan menyampaikan argumen saya.
 {DebateStatus(true)}
 Terima kasih Moderator, saya akan menyampaikan argumen saya.
 
+{CharAnimation("haru_greeter_t03","GivingArgument")}
 {ChangeTime(5)}
 Pada kenyataannya, siswa akan dengan mudah teralih pada hal yang lain selain belajar.
 
@@ -25,11 +26,12 @@ Contohnya saja menggunakan media sosial tersebut untuk berkomunikasi secara prib
 
 {ShowArgue(true)}
 {TransNum(1)}
-{CharAnimation("haru_greeter_t03","GivingArgument")}
+{CharAnimation("haru_greeter_t03","Surprised")}
 {ChangeTime(5)}
 Selain itu, media sosial akan melemahkan interaksi sosial para pelajar di dunia nyata.
 
 {ShowArgue(false)}
+{CharAnimation("haru_greeter_t03","ShakeHead")}
 {ChangeTime(4)}
 Mereka akan sibuk dengan gawai dan media sosial masing-masing, 
 

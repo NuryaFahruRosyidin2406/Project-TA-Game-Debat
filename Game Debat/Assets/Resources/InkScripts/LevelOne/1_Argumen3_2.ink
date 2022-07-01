@@ -27,7 +27,7 @@ Tentu saja proses sangat penting.
 Siswa akan beranggapan bahwa tujuan utama belajar di sekolah adalah untuk mendapatkan nilai yang tinggi, 
 
 {ChangeTime(4)}
-Bukan untuk mendapatkan ilmu yang bermanfaat bagi kehidupan sehari-hari.
+Bukan untuk mendapatkan ilmu yang bermanfaat di kehidupan sehari-hari.
 
 {ChangeTime(3)}
 Hal ini yang akan menuntun siswa kepada kecurangan.

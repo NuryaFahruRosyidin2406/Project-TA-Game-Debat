@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL ChangeChoiceTime(changeTime)
 
 {Name("Fatih")}
 {Icon("fatih")}
@@ -25,10 +26,12 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 (Pilih argumen sanggahan untuk membantah argumen lawan!)
 
 * [Tingkatkan keamanan sistem]
+{ChangeChoiceTime(-2)}
 {AddDebateScore(10)}
 {ChangeScript("1_Argumen2_1")}
 
 * [Memperbanyak pengawas]
+{ChangeChoiceTime(2)}
 {AddDebateScore(3)}
 {ChangeScript("1_Argumen2_2")}
 

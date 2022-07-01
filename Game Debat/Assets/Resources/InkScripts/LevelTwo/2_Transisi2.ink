@@ -5,6 +5,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL ChangeChoiceTime(changeTime)
 
 {ChangeTime(0)}
 test 
@@ -18,9 +19,11 @@ test
 (Pilih argumen sanggahan untuk membantah argumen lawan!)
 
 * [Membatasi Waktu Penggunaan Media Sosial]
+{ChangeChoiceTime(-2)}
 {ChangeScript("2_Argumen2_1")}
 
 * [Memberikan Contoh Penggunaan Media Sosial]
+{ChangeChoiceTime(2)}
 {ChangeScript("2_Argumen2_2")}
 
 * [(Batal Menginterupsi)]

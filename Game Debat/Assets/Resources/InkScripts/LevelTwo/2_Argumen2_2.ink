@@ -10,10 +10,11 @@ test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(5)}
 Jika orang tua dan guru memberikan teladan yang baik dalam menggunakan media sosial,
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(4)}
 Secara otomatis anak dan siswanya pun akan mengikuti
 

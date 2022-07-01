@@ -22,8 +22,8 @@ Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban.
 {ShowArgue(false)}
 Baiklah, saya akan melanjutkan argumen saya.
 
-{ChangeTime(3)}
-Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban. 
+{ChangeTime(6)}
+Bahkan, para siswa tersebut biasanya telah mendapatkan kunci jawaban dari oknum yang tidak bertanggung jawab. 
 
 {ChangeTime(4)}
 Kalau sudah begini, apakah Anda masih yakin bahwa UN masih efektif untuk menentukan kelulusan seorang siswa?

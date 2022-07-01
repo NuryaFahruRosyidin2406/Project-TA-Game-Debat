@@ -15,6 +15,7 @@ test
 {ChangeTime(4)}
 Baiklah, saya akan melanjutkan argumen saya.
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(4)}
 Mereka akan sibuk dengan gawai dan media sosial masing-masing, 
 

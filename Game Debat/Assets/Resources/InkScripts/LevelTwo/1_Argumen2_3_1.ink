@@ -74,15 +74,15 @@ Karena siswa dihadapkan dalam situasi yang menantang mereka meningkatkan pengeta
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChangeTime(5)}
-Media sosial mampu memberikan banyak keterampilan bagi siswa dalam mengakses berbagai informasi.
+Media sosial memberikan banyak keterampilan bagi siswa dalam mengakses berbagai informasi.
 
 {ChangeTime(5)}
 Media sosial muncul sebagai kekuatan yang luar biasa dalam mengekspresikan diri,
 
 {ChangeTime(3)}
-Mempelajari keterampilan berkomunikasi dalam berbagai konteks, 
+Mempelajari cara berkomunikasi dalam berbagai konteks, 
 
 {ChangeTime(3)}
-Serta meningkatkan keterampilan literasi digital.
+Serta membantu meningkatkan keterampilan literasi digital.
 
 {ChangeScript("2_Intro")}

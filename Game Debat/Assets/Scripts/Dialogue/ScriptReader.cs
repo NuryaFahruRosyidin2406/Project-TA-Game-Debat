@@ -32,6 +32,7 @@ public class ScriptReader : MonoBehaviour
 
     public bool onChoice = false;
     public float choiceTimer = 4f;
+    public float choiceTimerSubtract = 0f;
 
     public bool debateRun;
     public bool scoreShow;
@@ -103,6 +104,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("AddDebateScore", (int debateScore) => addDebateScore(debateScore)); // Add or Reduce Player Score
         _StoryScript.BindExternalFunction("ShowScore", (bool scoreStatus) => showScore(scoreStatus)); // Change status of showing the score
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
+        _StoryScript.BindExternalFunction("ChangeChoiceTime", (float changeTime) => subChoiceTime(changeTime)); //Mengubah waktu untuk memilih
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
         _StoryScript.BindExternalFunction("ChangeScene", (string sceneName) => changeScene(sceneName)); // Change scene into a new scene
         _StoryScript.BindExternalFunction("PassLevel", (bool status) => PassLevel(status)); // Unlock next level
@@ -285,7 +287,14 @@ public class ScriptReader : MonoBehaviour
     public void choiceTime(float time) // function to change choice time in the inky
     {
         choiceTimer = time;
+        choiceTimer += choiceTimerSubtract;
         Debug.Log(choiceTimer + " Seconds");
+    }
+
+    public void subChoiceTime(float time)
+    {
+        choiceTimerSubtract = time;
+        Debug.Log("Choice Time reduce by "+ choiceTimerSubtract + " Seconds");
     }
 
     public void nextScript(string name) // Load Next Script for the dialogue

@@ -10,10 +10,11 @@ test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(3)}
 Dengan diajarkannya cara manajemen waktu yang baik,
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(5)}
 Maka pelajar bisa mengatur hal apa yang harus dijadikan prioritas dan dikerjakan terlebih dahulu.
 

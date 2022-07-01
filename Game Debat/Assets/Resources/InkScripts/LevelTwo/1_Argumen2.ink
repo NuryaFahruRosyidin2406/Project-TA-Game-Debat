@@ -86,7 +86,7 @@ Interaksi sosial yang terjalin juga semakin besar.
 Kebebasan berargumentasi di media sosial akan menjadi acuan dalam meningkatkan rasa percaya diri. 
 
 {ChangeTime(3)}
-Saat para pelajar berargumentasi di dunia maya, 
+Saat para pelajar mencoba berargumentasi di dunia maya, 
 
 {ChangeTime(4)}
 Mereka lebih leluasa untuk berpikir dan bersifat mandiri.
@@ -97,10 +97,7 @@ Akan tetapi saat dihadapkan di dunia nyata,
 {ChangeTime(4)}
 Kepercayaan diri mereka menjadi lemah dan gugup dalam berinteraksi.
 
-{ChangeTime(3)}
-Terbentuknya kepercayaan diri di dunia maya 
-
-{ChangeTime(4)}
-Akan menghantarkan kepercayaan diri yang lebih besar di dunia nyata.
+{ChangeTime(6)}
+Terbentuknya kepercayaan diri di dunia maya menghantarkan kepercayaan diri yang lebih besar di dunia nyata.
 
 {ChangeScript("1_Transisi2")}

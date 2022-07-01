@@ -16,21 +16,15 @@ Obsesi mendapatkan nilai Ujian Nasional yang tinggi demi masuk ke sekolah favori
 {CharExpression("chitose",0)}
 {ChangeTime(7)}
 {TransNum(2)}
-Obsesi mendapatkan nilai UN yang tinggi demi masuk ke sekolah favorit menuntun siswa untuk berbuat curang.
+Obsesi mendapatkan nilai UN yang tinggi demi masuk ke sekolah favorit mendorong siswa untuk berbuat curang.
 
 {CharAnimation("chitose","GivinganArgument")}
 {CharExpression("chitose",6)}
 {ChangeTime(3)}
 Hal ini tentu sudah bukan rahasia lagi. 
 
-{ChangeTime(4)}
-Beberapa siswa giat mengikuti bimbingan belajar di lembaga-lembaga tertentu.
-
-{ChangeTime(4)}
-Hal itu dilakukan oleh mereka untuk mendapatkan kunci jawaban dari Ujian Nasional. 
-
-{ChangeTime(3)}
-Tak jarang mereka rela untuk membayar mahal demi kunci jawaban tersebut. 
+{ChangeTime(5)}
+Beberapa siswa akan mencari dan melakukan segala cara agar dapat menyelesaikan soal ujian mereka.
 
 {ChangeTime(4)}
 {ShowArgue(true)}
@@ -38,11 +32,11 @@ Ketika UN berlangsung, tak jarang para siswa saling bekerja sama dengan saling m
 
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
-{ChangeTime(3)}
+{ChangeTime(6)}
 {ShowArgue(false)}
-Bahkan, beberapa oknum guru juga membantu para siswa dengan memberikan jawaban. 
+Bahkan, para siswa tersebut biasanya telah mendapatkan kunci jawaban dari oknum yang tidak bertanggung jawab. 
 
-{ChangeTime(4)}
-Apakah Anda masih yakin bahwa UN masih efektif untuk menentukan kelulusan seorang siswa?
+{ChangeTime(5)}
+Kalau sudah begini, apakah Anda masih yakin bahwa UN masih efektif untuk menentukan kelulusan seorang siswa?
 
 {ChangeScript("1_Argumen3")}

@@ -46,7 +46,7 @@ Interupsi!
 
 {ChangeTime(4)}
 {ShowArgue(false)}
-Penggunaan media sosial yang berlebihan menimbulkan rasa candu.
+Penggunaan media sosial yang berlebihan akan menimbulkan kecanduan.
 
 {Name("Pemain")}
 {Icon("pemain")}
@@ -89,6 +89,6 @@ Banyak sekali dampak positif yang bisa mereka dapatkan jika diimbangi dengan ada
 Pengawasan tersebut akan meminimalisir dampak negatif yang akan didapatkan para pelajar.
 
 {ChangeTime(4)}
-Hal itu juga membantu para pelajar agar tidak menyalahgunakan media sosial.
+Hal itu juga membantu para pelajar agar tidak sampai menyalahgunakan media sosial.
 
 {ChangeScript("1_Transisi1_3")}

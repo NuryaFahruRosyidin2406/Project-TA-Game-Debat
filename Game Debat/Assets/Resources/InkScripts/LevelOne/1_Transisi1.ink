@@ -7,6 +7,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL AddDebateScore(debateScore)
+EXTERNAL ChangeChoiceTime(changeTime)
 
 {Name("Fatih")}
 {Icon("fatih")}
@@ -23,10 +24,12 @@ Namun, tampaknya hal ini tidak lagi efektif.
 (Pilih argumen sanggahan untuk membantah argumen lawan!)
 
 * [Memberikan persiapan UN]
+{ChangeChoiceTime(-2)}
 {AddDebateScore(10)}
 {ChangeScript("1_Argumen1_1")}
 
 * [Membuat lingkungan sekolah bebas stress]
+{ChangeChoiceTime(2)}
 {AddDebateScore(2)}
 {ChangeScript("1_Argumen1_2")}
 

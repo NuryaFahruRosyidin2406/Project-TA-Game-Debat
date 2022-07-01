@@ -10,12 +10,13 @@ test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(4)}
 Adanya batasan waktu dalam penggunaan media sosial
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(5)}
-Akan meminimalisir rasa candu terhadap penggunaan media sosial
+Akan meminimalisir kecanduan terhadap penggunaan media sosial
 
 {Name("Farah")}
 {Icon("farah")}

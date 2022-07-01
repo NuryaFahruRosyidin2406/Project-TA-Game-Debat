@@ -10,10 +10,11 @@ test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(6)}
 Justru pelajar akan terbantu dalam meningkatkan interaksi sosial agar semakin terjalin kuat menggunakan media ini. 
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(5)}
 Karena tidak akan sulit untuk menciptakan interaksi dengan mudah dan cepat di media sosial.
 

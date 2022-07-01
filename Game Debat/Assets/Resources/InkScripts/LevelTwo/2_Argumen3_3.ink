@@ -11,7 +11,7 @@ test
 
 {Name("Farah")}
 {Icon("farah")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","ShakeHead")}
 {ChangeTime(4)}
 Baiklah, sekali lagi saya tegaskan bahwa saya tidak setuju dengan masalah ini.
 

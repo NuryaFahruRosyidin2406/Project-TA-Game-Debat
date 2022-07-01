@@ -18,6 +18,7 @@ Baiklah, saya akan melanjutkan argumen saya.
 {ChangeTime(4)}
 Terlebih lagi jika pelajar tersebut menjadi bergantung pada media sosial
 
+{CharAnimation("haru_greeter_t03","GivingArgument")}
 {ShowArgue(false)}
 {ChangeTime(4)}
 Yang pada akhirnya akan berimbas pada kecanduan terhadap media sosial.

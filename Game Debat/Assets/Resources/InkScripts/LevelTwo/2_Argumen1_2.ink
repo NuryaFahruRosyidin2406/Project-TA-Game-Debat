@@ -10,16 +10,17 @@ test
 
 {Name("Pemain")}
 {Icon("pemain")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(4)}
 Adanya batasan dalam penggunaan media sosial akan membuat pelajar 
 
+{CharAnimation("haru_greeter_t03","Listening")}
 {ChangeTime(4)}
 Memiliki waktu yang cukup untuk berinteraksi dengan lingkungan sekitarnya.
 
 {Name("Farah")}
 {Icon("farah")}
-{CharAnimation("haru_greeter_t03","Agree")}
+{CharAnimation("haru_greeter_t03","GivingArgument")}
 {ChangeTime(3)}
 Bagaimana bisa mereka membatasi penggunaan media sosial  
 

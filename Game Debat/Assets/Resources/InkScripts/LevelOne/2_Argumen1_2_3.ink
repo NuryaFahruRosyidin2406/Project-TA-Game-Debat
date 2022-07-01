@@ -78,9 +78,9 @@ UN dapat menjadi media persiapan yang mematangkan potensi untuk belajar dan meng
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
 {ChangeTime(5)}
-Saya tidak setuju! Karena nyatanya UN adalah standar nilai yang digunakan untuk seleksi masuk sekolah baru
+Saya tidak setuju! Karena UN merupakan salah satu syarat wajib untuk seleksi masuk sekolah baru
 
 {ChangeTime(4)}
-Dan secara otomatis persiapan UN sama dengan persiapan Ujian Masuk.
+Dan secara otomatis nilai UN menentukan kelulusan siswa di sekolah baru tersebut.
 
 {ChangeScript("3_Penutup")}

@@ -21,6 +21,9 @@ Bukan untuk mendapatkan ilmu yang bermanfaat bagi kehidupan sehari-hari.
 {ChangeTime(3)}
 Baiklah, saya akan melanjutkan argumen saya.
 
+{ChangeTime(5)}
+Siswa akan beranggapan bahwa tujuan utama belajar di sekolah adalah untuk mendapatkan nilai yang tinggi, 
+
 {ChangeTime(4)}
 Bukan untuk mendapatkan ilmu yang bermanfaat di kehidupan sehari-hari. 
 
