@@ -10,6 +10,7 @@ public class ScriptReader : MonoBehaviour
 {
     LevelScript levelScript;
     ScoreFuzzy scoreFuzzy;
+    ScoreDisplay scoreDisplay;
 
     [SerializeField] GameObject dialogueManager;
 
@@ -38,7 +39,7 @@ public class ScriptReader : MonoBehaviour
     public bool debateRun;
     public bool launchFuzzy;
     public bool scoreShow;
-    public int debateScoreIsi, debateScorePenyampaian, debateScoreStrategi;
+    public int debateScoreIsi, debateScorePenyampaian, debateScoreStrategi, statusHighscoreFuzzy;
 
     public bool argumenShow;
     public int transitionNumber;
@@ -46,6 +47,7 @@ public class ScriptReader : MonoBehaviour
     void Awake()
     {
         levelScript = dialogueManager.GetComponent<LevelScript>();
+        scoreFuzzy = dialogueManager.GetComponent<ScoreFuzzy>();
     }
 
     void Start()
@@ -108,6 +110,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("AddDebateScoreStrategi", (int debateScoreStrategi) => addDebateScoreStrategi(debateScoreStrategi)); // Add or Reduce Player Score Strategi
         _StoryScript.BindExternalFunction("CalculateScoreFuzzy", (bool fuzzyStatus) => calculateScoreFuzzy(fuzzyStatus)); // Change status to calculate fuzzy
         _StoryScript.BindExternalFunction("ShowScore", (bool scoreStatus) => showScore(scoreStatus)); // Change status of showing the score
+        _StoryScript.BindExternalFunction("HighscoreStatus", (int statusHighscore) => highscoreStatus(statusHighscore)); // Change status of showing the score
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeChoiceTime", (float changeTime) => subChoiceTime(changeTime)); //Mengubah waktu untuk memilih
         _StoryScript.BindExternalFunction("ChangeScript", (string scriptName) => nextScript(scriptName));
@@ -280,12 +283,28 @@ public class ScriptReader : MonoBehaviour
     {
         launchFuzzy = statusfuzzy;
         Debug.Log("Score Ditampilan: " + launchFuzzy);
-        if (launchFuzzy =! false)
+        if (launchFuzzy)
         {
-            Debug.Log("1. Mulai masuk perhitugan fuzzy: " + launchFuzzy);
+            Debug.Log("1. Mulai masuk perhitungan fuzzy: " + launchFuzzy);
             scoreFuzzy.metodeFuzzyMamdani();
         }
-        else Debug.Log("2. Mulai masuk perhitugan fuzzy: " + launchFuzzy);
+        else Debug.Log("2. Mulai masuk perhitungan fuzzy: " + launchFuzzy);
+    }
+
+    public void highscoreStatus(int addhighscoreStatus)
+    {
+        statusHighscoreFuzzy = addhighscoreStatus;
+        Debug.Log("Score Ditampilan: " + statusHighscoreFuzzy);
+        if (statusHighscoreFuzzy == 1)
+        {
+            Debug.Log("1. Mulai masuk memasukkan highscore fuzzy level satu: " + statusHighscoreFuzzy);
+            scoreFuzzy.highscoreLevelOne();
+        }
+        else if (statusHighscoreFuzzy == 2) 
+        {
+            Debug.Log("1. Mulai masuk memasukkan highscore fuzzy level dua: " + statusHighscoreFuzzy);
+            scoreFuzzy.highscoreLevelTwo();
+        }
     }
 
     public void addDebateScoreIsi(int scoreIsi) // Add Player Score Isi

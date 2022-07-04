@@ -12,6 +12,9 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] GameObject dialogueManager;
 
     public Text myScoreText;
+    public Text keteranganScoreAkhirText;
+    //public static string[] keteranganScoreAkhir = new string[] {"KURANG BAGUS", "CUKUP BAGUS", "BAGUS"};
+    //public string randomKeterangan = keteranganScoreAkhir[Random.Range(0, keteranganScoreAkhir.Length)];
     private int scoreNum;
 
     private bool showScore;
@@ -27,6 +30,7 @@ public class ScoreSystem : MonoBehaviour
     {
         scoreNum = 0;
         myScoreText.text = "" + scoreNum;
+        keteranganScoreAkhirText.text = "" + scoreFuzzy.keteranganNilai.ToString();
     }
 
     void Update()
@@ -39,17 +43,19 @@ public class ScoreSystem : MonoBehaviour
             {
                 SoundManagerScript.PlaySound("scorecount");
                 myScoreText.text = "" + Random.Range(0, 100);
+                //keteranganScoreAkhirText.text = "" + randomKeterangan;
                 timeToCountScore -= Time.deltaTime;
             }
             else
             {
                 SoundManagerScript.StopSound();
                 myScoreText.text = "" + scoreNum;
+                keteranganScoreAkhirText.text = "" + scoreFuzzy.keteranganNilai.ToString();
             }
         }
         else
         {
-            scoreNum = (int) scoreFuzzy.hasilkeluaran;
+            scoreNum = (int) scoreFuzzy.nilaiAkhir;
             //scoreNum = scriptReader.debateScoreIsi;
             showScore = scriptReader.scoreShow;
             // Edit skor disini

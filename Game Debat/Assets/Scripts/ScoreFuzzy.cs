@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreFuzzy : MonoBehaviour
 {
@@ -11,7 +12,11 @@ public class ScoreFuzzy : MonoBehaviour
     public static int isi, penyampaian, strategi;
     public static float sampel;
     public float na, hasilkeluaran;
-    int hasilakhir;
+    public int nilaiAkhir;
+    public int highscoreLevelSatu = 0;
+    public int highscoreLevelDua = 0;
+    public static string keteranganNilaiAkhir, keteranganNA;
+    public string keteranganNilai;
 
     void Awake()
     {
@@ -28,6 +33,8 @@ public class ScoreFuzzy : MonoBehaviour
     {
         // inisialisasi nilai isi, penyampaian, strategi
         //isi = PlayerPrefs.GetInt("debateSkorIsi");
+        
+
         isi = scriptReader.debateScoreIsi;
         Debug.Log("Nilai Isi: " + isi);
         //penyampaian = PlayerPrefs.GetInt("debateSkorPenyampaian");
@@ -55,8 +62,61 @@ public class ScoreFuzzy : MonoBehaviour
             hasilkeluaran += 1;
         }
         else hasilkeluaran += 0;
-        Debug.Log("Skor Penilaian Debat adalah  = " + hasilkeluaran);
+        nilaiAkhir = (int) hasilkeluaran * 100 / 74;
+        Debug.Log("Nilai Akhir " + nilaiAkhir);
+        fixScore();
+        keteranganNilai = keteranganNA;
+        Debug.Log("Skor Penilaian Debat adalah  = " + nilaiAkhir + " (" + keteranganNA + ").");
         hapusinputfuzzy();
+    }
+
+    public void fixScore()
+    {
+        Debug.Log("Masuk fixscore");
+        Debug.Log("fix keterangan nilai = " + keteranganNilaiAkhir);
+        if (keteranganNilaiAkhir == "KURANG BAGUS!" && nilaiAkhir >= 0 && nilaiAkhir <= 62)
+        {
+            keteranganNA = "KURANG BAGUS!";
+            Debug.Log("fix keterangan NA = " + keteranganNA);
+        }
+        else if (keteranganNilaiAkhir == "KURANG BAGUS!" && nilaiAkhir >= 62 && nilaiAkhir <= 75)
+        {
+            keteranganNA = "CUKUP BAGUS!";
+            Debug.Log("fix keterangan NA = " + keteranganNA);
+        }
+        else if (keteranganNilaiAkhir == "CUKUP BAGUS!" && nilaiAkhir >= 62 && nilaiAkhir <= 75)
+        {
+            keteranganNA = "CUKUP BAGUS!";
+            Debug.Log("fix keterangan NA = " + keteranganNA);
+        }
+        else if (keteranganNilaiAkhir == "CUKUP BAGUS!" && nilaiAkhir >= 75 && nilaiAkhir <= 100)
+        {
+            keteranganNA = "BAGUS!";
+            Debug.Log("fix keterangan NA = " + keteranganNA);
+        }
+        else if (keteranganNilaiAkhir == "BAGUS!" && nilaiAkhir >= 75 && nilaiAkhir <= 100)
+        {
+            keteranganNA = "BAGUS!";
+            Debug.Log("fix keterangan NA = " + keteranganNA);
+        }
+    }
+
+    public void highscoreLevelOne()
+    {
+        highscoreLevelSatu = nilaiAkhir;
+        if (highscoreLevelSatu > PlayerPrefs.GetInt("HighScoreLevelSatu", 0))
+        {
+            PlayerPrefs.SetInt("HighScoreLevelSatu", highscoreLevelSatu);
+        }
+    }
+
+    public void highscoreLevelTwo()
+    {
+        highscoreLevelDua = nilaiAkhir;
+        if (highscoreLevelDua > PlayerPrefs.GetInt("HighScoreLevelDua", 0))
+        {
+            PlayerPrefs.SetInt("HighScoreLevelDua", highscoreLevelDua);
+        }
     }
 
     public void hapusinputfuzzy()
@@ -469,16 +529,23 @@ public class ScoreFuzzy : MonoBehaviour
             }
             if (terbesarX > 0)
             {
+                keteranganNilaiAkhir = "KURANG BAGUS!";
                 Debug.Log("Nilai penilaian debat kurang bagus = " + terbesarX);
+                Debug.Log("Keterangan Nilai Akhir = " + keteranganNilaiAkhir);
             }
             if (terbesarY > 0)
             {
+                keteranganNilaiAkhir = "CUKUP BAGUS!";
                 Debug.Log("Nilai penilaian debat cukup bagus = " + terbesarY);
+                Debug.Log("Keterangan Nilai Akhir = " + keteranganNilaiAkhir);
             }
             if (terbesarZ > 0)
             {
+                keteranganNilaiAkhir = "BAGUS!";
                 Debug.Log("Nilai penilaian debat bagus = " + terbesarZ);
+                Debug.Log("Keterangan Nilai Akhir = " + keteranganNilaiAkhir);
             }
+            
             Debug.Log("Nilai terbesarX = " + terbesarX);
             Debug.Log("Nilai terbesarY = " + terbesarY);
             Debug.Log("Nilai terbesarZ = " + terbesarZ);

@@ -12,6 +12,7 @@ EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 EXTERNAL CalculateScoreFuzzy(fuzzyStatus)
 EXTERNAL ShowScore(scoreStatus)
+EXTERNAL HighscoreStatus(statusHighscore)
 EXTERNAL DebateStatus(debateStatus)
 
 {ChangeTime(0)}
@@ -31,3 +32,4 @@ Terima kasih kepada pihak oposisi untuk argumennya.
 Selanjutnya, diberikan waktu kepada juri untuk memberikan penilaiannya.
 
 {ShowScore(true)}
+{HighscoreStatus(1)}
