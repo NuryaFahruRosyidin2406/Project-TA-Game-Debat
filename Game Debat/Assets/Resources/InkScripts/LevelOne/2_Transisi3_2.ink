@@ -6,7 +6,6 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Test
@@ -20,5 +19,4 @@ Test
 (Pilih argumen yang ingin dipakai!)
 
 * [Motivasi Belajar]
-{AddDebateScore(5)}
 {ChangeScript("2_Argumen3_2_1")}

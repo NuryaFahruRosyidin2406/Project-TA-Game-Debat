@@ -6,6 +6,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL TransNum(transNumber)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 
 {ChangeTime(0)}
 Test
@@ -55,6 +56,7 @@ Kenapa harus media sosial? Media sosial bukanlah solusi yang efektif.
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(12)}
 {ChangeTime(4)}
 Pembelajaran akan terasa lebih mudah melalui media sosial,
 
@@ -73,6 +75,7 @@ Karena siswa dihadapkan dalam situasi yang menantang mereka meningkatkan pengeta
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(13)}
 {ChangeTime(5)}
 Media sosial memberikan banyak keterampilan bagi siswa dalam mengakses berbagai informasi.
 

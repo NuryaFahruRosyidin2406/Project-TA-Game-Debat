@@ -6,6 +6,9 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScoreIsi(debateScoreIsi)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
+EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 EXTERNAL ShowScore(scoreStatus)
 EXTERNAL DebateStatus(debateStatus)
 
@@ -16,6 +19,9 @@ Terima kasih kepada pihak oposisi yang telah menyampaikan argumennya.
 {Icon("mc2")}
 {ChangeTime(4)}
 {DebateStatus(false)}
+{AddDebateScoreIsi(0)}
+{AddDebateScorePenyampaian(0)}
+{AddDebateScoreStrategi(0)}
 Terima kasih kepada pihak oposisi untuk argumennya.
 
 {ChangeTime(4)}

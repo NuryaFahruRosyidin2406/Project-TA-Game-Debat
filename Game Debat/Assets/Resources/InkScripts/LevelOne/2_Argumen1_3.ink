@@ -6,7 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
@@ -58,7 +58,7 @@ Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
 Pilih untuk mempertahankan argumen!) 
 
 * [UN Sebagai Sarana Persiapan]
-{AddDebateScore(5)}
+{AddDebateScorePenyampaian(13)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -72,7 +72,7 @@ UN dapat menjadi media persiapan yang mematangkan potensi untuk belajar dan meng
 {ChangeScript("2_Transisi1_3")}
 
 * [UN Adalah Syarat Wajib]
-{AddDebateScore(-5)}
+{AddDebateScorePenyampaian(12)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}

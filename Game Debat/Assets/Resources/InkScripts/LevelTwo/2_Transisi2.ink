@@ -5,6 +5,8 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
+EXTERNAL AddDebateScoreIsi(debateScoreIsi)
+EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 EXTERNAL ChangeChoiceTime(changeTime)
 
 {ChangeTime(0)}
@@ -20,11 +22,17 @@ test
 
 * [Membatasi Waktu Penggunaan Media Sosial]
 {ChangeChoiceTime(-2)}
+{AddDebateScoreIsi(13)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("2_Argumen2_1")}
 
 * [Memberikan Contoh Penggunaan Media Sosial]
 {ChangeChoiceTime(2)}
+{AddDebateScoreIsi(11)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("2_Argumen2_2")}
 
 * [(Batal Menginterupsi)]
+{AddDebateScoreIsi(0)}
+{AddDebateScoreStrategi(0)}
 {ChangeScript("2_Argumen2_3")}

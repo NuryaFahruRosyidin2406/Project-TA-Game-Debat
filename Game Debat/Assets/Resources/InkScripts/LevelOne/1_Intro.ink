@@ -9,12 +9,10 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
 
 {Name("Moderator")}
 {Icon("mc1")}
 {ChangeTime(5)}
-{AddDebateScore(30)}
 Hari ini kita akan membahas tentang Penghapusan Ujian Nasional atau yang biasa disebut UN 
 
 {ChangeTime(3)}
@@ -55,7 +53,6 @@ Selanjutnya silahkan kepada pihak oposisi untuk segera memperkenalkan diri.
 {Name("Pemain")}
 {Icon("pemain")}
 {ChangeTime(4)}
-{AddDebateScore(10)}
 Halo teman-teman! Kenalin nama saya Pemain.
 
 {ChangeTime(5)}
@@ -78,7 +75,6 @@ Dipersilahkan kepada pihak afirmasi untuk membuka debat.
 Halo semua, saya Pemain.
 
 {ChangeTime(4)}
-{AddDebateScore(7)}
 Saya menolak Penghapusan UN Sebagai Standar Kelulusan Siswa.
 
 {Name("Moderator")}
@@ -98,7 +94,6 @@ Dipersilahkan kepada pihak afirmasi untuk membuka debat.
 . . .
 
 {ChangeTime(3)}
-{AddDebateScore(-5)}
 . . . . . .
 
 {Name("Moderator")}

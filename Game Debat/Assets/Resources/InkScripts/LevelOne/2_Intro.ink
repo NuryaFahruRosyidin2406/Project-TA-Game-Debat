@@ -8,7 +8,6 @@ EXTERNAL ChangeScript(scriptName)
 EXTERNAL TransNum(transNumber)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL DebateStatus(debateStatus)
-EXTERNAL AddDebateScore(debateScore)
 
 {ChangeTime(0)}
 Terima kasih kepada pihak afirmasi yang telah menyampaikan argumennya.
@@ -30,13 +29,10 @@ Selanjutnya, diberikan waktu kepada pihak oposisi untuk menyampaikan argumennya.
 (Pilih argumen yang ingin dipakai!)
 
 * [Motivasi Belajar]
-{AddDebateScore(5)}
 {ChangeScript("2_Argumen1")}
 
 * [Mengukur Potensi]
-{AddDebateScore(5)}
 {ChangeScript("2_Argumen2")}
 
 * [Persiapan Seleksi Sekolah/Kuliah]
-{AddDebateScore(5)}
 {ChangeScript("2_Argumen3")}

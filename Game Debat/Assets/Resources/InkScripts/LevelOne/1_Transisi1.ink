@@ -6,7 +6,8 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
+EXTERNAL AddDebateScoreIsi(debateScoreIsi)
+EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 EXTERNAL ChangeChoiceTime(changeTime)
 
 {Name("Fatih")}
@@ -25,14 +26,17 @@ Namun, tampaknya hal ini tidak lagi efektif.
 
 * [Memberikan persiapan UN]
 {ChangeChoiceTime(-2)}
-{AddDebateScore(10)}
+{AddDebateScoreIsi(13)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("1_Argumen1_1")}
 
 * [Membuat lingkungan sekolah bebas stress]
 {ChangeChoiceTime(2)}
-{AddDebateScore(2)}
+{AddDebateScoreIsi(11)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("1_Argumen1_2")}
 
 * [(Batal Menginterupsi)]
-{AddDebateScore(0)}
+{AddDebateScoreIsi(0)}
+{AddDebateScoreStrategi(0)}
 {ChangeScript("1_Argumen1_3")}

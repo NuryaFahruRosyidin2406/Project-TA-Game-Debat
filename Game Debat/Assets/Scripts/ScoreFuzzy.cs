@@ -4,24 +4,82 @@ using UnityEngine;
 
 public class ScoreFuzzy : MonoBehaviour
 {
-    static int isi, penyampaian, sampel, strategi;
-    float na, hasilkeluaran;
+    ScriptReader scriptReader;
+
+    [SerializeField] GameObject dialogueManager;
+
+    public static int isi, penyampaian, strategi;
+    public static float sampel;
+    public float na, hasilkeluaran;
     int hasilakhir;
+
+    void Awake()
+    {
+        scriptReader = dialogueManager.GetComponent<ScriptReader>();
+    }
+
+    // Start is called before the first frame update
+    /*void Start()
+    {
+        metodeFuzzyMamdani();
+    }*/
+
+    public void metodeFuzzyMamdani()
+    {
+        // inisialisasi nilai isi, penyampaian, strategi
+        //isi = PlayerPrefs.GetInt("debateSkorIsi");
+        isi = scriptReader.debateScoreIsi;
+        Debug.Log("Nilai Isi: " + isi);
+        //penyampaian = PlayerPrefs.GetInt("debateSkorPenyampaian");
+        penyampaian = scriptReader.debateScorePenyampaian;
+        Debug.Log("Nilai Penyampaian: " + penyampaian);
+        //strategi = PlayerPrefs.GetInt("debateSkorStrategi");
+        strategi = scriptReader.debateScoreStrategi;
+        Debug.Log("Nilai Strategi: " + strategi);
+        // Masuk tahap Fuzzifikasi
+        fuzzy_mamdani fuzzy = new fuzzy_mamdani();
+        fuzzy.anggotaisi(isi);
+        fuzzy.anggotapenyampaian(penyampaian);
+        fuzzy.anggotastrategi(strategi);
+        fuzzy.cetakMember();
+        // Masuk tahap Inferensi
+        fuzzy.inferensi();
+        // Masuk tahap Defuzzifikasi
+        sampel = 20;
+        na = fuzzy.defuzzifikasi(sampel);
+        Debug.Log("Nilai Akhir = " + na);
+        hasilkeluaran = (int)na;
+        Debug.Log("Nilai Keluaran = " + hasilkeluaran);
+        if (na - hasilkeluaran >= 0.5)
+        {
+            hasilkeluaran += 1;
+        }
+        else hasilkeluaran += 0;
+        Debug.Log("Skor Penilaian Debat adalah  = " + hasilkeluaran);
+        hapusinputfuzzy();
+    }
+
+    public void hapusinputfuzzy()
+    {
+        PlayerPrefs.DeleteKey("debateSkorIsi");
+        PlayerPrefs.DeleteKey("debateSkorPenyampaian");
+        PlayerPrefs.DeleteKey("debateSkorStrategi");
+    }
 
     public class fuzzy_mamdani
     {
-        int k;
-        float memberIsiKurangBagus, memberIsiCukupBagus, memberIsiBagus, memberIsiBagusSekali;
-        float memberPenyampaianKurangBagus, memberPenyampaianCukupBagus, memberPenyampaianBagus;
-        float memberStrategiKurangBagus, memberStrategiCukupBagus, memberStrategiBagus;
-        float deltaX, deltaY, deltaZ;
-        float hasilPembilang, hasilPenyebut, hasilDefuzzifikasi;
-        float jumlah_sampelX, jumlah_sampelY, jumlah_sampelZ, jumlah_samir;
-        float mirlangX, mirlangY, mirlangZ;
-        float pembilangX, pembilangY, pembilangZ, pembilangmir;
-        float pengaliX, pengaliY, pengaliZ;
-        float terbesarX, terbesarY, terbesarZ;
-        float titik_sampelX, titik_sampelY, titik_sampelZ;
+        public int k;
+        public float memberIsiKurangBagus, memberIsiCukupBagus, memberIsiBagus, memberIsiBagusSekali;
+        public float memberPenyampaianKurangBagus, memberPenyampaianCukupBagus, memberPenyampaianBagus;
+        public float memberStrategiKurangBagus, memberStrategiCukupBagus, memberStrategiBagus;
+        public float deltaX, deltaY, deltaZ;
+        public float hasilPembilang, hasilPenyebut, hasilDefuzzifikasi;
+        public float jumlah_sampelX, jumlah_sampelY, jumlah_sampelZ, jumlah_samir;
+        public float mirlangX, mirlangY, mirlangZ;
+        public float pembilangX, pembilangY, pembilangZ, pembilangmir;
+        public float pengaliX, pengaliY, pengaliZ;
+        public float terbesarX, terbesarY, terbesarZ;
+        public float titik_sampelX, titik_sampelY, titik_sampelZ;
 
         //Keanggotaan isi
         public void anggotaisi(float inputIsi)
@@ -284,23 +342,23 @@ public class ScoreFuzzy : MonoBehaviour
 
                             if (i == 0 && j == 0 && l <= 2)
                             {
-                                kondisi[k] = "Kurang_Bagus";
+                                kondisi[k] = "Kurang Bagus";
                             }
                             else if (i == 0 && j == 1 && l == 0)
                             {
-                                kondisi[k] = "Kurang_Bagus";
+                                kondisi[k] = "Kurang Bagus";
                             }
                             else if (i == 0 && j == 1 && l >= 1)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 0 && j == 2 && l == 0)
                             {
-                                kondisi[k] = "Kurang_Bagus";
+                                kondisi[k] = "Kurang Bagus";
                             }
                             else if (i == 0 && j == 2 && l == 1)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 0 && j == 2 && l == 2)
                             {
@@ -308,19 +366,19 @@ public class ScoreFuzzy : MonoBehaviour
                             }
                             else if (i == 1 && j == 0 && l == 0)
                             {
-                                kondisi[k] = "Kurang_Bagus";
+                                kondisi[k] = "Kurang Bagus";
                             }
                             else if (i == 1 && j == 0 && l >= 1)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 1 && j == 1 && l >= 0)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 1 && j == 2 && l == 0)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 1 && j == 2 && l >= 1)
                             {
@@ -328,11 +386,11 @@ public class ScoreFuzzy : MonoBehaviour
                             }
                             else if (i == 2 && j == 0 && l >= 0)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 2 && j == 1 && l <= 1)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 2 && j == 1 && l == 2)
                             {
@@ -344,11 +402,11 @@ public class ScoreFuzzy : MonoBehaviour
                             }
                             else if (i == 3 && j == 0 && l >= 0)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 3 && j == 1 && l == 0)
                             {
-                                kondisi[k] = "Cukup_Bagus";
+                                kondisi[k] = "Cukup Bagus";
                             }
                             else if (i == 3 && j == 1 && l >= 1)
                             {
@@ -372,39 +430,40 @@ public class ScoreFuzzy : MonoBehaviour
             }
 
             // Menentukan nilai max
-            for (int i = 0; i < k; k++)
+            for (int ii = 0; ii < k; ii++)
             {
-                if (kondisi[i] == "Kurang Bagus")
+                Debug.Log("Max " + ii);
+                if (kondisi[ii] == "Kurang Bagus")
                 {
-                    if (i == 0)
+                    if (ii == 0)
                     {
-                        terbesarX = nilaiKondisi[i];
+                        terbesarX = nilaiKondisi[ii];
                     }
-                    else if (nilaiKondisi[i] > terbesarX)
+                    else if (nilaiKondisi[ii] > terbesarX)
                     {
-                        terbesarX = nilaiKondisi[i];
+                        terbesarX = nilaiKondisi[ii];
                     }
                 }
-                else if (kondisi[i] == "Cukup Bagus")
+                else if (kondisi[ii] == "Cukup Bagus")
                 {
-                    if (i == 0)
+                    if (ii == 0)
                     {
-                        terbesarY = nilaiKondisi[i];
+                        terbesarY = nilaiKondisi[ii];
                     }
-                    else if (nilaiKondisi[i] > terbesarY)
+                    else if (nilaiKondisi[ii] > terbesarY)
                     {
-                        terbesarY = nilaiKondisi[i];
+                        terbesarY = nilaiKondisi[ii];
                     }
                 }
-                else if (kondisi[i] == "Bagus")
+                else if (kondisi[ii] == "Bagus")
                 {
-                    if (i == 0)
+                    if (ii == 0)
                     {
-                        terbesarZ = nilaiKondisi[i];
+                        terbesarZ = nilaiKondisi[ii];
                     }
-                    else if (nilaiKondisi[i] > terbesarZ)
+                    else if (nilaiKondisi[ii] > terbesarZ)
                     {
-                        terbesarZ = nilaiKondisi[i];
+                        terbesarZ = nilaiKondisi[ii];
                     }
                 }
             }
@@ -420,6 +479,9 @@ public class ScoreFuzzy : MonoBehaviour
             {
                 Debug.Log("Nilai penilaian debat bagus = " + terbesarZ);
             }
+            Debug.Log("Nilai terbesarX = " + terbesarX);
+            Debug.Log("Nilai terbesarY = " + terbesarY);
+            Debug.Log("Nilai terbesarZ = " + terbesarZ);
         }
 
         // Bagian defuzzifikasi
@@ -434,7 +496,7 @@ public class ScoreFuzzy : MonoBehaviour
             mirlangZ = 0;
             pembilangmir = 0;
             hasilPenyebut = 0;
-            hasilDefuzzifikasi = 0;
+            hasilDefuzzifikasi = 1;
             titik_sampelX = 0;
             titik_sampelY = 0;
             titik_sampelZ = 0;
@@ -449,6 +511,10 @@ public class ScoreFuzzy : MonoBehaviour
             pengaliX = terbesarX;
             pengaliY = terbesarY;
             pengaliZ = terbesarZ;
+
+            Debug.Log(pengaliX);
+            Debug.Log(pengaliY);
+            Debug.Log(pengaliZ);
 
             // Defuzzifikasi Kurang Bagus (Trapesium)
             if (terbesarX > 0)
@@ -910,47 +976,5 @@ public class ScoreFuzzy : MonoBehaviour
             Debug.Log("Strategi cukup bagus adalah " + memberStrategiCukupBagus);
             Debug.Log("Strategi bagus adalah " + memberStrategiBagus);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        metodeFuzzyMamdani();
-    }
-
-    public void metodeFuzzyMamdani()
-    {
-        // inisialisasi nilai isi, penyampaian, strategi
-        isi = 24;
-        Debug.Log("Nilai Isi: " + isi);
-        penyampaian = 25;
-        Debug.Log("Nilai Penyampaian: " + penyampaian);
-        strategi = 3;
-        Debug.Log("Nilai Strategi: " + strategi);
-        // Masuk tahap Fuzzifikasi
-        fuzzy_mamdani fuzzy = new fuzzy_mamdani();
-        fuzzy.anggotaisi(isi);
-        fuzzy.anggotapenyampaian(penyampaian);
-        fuzzy.anggotastrategi(strategi);
-        fuzzy.cetakMember();
-        // Masuk tahap Inferensi
-        fuzzy.inferensi();
-        // Masuk tahap Defuzzifikasi
-        sampel = 10;
-        na = fuzzy.defuzzifikasi(sampel);
-        Debug.Log("Nilai Akhir = " + na);
-        hasilkeluaran = (int)na;
-        Debug.Log("Nilai Keluaran = " + hasilkeluaran);
-        if (na - hasilkeluaran >= 0.5)
-        {
-            hasilkeluaran += 1;
-        }
-        else hasilkeluaran += 0;
-        Debug.Log("Skor Penilaian Debat adalah  = " + hasilkeluaran);
-    }
-
-    public void hapusinputfuzzy()
-    {
-
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreSystem : MonoBehaviour
 {
     ScriptReader scriptReader;
+    ScoreFuzzy scoreFuzzy;
 
     public GameObject displayMenu;
     [SerializeField] GameObject dialogueManager;
@@ -19,6 +20,7 @@ public class ScoreSystem : MonoBehaviour
     void Awake()
     {
         scriptReader = dialogueManager.GetComponent<ScriptReader>();
+        scoreFuzzy = dialogueManager.GetComponent<ScoreFuzzy>();
     }
 
     void Start()
@@ -31,6 +33,7 @@ public class ScoreSystem : MonoBehaviour
     {
         if (showScore)
         {
+            //scoreFuzzy.metodeFuzzyMamdani();
             OpenMenu();
             if (timeToCountScore >= 0)
             {
@@ -46,7 +49,8 @@ public class ScoreSystem : MonoBehaviour
         }
         else
         {
-            scoreNum = scriptReader.debateScore;
+            scoreNum = (int) scoreFuzzy.hasilkeluaran;
+            //scoreNum = scriptReader.debateScoreIsi;
             showScore = scriptReader.scoreShow;
             // Edit skor disini
         }
@@ -54,7 +58,6 @@ public class ScoreSystem : MonoBehaviour
 
     public void OpenMenu()
     {
-        
         displayMenu.SetActive(true);
         // codingan ganti scene yang spesifik
         /*

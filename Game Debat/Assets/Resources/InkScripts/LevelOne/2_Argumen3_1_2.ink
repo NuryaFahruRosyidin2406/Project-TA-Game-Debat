@@ -6,7 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
@@ -58,7 +58,7 @@ Potensi ini dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 (Pilih untuk mempertahankan argumen!) 
 
 * [UTS dan UAS Tidak Berstandar Nasional]
-{AddDebateScore(5)}
+{AddDebateScorePenyampaian(13)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -72,7 +72,7 @@ Sehingga tidak dapat menjadi jaminan sebagai standar nasional yang baik
 {ChangeScript("3_Penutup")}
 
 * [UTS dan UAS Tidak Dapat Digunakan]
-{AddDebateScore(-2)}
+{AddDebateScorePenyampaian(11)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}

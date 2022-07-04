@@ -6,6 +6,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL TransNum(transNumber)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 
 {ChangeTime(0)}
 Test
@@ -58,6 +59,7 @@ Media sosial membuat pelajar merasa mampu hanya di dunia maya.
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(13)}
 {ChangeTime(5)}
 Para pelajar akan merasa terbantu dalam meningkatkan interaksi sosial agar semakin terjalin kuat.
 
@@ -82,6 +84,7 @@ Interaksi sosial yang terjalin juga semakin besar.
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(11)}
 {ChangeTime(5)}
 Kebebasan berargumentasi di media sosial akan menjadi acuan dalam meningkatkan rasa percaya diri. 
 

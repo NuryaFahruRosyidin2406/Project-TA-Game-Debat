@@ -6,6 +6,7 @@ EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
 EXTERNAL TransNum(transNumber)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 
 {ChangeTime(0)}
 Test
@@ -58,6 +59,7 @@ Penggunaan media sosial yang berlebihan akan menimbulkan kecanduan.
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(13)}
 {ChangeTime(3)}
 Adanya batasan-batasan dalam penggunaan media sosial, 
 
@@ -79,6 +81,7 @@ Kita harus dapat terbiasa menggunakan media sosial dengan  bijak tanpa merugikan
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
+{AddDebateScorePenyampaian(11)}
 {ChangeTime(4)}
 Ditengah kebebasan para pelajar dalam menggunakan media sosial,
 

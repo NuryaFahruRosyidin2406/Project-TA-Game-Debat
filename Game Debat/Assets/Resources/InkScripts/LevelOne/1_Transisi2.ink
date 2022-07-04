@@ -6,7 +6,8 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
+EXTERNAL AddDebateScoreIsi(debateScoreIsi)
+EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 EXTERNAL ChangeChoiceTime(changeTime)
 
 {Name("Fatih")}
@@ -27,14 +28,17 @@ Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif u
 
 * [Tingkatkan keamanan sistem]
 {ChangeChoiceTime(-2)}
-{AddDebateScore(10)}
+{AddDebateScoreIsi(13)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("1_Argumen2_1")}
 
 * [Memperbanyak pengawas]
 {ChangeChoiceTime(2)}
-{AddDebateScore(3)}
+{AddDebateScoreIsi(11)}
+{AddDebateScoreStrategi(1)}
 {ChangeScript("1_Argumen2_2")}
 
 * [(Batal Menginterupsi)]
-{AddDebateScore(0)}
+{AddDebateScoreIsi(0)}
+{AddDebateScoreStrategi(0)}
 {ChangeScript("1_Argumen2_3")}

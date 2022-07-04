@@ -6,7 +6,7 @@ EXTERNAL ChangeTime(timeLeft)
 EXTERNAL ShowArgue(argueStatus)
 EXTERNAL ChangeScript(scriptName)
 EXTERNAL ChoiceTime(timeLeft)
-EXTERNAL AddDebateScore(debateScore)
+EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 EXTERNAL TransNum(transNumber)
 
 {ChangeTime(0)}
@@ -54,7 +54,7 @@ Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 (Pilih untuk mempertahankan argumen!)
 
 * [UN Pemberi Motivasi Secara Nasional]
-{AddDebateScore(5)}
+{AddDebateScorePenyampaian(13)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
@@ -71,7 +71,7 @@ Sehingga efeknya akan lebih optimal untuk skala besar.
 {ChangeScript("2_Transisi3_1")}
 
 * [UN Adalah Bentuk Motivasi Terbaik]
-{AddDebateScore(-2)}
+{AddDebateScorePenyampaian(12)}
 {Name("Pemain")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}

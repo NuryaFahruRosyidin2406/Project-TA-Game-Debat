@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class ScriptReader : MonoBehaviour
 {
     LevelScript levelScript;
+    ScoreFuzzy scoreFuzzy;
 
     [SerializeField] GameObject dialogueManager;
 
@@ -35,8 +36,9 @@ public class ScriptReader : MonoBehaviour
     public float choiceTimerSubtract = 0f;
 
     public bool debateRun;
+    public bool launchFuzzy;
     public bool scoreShow;
-    public int debateScore;
+    public int debateScoreIsi, debateScorePenyampaian, debateScoreStrategi;
 
     public bool argumenShow;
     public int transitionNumber;
@@ -101,7 +103,10 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
         _StoryScript.BindExternalFunction("DebateStatus", (bool debateStatus) => doingDebate(debateStatus)); // Change debate status
-        _StoryScript.BindExternalFunction("AddDebateScore", (int debateScore) => addDebateScore(debateScore)); // Add or Reduce Player Score
+        _StoryScript.BindExternalFunction("AddDebateScoreIsi", (int debateScoreIsi) => addDebateScoreIsi(debateScoreIsi)); // Add or Reduce Player Score Isi
+        _StoryScript.BindExternalFunction("AddDebateScorePenyampaian", (int debateScorePenyampaian) => addDebateScorePenyampaian(debateScorePenyampaian)); // Add or Reduce Player Score Isi
+        _StoryScript.BindExternalFunction("AddDebateScoreStrategi", (int debateScoreStrategi) => addDebateScoreStrategi(debateScoreStrategi)); // Add or Reduce Player Score Strategi
+        _StoryScript.BindExternalFunction("CalculateScoreFuzzy", (bool fuzzyStatus) => calculateScoreFuzzy(fuzzyStatus)); // Change status to calculate fuzzy
         _StoryScript.BindExternalFunction("ShowScore", (bool scoreStatus) => showScore(scoreStatus)); // Change status of showing the score
         _StoryScript.BindExternalFunction("ChoiceTime", (float timeLeft) => choiceTime(timeLeft));
         _StoryScript.BindExternalFunction("ChangeChoiceTime", (float changeTime) => subChoiceTime(changeTime)); //Mengubah waktu untuk memilih
@@ -271,12 +276,39 @@ public class ScriptReader : MonoBehaviour
         Debug.Log("Score Ditampilan: " + scoreShow);
     }
 
-    public void addDebateScore(int score) // Add Player Score
+    public void calculateScoreFuzzy(bool statusfuzzy)
     {
-        debateScore += score;
-        Debug.Log("Score pemain saat ini " + debateScore);
+        launchFuzzy = statusfuzzy;
+        Debug.Log("Score Ditampilan: " + launchFuzzy);
+        if (launchFuzzy =! false)
+        {
+            Debug.Log("1. Mulai masuk perhitugan fuzzy: " + launchFuzzy);
+            scoreFuzzy.metodeFuzzyMamdani();
+        }
+        else Debug.Log("2. Mulai masuk perhitugan fuzzy: " + launchFuzzy);
     }
-    
+
+    public void addDebateScoreIsi(int scoreIsi) // Add Player Score Isi
+    {
+        debateScoreIsi += scoreIsi;
+        Debug.Log("Score isi pemain saat ini " + debateScoreIsi);
+        PlayerPrefs.SetInt("debateSkorIsi", debateScoreIsi);
+    }
+
+    public void addDebateScorePenyampaian(int scorePenyampaian) // Add Player Score Penyampaian
+    {
+        debateScorePenyampaian += scorePenyampaian;
+        Debug.Log("Score penyampaian pemain saat ini " + debateScorePenyampaian);
+        PlayerPrefs.SetInt("debateSkorPenyampaian", debateScorePenyampaian);
+    }
+
+    public void addDebateScoreStrategi(int scoreStrategi) // Add Player Score Strategi
+    {
+        debateScoreStrategi += scoreStrategi;
+        Debug.Log("Score strategi pemain saat ini " + debateScoreStrategi);
+        PlayerPrefs.SetInt("debateSkorStrategi", debateScoreStrategi);
+    }
+
     public void changeTime(float time) // function to change time in the inky
     {
         float setTimeLeft = time;
