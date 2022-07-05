@@ -24,6 +24,7 @@ public class timersettings : MonoBehaviour
     public GameObject PauseOff;
     public GameObject boxTimer;
     public GameObject boxSkor;
+    public GameObject popUpMulaiUlang;
     public Text countdownDisplay;
     public Text TextTimer;
 
@@ -52,8 +53,10 @@ public class timersettings : MonoBehaviour
 
     public void waktuberhenti()
     {
+        Debug.Log("Fungsi waktuberhenti");
         if (Skordrag.jmlscoremg2 == scoremax)
         {
+            Debug.Log("Fungsi waktuberhenti kondisi 1");
             GameAktif = false;
             boxTimer.gameObject.SetActive(false);
             boxSkor.gameObject.SetActive(false);
@@ -63,19 +66,20 @@ public class timersettings : MonoBehaviour
 
     public void mulaihm()
     {
+        Debug.Log("Fungsi mulaihm");
         PanelMulai.SetActive(false);
         PanelHitungmundur.SetActive(true);
         //PanelWadahUI.SetActive(true);
         Panelmg2S1.SetActive(true);
         StartCoroutine(CountdownToStart());
-        GOTimer.gameObject.SetActive(true);
-        GOSkor.gameObject.SetActive(true);
+        //GOTimer.gameObject.SetActive(true);
+        GOSkor.gameObject.SetActive(false);
     }
 
     public void Resume()
     {
+        Debug.Log("Fungsi Resume");
         PauseMenu.SetActive(false);
-
         PauseOff.SetActive(true);
         PauseOn.SetActive(false);
         GameAktif = true;
@@ -83,8 +87,8 @@ public class timersettings : MonoBehaviour
 
     public void Pause()
     {
+        Debug.Log("Fungsi Pause");
         PauseMenu.SetActive(true);
-
         PauseOff.SetActive(false);
         PauseOn.SetActive(true);
         GameAktif = false;
@@ -122,14 +126,21 @@ public class timersettings : MonoBehaviour
             s += Time.deltaTime;
             if (s >= 1)
             {
+                Debug.Log("Waktu timer = " + Waktu);
                 Waktu--;
                 s = 0;
             }
         }
         if (GameAktif && Waktu <= 0)
         {
-            PanelSelesaimg2.SetActive(true);
-            waktuberhenti();
+            Debug.Log("Waktu Habis");
+            //PanelSelesaimg2.SetActive(true);
+            //waktuberhenti();
+            GameAktif = false;
+            //boxTimer.gameObject.SetActive(false);
+            boxSkor.gameObject.SetActive(false);
+            popUpMulaiUlang.gameObject.SetActive(true);
+            Waktu = 0;
         }
         SetText();
     }

@@ -8,15 +8,36 @@ public class pindahPS : MonoBehaviour
     public GameObject PanelMulai;
     public GameObject PanelHitungmundur;
     public GameObject Panelmg2S1;
-    public GameObject SettingMenu;
+    public GameObject SettingMenuSebelumMulai;
+    public GameObject SettingMenuMulai;
+    public GameObject ButtonSettingMenuSebelumMulai;
+    public GameObject ButtonSettingMenuMulai;
     public GameObject HintMenu;
-    public GameObject SoundOn;
-    public GameObject SoundOff;
+    public GameObject SoundOnMulai;
+    public GameObject SoundOffMulai;
+    public GameObject SoundOnBelumMulai;
+    public GameObject SoundOffBelumMulai;
+    public GameObject exitMenuMulai;
+    public GameObject exitMenuSebelumMulai;
+    public GameObject HintButtonMulai;
     public timersettings Timersettings;
 
     public void mgsoalsatuClicked()
     {
         Timersettings.mulaihm();
+        ButtonSettingMenuMulai.SetActive(true);
+        ButtonSettingMenuSebelumMulai.SetActive(false);
+        HintButtonMulai.SetActive(true);
+    }
+
+    public void OpenKey(GameObject keyName)
+    {
+        keyName.SetActive(true);
+    }
+
+    public void CloseKey(GameObject keyName)
+    {
+        keyName.SetActive(false);
     }
 
     public void LoadScene(string sceneName)
@@ -24,14 +45,31 @@ public class pindahPS : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void OpenSettingMenu()
+    public void RestartLevel()
     {
-        SettingMenu.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SettingMenuMulai.SetActive(false);
+        SettingMenuSebelumMulai.SetActive(true);
     }
 
-    public void CloseSettingMenu()
+    public void OpenSettingMenuMulai()
     {
-        SettingMenu.SetActive(false);
+        SettingMenuMulai.SetActive(true);
+    }
+
+    public void CloseSettingMenuMulai()
+    {
+        SettingMenuMulai.SetActive(false);
+    }
+
+    public void OpenSettingMenuSebelumMulai()
+    {
+        SettingMenuSebelumMulai.SetActive(true);
+    }
+
+    public void CloseSettingMenuSebelumMulai()
+    {
+        SettingMenuSebelumMulai.SetActive(false);
     }
 
     public void OpenHintMenu()
@@ -44,15 +82,47 @@ public class pindahPS : MonoBehaviour
         HintMenu.SetActive(false);
     }
 
-    public void TurnOnSound()
+    public void OpenExitMenuMulai()
     {
-        SoundOn.SetActive(true);
-        SoundOff.SetActive(false);
+        exitMenuMulai.SetActive(true);
     }
 
-    public void TurnOffSound()
+    public void ClosedExitMenuMulai()
     {
-        SoundOn.SetActive(false);
-        SoundOff.SetActive(true);
+        exitMenuMulai.SetActive(false);
+    }
+
+    public void OpenExitMenuSebelumMulai()
+    {
+        exitMenuSebelumMulai.SetActive(true);
+    }
+
+    public void ClosedExitMenuSebelumMulai()
+    {
+        exitMenuSebelumMulai.SetActive(false);
+    }
+
+    public void TurnOnSoundMulai()
+    {
+        SoundOnMulai.SetActive(true);
+        SoundOffMulai.SetActive(false);
+    }
+
+    public void TurnOffSoundMulai()
+    {
+        SoundOnMulai.SetActive(false);
+        SoundOffMulai.SetActive(true);
+    }
+
+    public void TurnOnSoundBelumMulai()
+    {
+        SoundOnBelumMulai.SetActive(true);
+        SoundOffBelumMulai.SetActive(false);
+    }
+
+    public void TurnOffSoundBelumMulai()
+    {
+        SoundOnBelumMulai.SetActive(false);
+        SoundOffBelumMulai.SetActive(true);
     }
 }
