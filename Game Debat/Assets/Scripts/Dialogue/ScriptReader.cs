@@ -368,7 +368,19 @@ public class ScriptReader : MonoBehaviour
             Debug.Log(loadScript);
             _inkJsonFile = loadScript;
         }
-                
+        else if (SceneManager.GetActiveScene().name == "TutorialMiniGame")
+        {
+            var loadScript = Resources.Load<TextAsset>("InkScripts/TutorialMiniGame/" + name);
+            Debug.Log(loadScript);
+            _inkJsonFile = loadScript;
+        }
+        else if (SceneManager.GetActiveScene().name == "TutorialMainGame")
+        {
+            var loadScript = Resources.Load<TextAsset>("InkScripts/TutorialMainGame/" + name);
+            Debug.Log(loadScript);
+            _inkJsonFile = loadScript;
+        }
+
         LoadStory();
     }
 

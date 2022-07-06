@@ -3630,7 +3630,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3c34aab04ad79b84ca8625d26e785272, type: 3}
-    m_FontSize: 60
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -3641,7 +3641,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -----------
+  m_Text: Rasa percaya diri yang bagus dapat memperkuat interaksi sosial seseorang
 --- !u!222 &144769407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5284,7 +5284,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3c34aab04ad79b84ca8625d26e785272, type: 3}
-    m_FontSize: 45
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -5295,7 +5295,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ---------------
+  m_Text: Media sosial memiliki banyak manfaat, salah satunya adalah meningkatkan
+    keterampilan
 --- !u!222 &242098368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6747,7 +6748,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3c34aab04ad79b84ca8625d26e785272, type: 3}
-    m_FontSize: 55
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -6758,7 +6759,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -------------
+  m_Text: Tugas adalah sesuatu yang wajib dilakukan. Sehingga pembelajaran Management
+    Waktu yang baik tentu akan membantu penganturan prioritas
 --- !u!222 &313518960
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8400,7 +8402,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3c34aab04ad79b84ca8625d26e785272, type: 3}
-    m_FontSize: 60
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -8411,7 +8413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ----------
+  m_Text: Dengan membatasi penggunaan media sosial, dampak kecanduan dapat diminimalisir
 --- !u!222 &432156256
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11130,7 +11132,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: --------------
+  m_Text: Pembatasan adalah salah satu solusi untuk mengurangi kecanduan
 --- !u!222 &587829722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12118,8 +12120,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -857.77704}
-  m_SizeDelta: {x: 402.42, y: 179.1378}
+  m_AnchoredPosition: {x: 0, y: -115}
+  m_SizeDelta: {x: 272, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640437821
 MonoBehaviour:
@@ -15006,8 +15008,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: -858}
-  m_SizeDelta: {x: 356.59, y: 186.42}
+  m_AnchoredPosition: {x: 0, y: -115}
+  m_SizeDelta: {x: 272.9367, y: 142.6873}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &822230087
 MonoBehaviour:
@@ -22575,7 +22577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026703, y: -25}
+  m_AnchoredPosition: {x: 0, y: 47}
   m_SizeDelta: {x: 640.4284, y: 254.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246650259
@@ -27647,7 +27649,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -------------
+  m_Text: Penggunaan Media Sosial yang benar dapat melatih interaksi seseorang
 --- !u!222 &1597901839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29354,7 +29356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026703, y: -25}
+  m_AnchoredPosition: {x: 0, y: 47}
   m_SizeDelta: {x: 640.4284, y: 254.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669123753

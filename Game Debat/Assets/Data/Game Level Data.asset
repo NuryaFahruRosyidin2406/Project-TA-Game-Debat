@@ -21,6 +21,3 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3f3b6285be43825498a846b52d18a0ae, type: 2}
     - {fileID: 11400000, guid: b5491379a0baedb45bbc494fb707dc82, type: 2}
     - {fileID: 11400000, guid: 188daeb6b08f50c45aa6600cd6c63b48, type: 2}
-  - categoryName: LevelTwo
-    boardData:
-    - {fileID: 11400000, guid: 2d5900cd0355631499cee43cced9891c, type: 2}

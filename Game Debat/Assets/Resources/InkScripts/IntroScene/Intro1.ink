@@ -36,8 +36,6 @@ Ngomong ngomong, apakah kamu familiar dengan cara debat di sini?
 {ChangeTime(10)}
 Jika tidak, aku dengan senang hati akan mengajarimu 
 
-
-
 * [Iya. Aku sudah paham dengan cara debat di sini.]
 
 {Name("Pemain")}
@@ -79,7 +77,31 @@ Tentu saja!
 
 {CharExpression("chitose",0)}
 {ChangeTime(10)}
-Sekarang ayo ikut aku ke halaman sekolah
+Ada beberapa hal yang perlu kamu ketahui. Seperti peraturan.
+
+{ChangeTime(10)}
+Peraturan di Sekolah ini adalah debat akan di pandu oleh seorang moderator.
+
+{ChangeTime(10)}
+Debat di sekolah ini dilakukan oleh dua orang dengan waktu yang terbatas.
+
+{ChangeTime(10)}
+Satu orang akan mendukung masalah yang diperdebatkan.
+
+{ChangeTime(10)}
+Satu orang lagi akan melawan permasalahan yang ada.
+
+{ChangeTime(10)}
+Di akhir debat, juri akan menilai adu argumen peserta.
+
+{CharAnimation("chitose","AgreeWithYou")}
+{ChangeTime(10)}
+Jadi, kau harus memilih argumen yang tepat jika ingin mendapatkan nilai terbaik.
+
+{ChangeTime(10)}
+Untuk teknis detailnya. Ayo lihat petunjuk ini.
+
+{ChangeScene("Tutorial")}
 
 * [Diam]
 

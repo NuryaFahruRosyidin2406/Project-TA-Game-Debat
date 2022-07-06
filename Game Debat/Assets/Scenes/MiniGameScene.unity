@@ -9608,7 +9608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Keamanan yang tinggi tentu akan mengurangi tingkat kecurangan
+  m_Text: Keamanan sistem yang tinggi tentu akan mengurangi tingkat kecurangan
 --- !u!222 &1984843825
 CanvasRenderer:
   m_ObjectHideFlags: 0

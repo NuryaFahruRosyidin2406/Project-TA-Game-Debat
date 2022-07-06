@@ -2404,7 +2404,7 @@ GameObject:
   - component: {fileID: 1565667083}
   - component: {fileID: 1565667082}
   m_Layer: 5
-  m_Name: LevelTurtorialButton
+  m_Name: LevelTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

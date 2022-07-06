@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountDownTimer : MonoBehaviour
 {
@@ -39,14 +40,21 @@ public class CountDownTimer : MonoBehaviour
 
     void Update()
     {
-        if (_stopTimer == false)
+        if(SceneManager.GetActiveScene().name == "TutorialMiniGame")
         {
-            _timeLeft -= Time.deltaTime;
+            // Time is not running down
         }
-
-        if(_timeLeft <= _oneSecondDown)
+        else
         {
-            _oneSecondDown = _timeLeft - 1f;
+            if (_stopTimer == false)
+            {
+                _timeLeft -= Time.deltaTime;
+            }
+
+            if (_timeLeft <= _oneSecondDown)
+            {
+                _oneSecondDown = _timeLeft - 1f;
+            }
         }
     }
 
