@@ -344,7 +344,7 @@ public class ScriptReader : MonoBehaviour
 
     public void subChoiceTime(float time)
     {
-        choiceTimerSubtract = time;
+        choiceTimerSubtract += time;
         Debug.Log("Choice Time reduce by "+ choiceTimerSubtract + " Seconds");
     }
 
