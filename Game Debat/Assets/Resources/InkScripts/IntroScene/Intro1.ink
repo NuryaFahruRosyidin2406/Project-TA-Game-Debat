@@ -38,7 +38,7 @@ Jika tidak, aku dengan senang hati akan mengajarimu
 
 * [Iya. Aku sudah paham dengan cara debat di sini.]
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(10)}
 Iya. Aku sudah sangat paham tentang teknik dan cara debat disini.
@@ -63,7 +63,7 @@ Ayo ikut aku ke ruang debat
 
 * [Tidak. Bisa tolong ajari aku.]
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(10)}
 Aku baru disini. Bisa ajari aku cara debat?
@@ -103,14 +103,14 @@ Untuk teknis detailnya. Ayo lihat petunjuk ini.
 
 {ChangeScene("Tutorial")}
 
-* [Diam]
+* [(Diam)]
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(10)}
 . . .
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(10)}
 . . . . . .
