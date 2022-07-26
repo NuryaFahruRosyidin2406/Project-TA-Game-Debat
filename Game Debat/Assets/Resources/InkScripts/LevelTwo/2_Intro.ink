@@ -19,6 +19,7 @@ test
 Terima kasih kepada pihak afirmasi atas penyampaian argumennya.
 
 {ChangeTime(5)}
+{DebateStatus(true)}
 Selanjutnya, kepada pihak oposisi untuk menyampaikan argumennya.
 
 {ChangeScript("2_Argumen1")}
