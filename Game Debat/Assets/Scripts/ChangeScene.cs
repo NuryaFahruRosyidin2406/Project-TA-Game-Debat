@@ -5,37 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public GameObject settingMenu;
-    public GameObject highScoreMenu;
-    public GameObject creditMenu;
-    public GameObject hintMenu;
-    public GameObject pauseMenu;
-    public GameObject keywordMenu;
-    public GameObject key1;
-    public GameObject key2;
-    public GameObject key3;
-    public GameObject key4;
-    public GameObject key5;
-    public GameObject key6;
+    // Initialize variabel for Game Menu
+    public GameObject settingMenu, highScoreMenu, creditMenu, 
+        hintMenu, pauseMenu, exitMenu;
 
-    public GameObject soundOn;
-    public GameObject soundOff;
-    public GameObject pauseOn;
-    public GameObject pauseOff;
+    // Initialize variabel for Key Word
+    public GameObject keywordMenu, key1, key2, key3, key4, key5, key6;
 
-    public GameObject exitMenu;
+    // Initialize variabel for Game Sound
+    public GameObject soundOn, soundOff;
 
-    //public int nextSceneLoad;
+    // Initialize variabel for Pause System
+    public GameObject pauseOn, pauseOff;
 
-    /*private void Start()
-    {
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;        
-    }*/
-
+    // Resume the Game
     public void Resume()
     {
+        // Closed the Pause Menu
         pauseMenu.SetActive(false);
 
+        // Unfreeze the Game
         pauseOff.SetActive(true);
         pauseOn.SetActive(false);
         Time.timeScale = 1f;
@@ -43,120 +32,130 @@ public class ChangeScene : MonoBehaviour
 
     public void Pause()
     {
+        // Open the Pause Menu
         pauseMenu.SetActive(true);
 
+        // Freeze the Game
         pauseOff.SetActive(false);
         pauseOn.SetActive(true);
         Time.timeScale = 0f;
     }
 
+    // Load any Scene based on its name
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
+    // Closed the application
     public void ExitGame()
     {
         Debug.Log("Exit Game");
         Application.Quit();
     }
 
+    // Restarting the level/Scene
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    
-    /*public void NextLevel()
-    {
-        SceneManager.LoadScene(nextSceneLoad);
 
-        if(nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
-        {
-            PlayerPrefs.SetInt("levelAt", nextSceneLoad);
-        }
-    }*/
-
+    // Open Key Description
     public void OpenKey(GameObject keyName)
     {
         keyName.SetActive(true);
     }
 
+    // Closed Key Description
     public void CloseKey(GameObject keyName)
     {
         keyName.SetActive(false);
     }
 
+    // Open Key Menu
     public void OpenKeywordtMenu()
     {
         keywordMenu.SetActive(true);
-        // Time.timeScale = 0f;
     }
 
+    // Closed Key Menu and Unfreeze the Game
     public void ClosedKeywordtMenu()
     {
         keywordMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
+    // Open Hint Menu
     public void OpenHintMenu()
     {
         hintMenu.SetActive(true);
     }
 
+    // Closed the Hint Menu and Unfreeze the Game
     public void CloseHintMenu()
     {
         hintMenu.SetActive(false);
         Time.timeScale = 1f;
     }
 
+    // Open the Credit Menu
     public void OpenCreditMenu()
     {
         settingMenu.SetActive(false);
         creditMenu.SetActive(true);
     }
 
+    // Closed the the Credit Menu
     public void CloseCreditMenu()
     {
         settingMenu.SetActive(true);
         creditMenu.SetActive(false);
     }
 
+    // Open High Score Menu
     public void OpenHighScoreMenu()
     {
         highScoreMenu.SetActive(true);
     }
 
+    // Closed the High Score Menu
     public void CloseHighScoreMenu()
     {
         highScoreMenu.SetActive(false);
     }
 
+    // Open the Setting Menu
     public void OpenSettingMenu()
     {
         settingMenu.SetActive(true);
     }
 
+    // Closed the Setting Menu
     public void CloseSettingMenu()
     {
         settingMenu.SetActive(false);
     }
 
+    // Open the Exit Menu
     public void OpenExitMenu()
     {
         exitMenu.SetActive(true);
     }
 
+    // Closed the Exit Menu
     public void ClosedExitMenu()
     {
         exitMenu.SetActive(false);
     }
 
+    // Turn on the Game Sound
     public void TurnOnSound()
     {
         soundOn.SetActive(true);
         soundOff.SetActive(false);
     }
 
+    // Turn off the Game Sound
     public void TurnOffSound()
     {
         soundOn.SetActive(false);

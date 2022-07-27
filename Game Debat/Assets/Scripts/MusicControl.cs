@@ -4,25 +4,32 @@ using UnityEngine;
 
 public class MusicControl : MonoBehaviour
 {
-    public static MusicControl instance; // Creates a static varible for a MusicControlScript instance
+    // Creates a static varible for a MusicControlScript instance
+    public static MusicControl instance; 
+
+    // Initialized audio source variable
     AudioSource audioSource;
 
-    private void Awake() // Runs before void Start()
+    // Runs before void Start()
+    private void Awake() 
     {
-        //DontDestroyOnLoad(this.gameObject); // Don't destroy this gameObject when loading different scenes
-
-        if (instance == null) // If the MusicControlScript instance variable is null
+        // If the MusicControlScript instance variable is null
+        if (instance == null) 
         {
-            instance = this; // Set this object as the instance
+            // Set this object as the instance
+            instance = this; 
         }
         else // If there is already a MusicControlScript instance active
         {
-            Destroy(gameObject); // Destroy this gameObject
+            // Destroy this gameObject
+            Destroy(gameObject);
         }
 
+        // Get the AudioSource from the object
         audioSource = GetComponent<AudioSource>();
     }
 
+    // Mute/Unmute the Game Audio
     public void MuteAudio()
     {
         audioSource.mute = !audioSource.mute;

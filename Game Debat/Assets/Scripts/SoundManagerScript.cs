@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
+    // Creates a static varible for the audio
     public static AudioClip interuptSound, countingScore, congrastSound;
     static AudioSource audioSrc;
 
     void Start()
     {
+        // Load the audio source into the variables
         interuptSound = Resources.Load<AudioClip>("SoundEffect/Interupsi");
         countingScore = Resources.Load<AudioClip>("SoundEffect/ScoreCount");
         congrastSound = Resources.Load<AudioClip>("SoundEffect/Congrats");
 
+        // Get the audio component
         audioSrc = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        
-    }
-
+    // Play the audio base on its case
     public static void PlaySound (string clip)
     {
         switch (clip)
@@ -37,6 +36,7 @@ public class SoundManagerScript : MonoBehaviour
         }
     }
 
+    // Stop the audio
     public static void StopSound()
     {
         audioSrc.Stop();

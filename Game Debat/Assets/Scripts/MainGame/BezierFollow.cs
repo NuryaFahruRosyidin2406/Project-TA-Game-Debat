@@ -9,7 +9,7 @@ public class BezierFollow : MonoBehaviour
     // Acces scriptReader script function and variable
     ScriptReader scriptReader;
 
-    // Initialize object to refrence in Unity Inspector
+    // Initialize variabel to get an object to refrence in Unity Inspector
     [SerializeField] GameObject dialogueManager;
     [SerializeField] private Transform[] routes;
 
