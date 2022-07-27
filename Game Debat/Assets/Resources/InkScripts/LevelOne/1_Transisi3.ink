@@ -12,7 +12,7 @@ EXTERNAL AddDebateScoreStrategi(debateScoreStrategi)
 {ChangeTime(0)}
 Dapat saya simpulkan bahwa Ujian Nasional tidak dapat dijadikan acuan kelulusan yang efektif
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}

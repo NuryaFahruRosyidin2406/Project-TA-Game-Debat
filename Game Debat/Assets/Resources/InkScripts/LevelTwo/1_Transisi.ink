@@ -10,7 +10,7 @@ EXTERNAL DebateStatus(debateStatus)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {ChoiceTime(1000)}

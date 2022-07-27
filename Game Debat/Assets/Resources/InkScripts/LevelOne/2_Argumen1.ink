@@ -12,7 +12,7 @@ EXTERNAL TransNum(transNumber)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(3)}
 Menurut saya, Ujian Nasional masih tetap efektif.
@@ -47,7 +47,7 @@ Interupsi!
 {ShowArgue(false)}
 Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
@@ -55,7 +55,7 @@ Motivasi belajar bisa di dapatkan dari tempat lain. Tidak hanya di UN
 
 * [UN Pemberi Motivasi Secara Nasional]
 {AddDebateScorePenyampaian(13)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
@@ -72,7 +72,7 @@ Sehingga efeknya akan lebih optimal untuk skala besar.
 
 * [UN Adalah Bentuk Motivasi Terbaik]
 {AddDebateScorePenyampaian(12)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

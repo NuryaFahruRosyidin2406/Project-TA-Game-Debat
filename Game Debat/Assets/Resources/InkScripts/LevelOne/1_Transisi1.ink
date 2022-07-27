@@ -16,7 +16,7 @@ EXTERNAL ChangeChoiceTime(changeTime)
 {ChangeTime(0)}
 Namun, tampaknya hal ini tidak lagi efektif. 
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharExpression("chitose",6)}
 {ChoiceTime(10)}

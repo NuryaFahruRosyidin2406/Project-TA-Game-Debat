@@ -11,7 +11,7 @@ EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(4)}
 Saya kurang setuju dengan pendapat yang menyatakan,
@@ -49,14 +49,14 @@ Interupsi!
 {ShowArgue(false)}
 Media sosial membuat pelajar merasa mampu hanya di dunia maya.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
 (Pilih untuk mempertahankan argumen!) 
 
 * [Memperkuat Interaksi Sosial]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(13)}
@@ -81,7 +81,7 @@ Interaksi sosial yang terjalin juga semakin besar.
 {ChangeScript("1_Transisi1_2")}
 
 * [Meningkatkan Rasa Percaya Diri]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(11)}

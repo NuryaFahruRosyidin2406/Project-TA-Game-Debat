@@ -11,7 +11,7 @@ EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(3)}
 Seperti yang kita ketahui bersama,
@@ -46,14 +46,14 @@ Interupsi!
 {ShowArgue(false)}
 Kenapa harus media sosial? Media sosial bukanlah solusi yang efektif.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
 (Pilih untuk mempertahankan argumen!)
 
 * [Mempermudah Pembelajaran]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(12)}
@@ -72,7 +72,7 @@ Karena siswa dihadapkan dalam situasi yang menantang mereka meningkatkan pengeta
 {ChangeScript("1_Transisi3_1")}
 
 * [Meningkatkan Keterampilan]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(13)}

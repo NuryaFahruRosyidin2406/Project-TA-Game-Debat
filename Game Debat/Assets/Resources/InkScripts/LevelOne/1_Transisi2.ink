@@ -17,7 +17,7 @@ EXTERNAL ChangeChoiceTime(changeTime)
 {ChangeTime(0)}
 Kalau sudah begini, apakah Anda masih yakin bahwa Ujian Nasional masih efektif untuk menentukan kelulusan seorang siswa?
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}

@@ -12,7 +12,7 @@ EXTERNAL TransNum(transNumber)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(5)}
 Tentunya universitas di negara ini memiliki kriteria tertentu kepada calon mahasiswa, salah satunya nilai UN.
@@ -51,7 +51,7 @@ Interupsi!
 {ShowArgue(false)}
 Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
@@ -59,7 +59,7 @@ Persiapan Ujian Masuk Sekolah Baru Bisa Dilakukan Tanpa UN
 
 * [UN Sebagai Sarana Persiapan]
 {AddDebateScorePenyampaian(13)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
@@ -73,7 +73,7 @@ UN dapat menjadi media persiapan yang mematangkan potensi untuk belajar dan meng
 
 * [UN Adalah Syarat Wajib]
 {AddDebateScorePenyampaian(12)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

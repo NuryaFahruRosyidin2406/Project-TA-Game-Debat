@@ -10,7 +10,7 @@ EXTERNAL ChoiceTime(timeLeft)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",0)}
