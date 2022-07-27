@@ -11,7 +11,7 @@ EXTERNAL AddDebateScorePenyampaian(debateScorePenyampaian)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(6)}
 Kecanduan terhadap media sosial dapat diatasi dengan menerapkan aturan yang tegas tentang waktu untuk mengakses media sosial.
@@ -49,14 +49,14 @@ Interupsi!
 {ShowArgue(false)}
 Penggunaan media sosial yang berlebihan akan menimbulkan kecanduan.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
 (Pilih untuk mempertahankan argumen!) 
 
 * [Adanya Batasan Penggunaan Media Sosial]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(13)}
@@ -78,7 +78,7 @@ Kita harus dapat terbiasa menggunakan media sosial dengan  bijak tanpa merugikan
 {ChangeScript("1_Transisi3")}
 
 * [Adanya Pengawasan Dari Orang Tua/Guru]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Agree")}
 {AddDebateScorePenyampaian(11)}

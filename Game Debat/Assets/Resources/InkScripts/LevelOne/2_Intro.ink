@@ -21,7 +21,7 @@ Terimakasih kepada pihak afirmasi untuk argumennya.
 {ChangeTime(5)}
 Selanjutnya, diberikan waktu kepada pihak oposisi untuk menyampaikan argumennya.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(0)}

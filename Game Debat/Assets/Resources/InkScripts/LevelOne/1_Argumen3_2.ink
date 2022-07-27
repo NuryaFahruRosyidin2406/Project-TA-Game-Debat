@@ -9,7 +9,7 @@ EXTERNAL ChangeScript(scriptName)
 {ChangeTime(0)}
 Hasil tentu saja lebih penting dari pada proses. Percuma saja bekerja dengan giat jika ujungnya akan gagal.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

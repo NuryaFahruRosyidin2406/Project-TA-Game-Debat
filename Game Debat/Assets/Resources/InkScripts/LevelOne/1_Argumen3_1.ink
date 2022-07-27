@@ -9,7 +9,7 @@ EXTERNAL ChangeScript(scriptName)
 {ChangeTime(0)}
 Justru dengan memiliki fokus yang jelas, siswa akan memiliki proses belajar yang lebih baik, karena tujuannya sudah jelas.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

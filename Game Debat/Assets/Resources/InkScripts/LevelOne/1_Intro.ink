@@ -43,17 +43,17 @@ Pada debat kali ini saya mendukung Penghapusan UN Sebagai Standar Kelulusan Sisw
 {ChangeTime(5)}
 Selanjutnya silahkan kepada pihak oposisi untuk segera memperkenalkan diri.
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(10)}
 {ChangeTime(0)}
 (Silahkan pilih cara perkenalan diri!)
 
 * [Memperkenalkan diri dengan Ceria]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(4)}
-Halo teman-teman! Kenalin nama saya Pemain.
+Halo teman-teman! Kenalin nama saya Budi.
 
 {ChangeTime(5)}
 Di debat ini saya menolak Penghapusan UN Sebagai Standar Kelulusan Siswa.
@@ -69,10 +69,10 @@ Dipersilahkan kepada pihak afirmasi untuk membuka debat.
 {ChangeScript("1_Argumen1")}
 
 * [Memperkenalkan diri dengan Serius]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(3)}
-Halo semua, saya Pemain.
+Halo semua, saya Budi.
 
 {ChangeTime(4)}
 Saya menolak Penghapusan UN Sebagai Standar Kelulusan Siswa.
@@ -88,7 +88,7 @@ Dipersilahkan kepada pihak afirmasi untuk membuka debat.
 {ChangeScript("1_Argumen1")}
 
 * [Memperkenalkan diri dengan Diam]
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(3)}
 . . .

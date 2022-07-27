@@ -12,7 +12,7 @@ EXTERNAL TransNum(transNumber)
 {ChangeTime(0)}
 Test
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChangeTime(5)}
 Saya masih menganggap Ujian Nasional menjadi penentu kelulusan yang efektif terlepas dari kecurangan yang terjadi.
@@ -51,7 +51,7 @@ Interupsi!
 {ShowArgue(false)}
 Potensi ini dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {ChoiceTime(1000)}
 {ChangeTime(2)}
@@ -59,7 +59,7 @@ Potensi ini dapat di ukur menggunakan UTS dan UAS, tidak perlu UN
 
 * [UTS dan UAS Tidak Berstandar Nasional]
 {AddDebateScorePenyampaian(13)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}
@@ -73,7 +73,7 @@ Sehingga tidak dapat menjadi jaminan sebagai standar nasional yang baik
 
 * [UTS dan UAS Tidak Dapat Digunakan]
 {AddDebateScorePenyampaian(11)}
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

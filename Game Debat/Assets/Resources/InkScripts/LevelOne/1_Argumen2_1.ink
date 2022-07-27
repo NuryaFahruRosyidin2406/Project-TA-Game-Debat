@@ -9,7 +9,7 @@ EXTERNAL ChangeScript(scriptName)
 {ChangeTime(0)}
 Kecurangan dapat di atasi dengan menggunakan sistem ujian berbasis komputer dengan keamanan yang tinggi
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

@@ -9,7 +9,7 @@ EXTERNAL ChangeScript(scriptName)
 {ChangeTime(0)}
 Untuk itu kita perlu menciptakan lingkungan bebas stress demi menghilangkan beban psikologis siswa
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

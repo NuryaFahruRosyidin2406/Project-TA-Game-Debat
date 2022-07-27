@@ -9,7 +9,7 @@ EXTERNAL ChangeScript(scriptName)
 {ChangeTime(0)}
 Beban psikologis ini dapat dikurangi dengan memberikan persiapan yang matang terhadap siswa
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("chitose","AgreeWithYou")}
 {CharExpression("chitose",1)}

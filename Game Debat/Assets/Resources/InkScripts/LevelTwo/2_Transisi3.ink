@@ -11,7 +11,7 @@ EXTERNAL ChoiceTime(timeLeft)
 {ChangeTime(0)}
 test 
 
-{Name("Pemain")}
+{Name("Budi")}
 {Icon("pemain")}
 {CharAnimation("haru_greeter_t03","Listening")}
 {ChoiceTime(10)}
