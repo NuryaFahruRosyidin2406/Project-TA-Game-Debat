@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class ScoreFuzzy : MonoBehaviour
 {
+    // Mengakses fungsi dan variabel dari scriptreader
     ScriptReader scriptReader;
 
+    // Inisialisasi variabel sehingga dapat di reference  di unity inspector
     [SerializeField] GameObject dialogueManager;
 
+    // Inisialisasi variabel
     public static int isi, penyampaian, strategi;
     public static float sampel;
     public float na, hasilkeluaran;
@@ -18,33 +21,27 @@ public class ScoreFuzzy : MonoBehaviour
     public static string keteranganNilaiAkhir, keteranganNA;
     public string keteranganNilai;
 
+    // prosedur awake akan dipanggil jika sistem menyala
     void Awake()
     {
+        // scriptreader component diambil dari dialoguemanager
         scriptReader = dialogueManager.GetComponent<ScriptReader>();
     }
 
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        metodeFuzzyMamdani();
-    }*/
-
     public void metodeFuzzyMamdani()
     {
-        // inisialisasi nilai isi, penyampaian, strategi
-        //isi = PlayerPrefs.GetInt("debateSkorIsi");
-        
-
+        // Inisialisasi variabel input untuk variabel input fuzzy
         isi = scriptReader.debateScoreIsi;
         Debug.Log("Nilai Isi: " + isi);
-        //penyampaian = PlayerPrefs.GetInt("debateSkorPenyampaian");
         penyampaian = scriptReader.debateScorePenyampaian;
         Debug.Log("Nilai Penyampaian: " + penyampaian);
-        //strategi = PlayerPrefs.GetInt("debateSkorStrategi");
         strategi = scriptReader.debateScoreStrategi;
         Debug.Log("Nilai Strategi: " + strategi);
+        
         // Masuk tahap Fuzzifikasi
+        // Menggunakan multiple class dan membuat variabel dengan nama fuzzy_mamdani dengan nama variabel fuzzy
         fuzzy_mamdani fuzzy = new fuzzy_mamdani();
+        // Mengelola prosedur pada class fuzzy dari nilai variabel yang di input
         fuzzy.anggotaisi(isi);
         fuzzy.anggotapenyampaian(penyampaian);
         fuzzy.anggotastrategi(strategi);
@@ -53,8 +50,9 @@ public class ScoreFuzzy : MonoBehaviour
         fuzzy.inferensi();
         // Masuk tahap Defuzzifikasi
         sampel = 20;
+        // Menginisialisasi nilai variabel na dari nilai keluaran fungsi defuzzifikasi
         na = fuzzy.defuzzifikasi(sampel);
-        Debug.Log("Nilai Akhir = " + na);
+        Debug.Log("Nilai Akhir Fuzzy = " + na);
         hasilkeluaran = (int)na;
         Debug.Log("Nilai Keluaran = " + hasilkeluaran);
         if (na - hasilkeluaran >= 0.5)
@@ -62,7 +60,7 @@ public class ScoreFuzzy : MonoBehaviour
             hasilkeluaran += 1;
         }
         else hasilkeluaran += 0;
-        nilaiAkhir = (int) hasilkeluaran * 100 / 74;
+        nilaiAkhir = (int) hasilkeluaran * 100 / 87;
         Debug.Log("Nilai Akhir " + nilaiAkhir);
         fixScore();
         keteranganNilai = keteranganNA;
@@ -70,6 +68,7 @@ public class ScoreFuzzy : MonoBehaviour
         hapusinputfuzzy();
     }
 
+    // Prosedur atau fungsi untuk mengkonversi nilai akhir menjadi skala 1 sampai 100
     public void fixScore()
     {
         Debug.Log("Masuk fixscore");
@@ -101,6 +100,7 @@ public class ScoreFuzzy : MonoBehaviour
         }
     }
 
+    // Prosedur atau fungsi untuk mengambil highscore pada level satu
     public void highscoreLevelOne()
     {
         highscoreLevelSatu = nilaiAkhir;
@@ -110,6 +110,7 @@ public class ScoreFuzzy : MonoBehaviour
         }
     }
 
+    // Prosedur atau fungsi untuk mengambil highscore pada level dua
     public void highscoreLevelTwo()
     {
         highscoreLevelDua = nilaiAkhir;
@@ -119,6 +120,7 @@ public class ScoreFuzzy : MonoBehaviour
         }
     }
 
+    // Prosedur atau fungsi untuk menghapus save didalam game (playerprefs ini memori yang ada pada game)
     public void hapusinputfuzzy()
     {
         PlayerPrefs.DeleteKey("debateSkorIsi");
@@ -126,6 +128,7 @@ public class ScoreFuzzy : MonoBehaviour
         PlayerPrefs.DeleteKey("debateSkorStrategi");
     }
 
+    // Prosedur class untuk algoritma fuzzy mamdani
     public class fuzzy_mamdani
     {
         public int k;
@@ -347,6 +350,7 @@ public class ScoreFuzzy : MonoBehaviour
         }
 
         // Bagian inferensi
+        // Prosedur atau fungsi untuk proses inferensi tanpa nilai balik
         public void inferensi()
         {
             float[] nilaiKondisi = new float[10];
@@ -481,7 +485,7 @@ public class ScoreFuzzy : MonoBehaviour
                                 kondisi[k] = "Bagus";
                             }
 
-                            // .... //
+                            // Menampilkan keterangan rules yang dipakai di console
                             Debug.Log("Ketika isi " + nilaiIsi[i] + ", penyampaian " + nilaiPenyampaian[j] + ", dan strategi " + nilaiStrategi[l] + ". Maka penilaian debat " + kondisi[k] + " dengan nilai = " + nilaiKondisi[k]);
                             k = k + 1;
                         }
@@ -552,6 +556,7 @@ public class ScoreFuzzy : MonoBehaviour
         }
 
         // Bagian defuzzifikasi
+        // Prosedur atau fungsi yang mengirimkan nilai balik
         public float defuzzifikasi(float ambilSampel)
         {
             hasilPembilang = 0;
@@ -584,7 +589,7 @@ public class ScoreFuzzy : MonoBehaviour
             Debug.Log(pengaliZ);
 
             // Defuzzifikasi Kurang Bagus (Trapesium)
-            if (terbesarX > 0)
+            if (terbesarX > 0 && terbesarY == 0 && terbesarZ == 0)
             {
                 deltaX = 63 / sampel;
                 titik_sampelX = 0;
@@ -625,10 +630,10 @@ public class ScoreFuzzy : MonoBehaviour
             }
 
             // Defuzzifikasi Cukup Bagus (Trapesium)
-            else if (terbesarY > 0)
+            else if (terbesarX == 0 && terbesarY > 0 && terbesarZ == 0)
             {
-                deltaY = 15 / sampel;
-                titik_sampelY = 61.01f;
+                deltaY = 11 / sampel;
+                titik_sampelY = 63.0f;
                 Debug.Log("Nilai beda selisih = " + deltaY);
                 Debug.Log("Nilai titik sampel diawal = " + titik_sampelY);
                 for (int i = 1; i <= sampel; i++)
@@ -678,14 +683,17 @@ public class ScoreFuzzy : MonoBehaviour
                             Debug.Log(i + ". Nilai jumlah sampel = " + jumlah_samir);
                         }
                     }
+                    Debug.Log("Sampel ke-" + i + " = " + titik_sampelY);
+                    titik_sampelY += deltaY;
+                    mirlangY = 0;
                 }
             }
 
             // Defuzzifikasi Bagus (Trapesium)
-            else if (terbesarZ > 0)
+            else if (terbesarX == 0 && terbesarY == 0 && terbesarZ > 0)
             {
-                deltaZ = 26 / sampel;
-                titik_sampelZ = 74.01f;
+                deltaZ = 24 / sampel;
+                titik_sampelZ = 76.0f;
                 Debug.Log("Nilai beda selisih = " + deltaZ);
                 Debug.Log("Nilai titik sampel diawal = " + titik_sampelZ);
                 for (int i = 1; i <= sampel; i++)
@@ -716,6 +724,9 @@ public class ScoreFuzzy : MonoBehaviour
                         Debug.Log(i + ". Nilai pembilang = " + pembilangZ);
                         Debug.Log(i + ". Nilai jumlah sampel = " + jumlah_sampelZ);
                     }
+                    Debug.Log("Sampel ke-" + i + " = " + titik_sampelZ);
+                    titik_sampelZ += deltaZ;
+                    mirlangZ = 0;
                 }
             }
 
@@ -812,8 +823,8 @@ public class ScoreFuzzy : MonoBehaviour
             // Defuzzifikasi Cukup Bagus dan Bagus
             else if (terbesarX == 0 && terbesarY > 0 && terbesarZ > 0)
             {
-                deltaY = 76 / sampel;
-                titik_sampelY = 61.01f;
+                deltaY = 38 / sampel;
+                titik_sampelY = 62.0f;
                 Debug.Log("Nilai beda selisih = " + deltaY);
                 Debug.Log("Nilai titik sampel diawal = " + titik_sampelY);
                 for (int i = 1; i <= sampel; i++)
@@ -1027,6 +1038,7 @@ public class ScoreFuzzy : MonoBehaviour
             return hasilDefuzzifikasi;
         }
 
+        // Prosedur atau fungsi untuk menampilkan nilai fungsi keanggotaan untuk setiap nilai linguistik di console
         public void cetakMember()
         {
             Debug.Log("Nilai Fuzzy isi dengan input " + isi);
