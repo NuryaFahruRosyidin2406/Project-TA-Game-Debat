@@ -229,10 +229,14 @@ public class ScriptReader : MonoBehaviour
 
     public void playCharacterAnim(string charName, string animName)
     {
+        //sebuah variabel dg nama karakter bertipe game object diisi dengan sebuah game object
+        //yang memiliki nama hasil dari inputan charname
         GameObject character = GameObject.Find(charName);
         
         Debug.Log("Changing " + character.name + "'s Animation to" + animName);
 
+        //objek character akan mengambil komponen dari charanim untuk menjalankan fungsi character
+        //motion dengan inputan animnname
         character.GetComponent<CharAnim>().CharacterMotion(animName);
     }
 
