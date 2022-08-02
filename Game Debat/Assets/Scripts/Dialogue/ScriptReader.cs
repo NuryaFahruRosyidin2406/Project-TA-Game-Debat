@@ -105,7 +105,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
         _StoryScript.BindExternalFunction("DebateStatus", (bool debateStatus) => doingDebate(debateStatus)); // Change debate status
-        _StoryScript.BindExternalFunction("AddDebateScoreIsi", (int debateScoreIsi) => addDebateScoreIsi(debateScoreIsi)); // Add or Reduce Player Score Isi
+        _StoryScript.BindExternalFunction("AddDebateScoreIsi", (int debateScoreIsi) => addDebateScoreIsi(debateScoreIsi)); // Add or Reduce Player Score Isi (pada storyscript dibuat fungsi external untuk inky dengan nama AddDebateScoreIsi yang bertipe integer dengan nama variabel debateScoreIsi yang hasil inputannya akan diolah dan masuk kedalam fungsi addDebateScoreIsi dengan variabel input debateScoreIsi)
         _StoryScript.BindExternalFunction("AddDebateScorePenyampaian", (int debateScorePenyampaian) => addDebateScorePenyampaian(debateScorePenyampaian)); // Add or Reduce Player Score Isi
         _StoryScript.BindExternalFunction("AddDebateScoreStrategi", (int debateScoreStrategi) => addDebateScoreStrategi(debateScoreStrategi)); // Add or Reduce Player Score Strategi
         _StoryScript.BindExternalFunction("CalculateScoreFuzzy", (bool fuzzyStatus) => calculateScoreFuzzy(fuzzyStatus)); // Change status to calculate fuzzy

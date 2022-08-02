@@ -13,8 +13,6 @@ public class ScoreSystem : MonoBehaviour
 
     public Text myScoreText;
     public Text keteranganScoreAkhirText;
-    //public static string[] keteranganScoreAkhir = new string[] {"KURANG BAGUS", "CUKUP BAGUS", "BAGUS"};
-    //public string randomKeterangan = keteranganScoreAkhir[Random.Range(0, keteranganScoreAkhir.Length)];
     private int scoreNum;
 
     private bool showScore;
