@@ -1,17 +1,18 @@
-using System.Collections;
+using System.Collections; //Library untuk menggunakan fungsi dasar C#
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using Ink.Runtime;
-using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine; //Library untuk menggunakan fungsi dasar unity
+using UnityEngine.UI; //Library untuk menggunakan fungsi dasar UI unity
+using Ink.Runtime; //Library untuk menggunakan fungsi inky pada unity
+using TMPro; //Library untuk menggunakan TMP pada unity
+using UnityEngine.SceneManagement; //Library untuk menggunakan fungsi Management Scene
 
-public class ScriptReader : MonoBehaviour
+public class ScriptReader : MonoBehaviour 
 {
-    LevelScript levelScript;
+    LevelScript levelScript; //Untuk mengakses fungsi dan variabel dari level script
     ScoreFuzzy scoreFuzzy;
     ScoreDisplay scoreDisplay;
 
+    //Menginialisasikan variabel sehingga dapat direferensikan di unity inspector
     [SerializeField] GameObject dialogueManager;
 
     [SerializeField]
@@ -44,26 +45,25 @@ public class ScriptReader : MonoBehaviour
     public bool argumenShow;
     public int transitionNumber;
 
-    void Awake()
+    void Awake() //fungsi akan dipanggil ketika game dijalankan
     {
         levelScript = dialogueManager.GetComponent<LevelScript>();
         scoreFuzzy = dialogueManager.GetComponent<ScoreFuzzy>();
     }
 
-    void Start()
+    void Start() //fungsi akan dipanggil ketika frame pertama (masuk dlm scene) dijalankan
     {
-        TimerOn = true;
-        LoadStory();
+        TimerOn = true; //menyalakan timer dialogue
+        LoadStory(); //load file inky
     }
 
-    void Update()
+    void Update() //fungsi dipanggil setiap frame berjalan
     {
         if (TimerOn)
         {
             if(TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
-                //updateTimer(TimeLeft);
             }
             else
             {
@@ -92,7 +92,7 @@ public class ScriptReader : MonoBehaviour
         } 
     }
 
-    void LoadStory()
+    void LoadStory() //fungsi untuk membuka cerita selanjutnya (script inky)
     {
         _StoryScript = new Story(_inkJsonFile.text);
 
@@ -345,7 +345,7 @@ public class ScriptReader : MonoBehaviour
     public void subChoiceTime(float time)
     {
         choiceTimerSubtract += time;
-        Debug.Log("Choice Time reduce by "+ choiceTimerSubtract + " Seconds");
+        Debug.Log("Choice Time add by "+ choiceTimerSubtract + " Seconds");
     }
 
     public void nextScript(string name) // Load Next Script for the dialogue
@@ -394,14 +394,6 @@ public class ScriptReader : MonoBehaviour
     {
         SoundManagerScript.PlaySound(soundName);
         Debug.Log("Play sound effect " + soundName);
-    }
-
-    void updateTimer(float currentTime) // update dialogue timer
-    {
-        currentTime += 1;
-
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
     }
 }
 
