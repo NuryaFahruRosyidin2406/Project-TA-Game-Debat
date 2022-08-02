@@ -8,18 +8,20 @@ public class GameDataSelector : MonoBehaviour
     public GameData currentGameData;
     public GameLevelData levelData;
 
-    // 
+    // Awake is called right after the sistem start
     void Awake()
     {
         SelectSequentalBoardData();
     }
 
+    // Get the Board data
     private void SelectSequentalBoardData()
     {
         foreach (var data in levelData.data)
         {
             if (data.categoryName == currentGameData.selectedCategoryName)
             {
+                // randomize the board data
                 var boardIndex = Random.Range(0,5);
                 Debug.Log("Puzzle yang di buka " + boardIndex);
 

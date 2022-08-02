@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class GameEvents
 {
+    // delegate allow to store and call a function as if it were a variable
     public delegate void EnableSquareSelection();
     public static event EnableSquareSelection OnEnableSquareSelection;
 
