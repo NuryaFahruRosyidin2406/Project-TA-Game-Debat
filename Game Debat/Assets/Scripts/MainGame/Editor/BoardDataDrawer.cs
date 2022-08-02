@@ -6,19 +6,23 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
+// Make a custom editor for Board Data in the Unity Inspector
 [CustomEditor(typeof(BoardData), false)]
 [CanEditMultipleObjects]
 [System.Serializable]
 public class BoardDataDrawer : Editor
 {
+    // get board data as the game data instance
     private BoardData GameDataInstance => target as BoardData;
     private ReorderableList _dataList;
-
+    
+    // if object is enable do this function
     private void OnEnable()
     {
         InitializeReordableList(ref _dataList, "SearchWords", "Searching Words");
     }
 
+    // Override the inspector GUI in the Unity
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
@@ -50,6 +54,7 @@ public class BoardDataDrawer : Editor
         }
     }
 
+    // Draw Columns and Row in the inspector based on the input value
     private void DrawColumnsRowsInputFields()
     {
         var columnsTemp = GameDataInstance.Columns;
@@ -65,6 +70,7 @@ public class BoardDataDrawer : Editor
         }
     }
 
+    // Draw the board table
     private void DrawBoardTable()
     {
         var tableStyle = new GUIStyle("box");
@@ -113,6 +119,7 @@ public class BoardDataDrawer : Editor
         EditorGUILayout.EndHorizontal();
     }
 
+    // Initialize Reordable List in the Unity inspector for the correct word
     private void InitializeReordableList(ref ReorderableList list, string propertyName, string listLabel)
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty(propertyName),
@@ -137,6 +144,7 @@ public class BoardDataDrawer : Editor
 
     }
 
+    // Convert all the letter to Upper letter
     private void ConvertToUpperButton()
     {
         if (GUILayout.Button("To Upper"))
@@ -164,6 +172,7 @@ public class BoardDataDrawer : Editor
         }
     }
 
+    // Clearing the board from all the letter
     private void ClearBoardButton()
     {
         if (GUILayout.Button("Clear Board"))
@@ -178,6 +187,7 @@ public class BoardDataDrawer : Editor
         }
     }
 
+    // Fill up the empty board with random letter
     private void FillupWithRandomLettersButton()
     {
         if (GUILayout.Button("Fill Up With Random"))

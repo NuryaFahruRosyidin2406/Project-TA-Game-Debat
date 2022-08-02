@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+
+// Allowing data to be created by right click on the Assets folder
 [CreateAssetMenu]
+
+// Create a class to hold the board data for the mini game
 public class BoardData : ScriptableObject
 {
+    // Initialize searching word class to get an input to refrence in Unity Inspector
     [System.Serializable]
     public class SearchingWord
     {
         public string Word;
     }
 
+    // Initialize board row class to get an input to refrence in Unity Inspector
     [System.Serializable]
     public class BoardRow
     {

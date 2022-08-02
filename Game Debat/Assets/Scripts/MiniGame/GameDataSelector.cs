@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameDataSelector : MonoBehaviour
 {
+    // get the current game data by refrencing it in Unity inspector
     public GameData currentGameData;
     public GameLevelData levelData;
 
+    // 
     void Awake()
     {
         SelectSequentalBoardData();

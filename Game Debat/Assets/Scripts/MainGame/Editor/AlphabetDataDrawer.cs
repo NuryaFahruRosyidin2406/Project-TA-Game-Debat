@@ -5,24 +5,29 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
+// Make a custom editor in the Unity Inspector
 [CustomEditor(typeof(AlphabetData))]
 [CanEditMultipleObjects]
 [System.Serializable]
 public class AlphabetDataDrawer : Editor
 {
+    // Initialize Reorderable List variable
     private ReorderableList AlphabetPlainList;
     private ReorderableList AlphabetNormalList;
     private ReorderableList AlphabetHighlightedList;
     private ReorderableList AlphabetWrongList;
 
+    // If the object is active do
     private void OnEnable()
     {
+        // InitializeReordableList function
         InitializeReordableList(ref AlphabetPlainList, "AlphabetPlain", "Alphabet Plain");
         InitializeReordableList(ref AlphabetNormalList, "AlphabetNormal", "Alphabet Normal");
         InitializeReordableList(ref AlphabetHighlightedList, "AlphabetHighlighted", "Alphabet Highlighted");
         InitializeReordableList(ref AlphabetWrongList, "AlphabetWrong", "Alphabet Wrong");
     }
 
+    // Override UI in Unity Inspector
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
@@ -33,6 +38,7 @@ public class AlphabetDataDrawer : Editor
         serializedObject.ApplyModifiedProperties();
     }
 
+    // Create function to draw the reordable list in the Inspector
     private void InitializeReordableList(ref ReorderableList list, string propertyName, string listLabel)
     {
         list = new ReorderableList(serializedObject, serializedObject.FindProperty(propertyName),
