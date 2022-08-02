@@ -99,8 +99,7 @@ public class ScriptReader : MonoBehaviour
         _StoryScript.BindExternalFunction("Name", (string charName) => ChangeName(charName));
         _StoryScript.BindExternalFunction("Icon", (string charName) => CharacterIcon(charName));
         _StoryScript.BindExternalFunction("CharAnimation", (string charName, string animName) => playCharacterAnim(charName, animName));
-        _StoryScript.BindExternalFunction("CharExpression", (string charName, int expressionInt) => changeCharacterExpression(charName, expressionInt));
-        _StoryScript.BindExternalFunction("charTarget", (string charName, float moveSpeed, float xpos, float ypos, float zpos) => setCharacterMoveTarget(charName, moveSpeed, xpos, ypos, zpos)); //Change character position.        
+        _StoryScript.BindExternalFunction("CharExpression", (string charName, int expressionInt) => changeCharacterExpression(charName, expressionInt));       
         _StoryScript.BindExternalFunction("ShowArgue", (bool argueStatus) => showArgue(argueStatus));
         _StoryScript.BindExternalFunction("TransNum", (int transNumber) => transNum(transNumber));
         _StoryScript.BindExternalFunction("ChangeTime", (float timeLeft) => changeTime(timeLeft)); // Change time for the dialogue
@@ -247,16 +246,6 @@ public class ScriptReader : MonoBehaviour
         Debug.Log("Changing " + character.name + "'s Expression to" + expressionNumber );
 
         character.GetComponent<CharAnim>().CharacterExpression(expressionNumber);
-    }
-
-    public void setCharacterMoveTarget(string charName, float movingSpeed, float xpos, float ypos, float zpos)
-    {
-        GameObject character = GameObject.Find(charName);
-        Vector3 targetPosition = new Vector3(xpos, ypos, zpos);
-        
-        Debug.Log("Moving " + character.name + "'s position to" + targetPosition);
-        
-        character.GetComponent<CharPosition>().setTarget(targetPosition, movingSpeed);
     }
 
     public void showArgue(bool argumen)
