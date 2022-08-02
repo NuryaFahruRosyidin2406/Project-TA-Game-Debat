@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class WordsGrid : MonoBehaviour
 {
+    // Initialize variabel to get an object to refrence in Unity Inspector
     public GameData currentGameData;
     public GameObject gridSquarePrefab;
     public AlphabetData alphabetData;
 
+    // Initialize variabel for the the words grid position
     public float squareOffset = 0.0f;
     public float topPosition;
 
     private List<GameObject> _squareList = new List<GameObject>();
 
+    // do this when enter the scene
     void Start()
     {
         SpawnGridSquare();
         SetSquaresPosition();
     }
 
+    // set the square position
     private void SetSquaresPosition()
     {
         var squareRect = _squareList[0].GetComponent<SpriteRenderer>().sprite.rect;
@@ -51,7 +55,7 @@ public class WordsGrid : MonoBehaviour
 
     }
 
-
+    // get the first square position
     private Vector2 GetFirstSquarePosition()
     {
         var startPosition = new Vector2(0f, transform.position.y);
@@ -71,6 +75,7 @@ public class WordsGrid : MonoBehaviour
         return startPosition;
     }
 
+    // spawn the grid square
     private void SpawnGridSquare()
     {
         if (currentGameData != null)
@@ -110,6 +115,7 @@ public class WordsGrid : MonoBehaviour
         }
     }
 
+    // get the square scale
     private Vector3 GetSquareScale(Vector3 defaultScale)
     {
         var finalScale = defaultScale;
@@ -131,6 +137,7 @@ public class WordsGrid : MonoBehaviour
         return finalScale;
     }
 
+    // scale down the square
     private bool ShouldScaleDown(Vector3 targetScale)
     {
         var squareRect = gridSquarePrefab.GetComponent<SpriteRenderer>().sprite.rect;
@@ -149,6 +156,7 @@ public class WordsGrid : MonoBehaviour
         return startPosition.x < GetHalfScreenWidht() * -1 || startPosition.y > topPosition;
     }
 
+    // get half of the screen widht
     private float GetHalfScreenWidht()
     {
         float height = Camera.main.orthographicSize * 2;

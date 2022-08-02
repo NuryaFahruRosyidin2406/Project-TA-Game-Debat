@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SearchingWordsList : MonoBehaviour
 {
+    // get the current data dan word prefab
     public GameData currentGameData;
     public GameObject searchingWordPrefab;
+
+    // Initialize variabel for the searching words list
     public float offset = 0.0f;
     public int maxColumns = 5;
     public int maxRows = 4;
@@ -16,8 +19,10 @@ public class SearchingWordsList : MonoBehaviour
 
     private List<GameObject> _words = new List<GameObject>();
 
+    // run this when enter the scene
     private void Start()
     {
+        // Get how much word from the current game data
         _wordsNumber = currentGameData.selectedBoardData.SearchWords.Count;
 
         if (_wordsNumber < _columns)
@@ -29,6 +34,7 @@ public class SearchingWordsList : MonoBehaviour
         SetWordsPosition();
     }
 
+    // calculating the rows and columns
     private void CalculateColumnsAndRowsNumber()
     {
         do
@@ -44,6 +50,7 @@ public class SearchingWordsList : MonoBehaviour
         }
     }
 
+    // increase the column number
     private bool TryIncreaseColumnNumber()
     {
         _columns++;
@@ -63,6 +70,7 @@ public class SearchingWordsList : MonoBehaviour
         return true;
     }
 
+    // create the word objects
     private void CreateWordObjects()
     {
         var squareScale = GetSquareScale(new Vector3(1f, 1f, 0.1f));
@@ -77,6 +85,7 @@ public class SearchingWordsList : MonoBehaviour
         }
     }
 
+    // get the square scale
     private Vector3 GetSquareScale(Vector3 defaultScale)
     {
         var finalScale = defaultScale;
@@ -99,6 +108,7 @@ public class SearchingWordsList : MonoBehaviour
         return finalScale;
     }
 
+    // scale down the square
     private bool ShouldScaleDown(Vector3 targetScale)
     {
         var squareRect = searchingWordPrefab.GetComponent<RectTransform>();
@@ -131,6 +141,7 @@ public class SearchingWordsList : MonoBehaviour
         return false;
     }
 
+    // set the words position
     private void SetWordsPosition()
     {
         var squareRect = _words[0].GetComponent<RectTransform>();
@@ -160,6 +171,7 @@ public class SearchingWordsList : MonoBehaviour
         }
     }
 
+    // get the first square position
     private Vector2 GetFirstSquarePosition()
     {
         var startPosition = new Vector2(0f, transform.position.y);
